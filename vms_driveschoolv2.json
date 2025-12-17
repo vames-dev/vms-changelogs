@@ -8,6 +8,6 @@
         "Added support for <code>17mov_Phone</code>",
         "Fixed <code>ShowSecondaryMarketOnly</code> - the value was inverted (<code>true</code>/<code>false</code>) in the previous update"
       ]
-    },
+    }
   ]
 }
