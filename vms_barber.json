@@ -1,0 +1,188 @@
+{
+  "currentVersion": "2.0.3",
+  "entries": [
+    {
+      "version": "2.0.3",
+      "date": "04/04/2025",
+      "changes": [
+        "Added support for rcore_clothing",
+        "Introduced default blacklisted Night Vision Goggles in the hair_1 section",
+        "Fixed an issue where the [<] button for Hair Highlights was changing Hair Style instead",
+        "Fixed a bug that allowed infinite scrolling of values - scrolling is now limited to LMB only"
+      ]
+    },
+    {
+      "version": "2.0.2",
+      "date": "18/03/2025",
+      "changes": [
+        "Support for custom interiors - currently available only for Gabz",
+        "Added targetCoords option to bossMenu in Config.Barbers",
+        "Added blacklist option to Config.Barbers",
+        "Introduced a new method for changing item ID in the barber menu - now, when you hold LMB on the left/right arrow, the selected ID will continuously change. No more repeated clicking!",
+        "Fixed a bug with the boss menu when using the marker system"
+      ]
+    },
+    {
+      "version": "2.0.1",
+      "date": "07/11/2024",
+      "changes": [
+        "Fixed employee-client interaction when using marker access",
+        "Fixed sending webhooks"
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "date": "19/10/2024",
+      "changes": [
+        "Complete redesign of the resource to ensure consistency across VMS resources",
+        "Added management menu, similar to the one in vms_tuning/vms_vehicleshopV2/vms_stores",
+        "Added Hair Fade (Compatible only with vms_tattooshop!).",
+        "A \"basket\" has been made - now you don't have to pay for a haircut to go to the beard, you can change everything and pay at the very end",
+        "Added a receipt for tattoo payments in the business tattoo shop, similar to the one in vms_tuning/vms_clothestore",
+        "Added the ability to set prices for each option separately i.e., for example, hair has been separated into the cost for cutting, coloring, dyeing the ends and style",
+        "Introduced compatibility with the tax system and job resumes from vms_cityhall",
+        "Compatibility with qb-target",
+        "Compatibility with QS-Inventory (Item clothing system)",
+        "Moved many options from config.lua to config.client.lua and changed the prefix from Config. to CL.",
+        "Moved UI translations to the translations.json file (Multi-language: EN, DE, FR, ES, PT, PL, CZ)"
+      ]
+    },
+    {
+      "version": "1.1.6",
+      "date": "14/01/2024",
+      "changes": [
+        "Improved makeup and lipstick color for fivem-appearance"
+      ]
+    },
+    {
+      "version": "1.1.5",
+      "date": "09/11/2023",
+      "changes": [
+        "Support for target system - Config.UseTarget, Config.TargetResource, Config.Target",
+        "Added setting of camera same for both employee and customer",
+        "Added translations in NL thanks to help from VMS Translators Team.",
+        "Adjusted scaling for 21:9 monitor format"
+      ]
+    },
+    {
+      "version": "1.1.4",
+      "date": "10/07/2023",
+      "changes": [
+        "Fixed an issue with the client skin in a barber that is managed by another player when using illenium-appearance on ESX",
+        "Added server-side warning when Config.Core configuration is wrong",
+        "Added leaving the chair when the player leaves the game while using the barber service",
+        "Corrected the position of the player working as a barber to where he selects the customer's haircut after completing the haircut animation",
+        "Added config.translation.lua file with new languages DE, FR, PT, ES thanks to help from VMS Translators Team (moved Config.Translate & Config.Lang here from config.lua file)"
+      ]
+    },
+    {
+      "version": "1.1.3",
+      "date": "14/06/2023",
+      "changes": [
+        "Improved illenium-appearance compatibility"
+      ]
+    },
+    {
+      "version": "1.1.2",
+      "date": "19/05/2023",
+      "changes": [
+        "Added Config.EnableShakeCam",
+        "Improved grade checking for employees",
+        "Fixed a bug with the ability to sit on an occupied seat"
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "date": "03/05/2025",
+      "changes": [
+        "Added bossMenuPos and bossMenuGrades option to Config.Barbers",
+        "Added function Config.BossMenu - by default for esx_society and qb-management",
+        "Added Config.Markers",
+        "Added Config.UseTattooMachineRequired & Config.TattooMachineItem - you can require employees to have a hair clipper",
+        "Changed from busy to taken in each file and changed trigger \"...:setBusyChair\" to \"...:takeChair\""
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "23/04/2023",
+      "changes": [
+        "Added the remove hats, glasses, and masks while using hairdressing services, so they do not interfere with choosing new styles.",
+        "Removed from config option Config.CanOthers",
+        "Hair panel 2 has been removed for the SkinManager qb-clothing as there are no values to change in qb-clothing."
+      ]
+    },
+    {
+      "version": "1.0.9",
+      "date": "28/03/2023",
+      "changes": [
+        "Supporting for illennium-appearance"
+      ]
+    },
+    {
+      "version": "1.0.8",
+      "date": "27/03/2023",
+      "changes": [
+        "Fixed checking barber job for QB-Core"
+      ]
+    },
+    {
+      "version": "1.0.7",
+      "date": "14/03/2023",
+      "changes": [
+        "Corrected category buttons to click correctly",
+        "Removed opacity values on UI for qb-clothing (because it cannot be changed in qb-clothing)",
+        "Removed some panels with color 2 values for fivem-appearance and qb-clothing (because it cannot be changed in qb-clothing and fivem-appearance)",
+        "Fixed eyecolor and makeup color in fivem-appearance",
+        "Fixed problem with character standing up when refreshing skin in qb-clothing",
+        "Added 3 translations to translation.js (header name and payment button)"
+      ]
+    },
+    {
+      "version": "1.0.6",
+      "date": "05/03/2023",
+      "changes": [
+        "Fixed hair_color_2 in fivem-appearance"
+      ]
+    },
+    {
+      "version": "1.0.5",
+      "date": "15/02/2023",
+      "changes": [
+        "Fixed make-up color and added blush first -1 for qb-clothing"
+      ]
+    },
+    {
+      "version": "1.0.4",
+      "date": "12/02/2023",
+      "changes": [
+        "Added blushes",
+        "Fixed hair_color_2 for fivem-appearance"
+      ]
+    },
+    {
+      "version": "1.0.3",
+      "date": "11/01/2023",
+      "changes": [
+        "Compatible with QB-Core",
+        "Added comapability with fivem-appearance for ESX and QB-Core",
+        "Added missing hair salon"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "date": "17/11/2022",
+      "changes": [
+        "Added config_gabz.lua file, there are coorded for Config.Barbers to gabz interiors",
+        "Fixed notifications sent from the server side",
+        "New translation options added to Config.Translate"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "16/10/2022",
+      "changes": [
+        "Fixed and added new color variants"
+      ]
+    }
+  ]
+}
