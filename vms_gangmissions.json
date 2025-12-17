@@ -1,0 +1,36 @@
+{
+  "currentVersion": "1.0.4",
+  "entries": [
+    {
+      "version": "1.0.4",
+      "date": "26/10/2023",
+      "changes": [
+        "Added compatibility with esx_context and ox_lib menu"
+      ]
+    },
+    {
+      "version": "1.0.3",
+      "date": "22/07/2023",
+      "changes": [
+        "PlayerData loading for qb-core has been improved",
+        "Added <code>Config.EnemiesPedsVisibleForAll</code> - so every player will see enemy peds",
+        "Added groups for enemy peds - this means I won't shoot at each other"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "date": "26/04/2023",
+      "changes": [
+        "Added <code>Config.MinimumPolice</code> to the ability to set a minimum number of police officers.",
+        "Added ability to set the addition of public ped with missions, no longer required for gangs only."
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "14/04/2023",
+      "changes": [
+        "Improve for QB-Core to load Player gang and vehicle spawns for missions"
+      ]
+    }
+  ]
+}
