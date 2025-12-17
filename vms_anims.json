@@ -1,0 +1,211 @@
+{
+  "currentVersion": "1.3.0",
+  "entries": [
+    {
+      "version": "1.3.0",
+      "date": "05/01/2025",
+      "changes": [
+        "Redesigned UI a little bit",
+        "Adjusted UI for 4K resolution",
+        "Added <code>Config.VirtualPedPosition</code>: this allows you to change the position and rotation of the virtual ped on the screen",
+        "Added <code>Config.UseMoveKeyToCancel</code>: you can allow players to cancel animations when they press W/S/A/D (Only if you cannot walk with animation)",
+        "Added additional protection against triggering animations when characters fall down",
+        "Added new parameter <code>flag</code> to <code>animations.lua</code> - this allows you to override the flag, this means that even when the player has MOVE selected, you can set, for example, flag 1 and he will never be able to walk with this animation",
+        "Optimized the code, there was a problem that when having the menu open for a long time with virtual ped resmon increased to huge values, now it is stable at 0.06ms with virtual ped running",
+        "Fixed a bug that caused virtual ped to try to run away when shot",
+        "Changed the method of detecting if an animation is synchronized - now you can create multiple categories with synchronized animations and they don't have to be in a separate section"
+      ]
+    },
+    {
+      "version": "1.2.6",
+      "date": "14/06/2024",
+      "changes": [
+        "Added auto detection of framework and skinmanager",
+        "Created export <code>isMenuOpened</code>: <code>exports['vms_anims']:isMenuOpened()</code>",
+        "Created export <code>getAnimData</code>: <code>exports['vms_anims']:getAnimData()</code>",
+        "Added <code>Config.Core</code> and <code>Config.PlayerLoadedServer</code> to the <code>config.lua</code>",
+        "Added saving walk style and expression in ESX and QB-Core metadata (for esx users: metadata in the framework was only introduced in version 1.9.4, if you have an older version, you must set <code>Config.UseSaveableWalk</code> and <code>Config.UseSaveableExpression</code> to <code>false</code>)",
+        "A <code>config.server.lua</code> file was created in which three framework functions were added"
+      ]
+    },
+    {
+      "version": "1.2.5",
+      "date": "13/02/2024",
+      "changes": [
+        "Added <code>Config.AdjustedTeleportBack</code>, if you want to prevent the possibility of passing through walls in adjusting the animation, you can run this, then when the animation ends the player will be teleported back to where he started it",
+        "Fixed bug with the ability to run the animation customization menu multiple times",
+        "Fixed premature cancellation of animation for Virtual Ped when quickly changing preview animation",
+        "Fixed a bug with multiple objects on Virtual Ped falling to the ground after closing the menu",
+        "Fixed loss of focus on input after running animation with auto-close UI",
+        "Converted animations from TayMcKenzieNZ RPEmotes resource for compatibility with vms_anims (https://github.com/vames-dev/rpemotes-for-vms_anims)"
+      ]
+    },
+    {
+      "version": "1.2.4",
+      "date": "17/10/2023",
+      "changes": [
+        "Fixed sending request for synced aniamation"
+      ]
+    },
+    {
+      "version": "1.2.3",
+      "date": "14/10/2023",
+      "changes": [
+        "Added the \"Adjust\" button to the menu and the <code>Config.AnimAdjustCommandName</code> command to the ability to adjust each animation (not scenarios) - you can still use the playerRotate option in <code>animations.lua</code> but if you use adjust the player can adjust each animation once",
+        "Added a new option to <code>animations.lua</code>: <code>runFunction</code> - it's a function to which you can add whatever you want e.g. events, exports whatever you need to trigger when running an animation",
+        "Added hiding of weapon menu during character rotation in animation adjustment menu",
+        "Added new <code>exports.vms_anims:Cancel()</code> - for cancelling animations launched via anims menu",
+        "Added new parameters to <code>RunAnimationById</code> export: <code>disableAdjusting</code>, options for synchronized animations",
+        "Fixed falling character during positioning",
+        "Corrected the problem of cancelling the animation of the virtual ped equally with the animation of the player, now it is separate, cancelling the virtualped will not also cancel the player animation",
+        "Corrected for <code>RunAnimationById</code> using time -1",
+        "Disabled ability to cancel animation when adjusting position, caused bug",
+        "Improved controls after closing menu with the focus menu on the search bar",
+        "Solved problem with shooting after pressing search bar with gun in hand"
+      ]
+    },
+    {
+      "version": "1.2.2",
+      "date": "05/08/2023",
+      "changes": [
+        "Added <code>Config.DefaultQuestionMenuKeys</code> - if you want to change the accept and reject keys of the animation proposal synchronized with the question default menu vms_anims, now you can change it there",
+        "Added for synchronized animations the ability to use with prop and particles - also added an animation example at the very bottom of the animations.lua file",
+        "Added <code>Config.EnableSelfSyncedAnim</code>: when searching for a player for a synchronized animation, the ability to select yourself among other players also could run this animation without selecting another player - displays a helpButtons menu in the lower left corner informing you that you can switch players with the E key",
+        "Added export <code>RunAnimationById</code> to the possibility of use with other resources so that you don't have to register and load animations in the future for other activities, you can do this with one simple export from vms_anims if it is also available in <code>animations.lua</code>",
+        "Added additional translation to E key in <code>translations.js</code> file",
+        "Fixed second prop in three dance glowsticks animations",
+        "The animation search has been changed - you don't have to type in the animation name from the beginning, e.g. DANCE GLOWS... to have the DANCE GLOWSTICK animation pop up for you, now you can just type GLOWSTICK and you will have it"
+      ]
+    },
+    {
+      "version": "1.2.1",
+      "date": "08/06/2023",
+      "changes": [
+        "Added <code>Config.EnableMovingLoopRefreshTime</code> - you can adjust the frequency of refreshing the loop that allows the player to move while the animation menu is running (for those who reported a problem that, for example, they can hit while using the menu, try reducing the value to, for example, 2/3)",
+        "Fixed bug with trying to send an animation to someone who wasn't around, which made it impossible to continue using the animation"
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "25/05/2023",
+      "changes": [
+        "Added preview of walking style on virtual ped",
+        "Added <code>Config.VirtualPedPreviewWalkingTime</code>",
+        "Added <code>Config.UseCustomQuestionMenu</code> & <code>Config.CustomQuestionMenu</code> - to use, for example, the vms_notify question menu from the last update.",
+        "When you cancel a synchronized animation, your friend will also cancel and be detached from you"
+      ]
+    },
+    {
+      "version": "1.1.9",
+      "date": "14/05/2023",
+      "changes": [
+        "Added <code>Config.CheckingBeforeOpenMenu</code> - You can add a check that, for example, the player is not handcuffed before opening menu",
+        "Added <code>Config.CheckingBeforeStartAnimation</code> - You can add a check that, for example, the player is not handcuffed before starting the animation",
+        "Added <code>Config.NoPlayersAroundStartOnlyOnMe</code> - if the player wants to run a synchronized animation but no one is around, the animation will run on him only"
+      ]
+    },
+    {
+      "version": "1.1.8",
+      "date": "06/04/2023",
+      "changes": [
+        "Fixed synchronized animation cancellation",
+        "Improved UI scaling for synced animation acceptance menu for 4K resolution"
+      ]
+    },
+    {
+      "version": "1.1.7",
+      "date": "26/03/2023",
+      "changes": [
+        "Fixed an issue with the display of a marker over the other player when selecting the player with whom to start a synchronized animation",
+        "Added Duration option to the synced animations - so that animations such as Hug are not looped",
+        "Added 2 new F*ck NSFW animations"
+      ]
+    },
+    {
+      "version": "1.1.6",
+      "date": "21/03/2023",
+      "changes": [
+        "Fixed loading animation list to UI"
+      ]
+    },
+    {
+      "version": "1.1.5",
+      "date": "17/03/2023",
+      "changes": [
+        "UI optimized, no longer loads all animations every run (should be much better in terms of menu loading time)",
+        "Added <code>Config.CoreDefine</code>, for one-time implementation of Core functions - the script is still possible to use in the standalone version, just don't complete it, but it is required for use if you want to use shared animations",
+        "Added <code>Config.EnabledOptionsWithJoin</code>, here you can add enabled options from joining (VirtualPed, Move, Loop)",
+        "Activate animation during positioning, so the player can accurately arrange the character in a particular place",
+        "Added marker above head players before sending request for synced animation, player can search for the exact person he wants to run animation with",
+        "Added <code>Config.CloseUiWhenPlayerRunSyncedAnim</code>, so you can enable the UI to automatically close when you start searching for a player to run a synced animation",
+        "Added <code>Config.CloseUiWhenPlayerRunPositioningAnim</code>, so you can enable automatic UI close when you run the animation positioning menu",
+        "Added <code>Config.EnableMovingWithUI</code>, this means that if you set this to true then players having the UI running can move further in the game (if a player on the UI presses the typing spot, moving is disabled until the typing spot is unfocused so that they don't walk or make other interactions while searching for animations)",
+        "Added some new synced anims - Carry, CPR, Hit head to head, Sitting on your knees, Blowjob"
+      ]
+    },
+    {
+      "version": "1.1.4",
+      "date": "19/02/2023",
+      "changes": [
+        "If you don't want to use opening the menu with <code>Config.CommandName</code> or <code>Config.KeyBind</code>, you can set it \"\" and it wont be loaded",
+        "Fixed visibility of menu accept shared animation",
+        "Fixed visibility of steering keys of positioning animation"
+      ]
+    },
+    {
+      "version": "1.1.3",
+      "date": "28/01/2023",
+      "changes": [
+        "Added ability to cancel synced animations via Config.CancelKey",
+        "Added Config.Hud (Ability to manage the display of the hud when the menu is running)",
+        "Added a new option Config.DisableKeyBindWhileDead to the config, you can disable the ability to open the menu if the player is dead",
+        "Fixed bug with minimap display after closing the animation menu"
+      ]
+    },
+    {
+      "version": "1.1.2",
+      "date": "08/01/2023",
+      "changes": [
+        "Added <code>translations.js</code>",
+        "Added <code>Config.RunAnimWhileRunned</code>, you will be able to turn on an animation without turning off the previous one",
+        "Added <code>Config.DisableRunNextPositionedAnim</code>, it will block the possibility of bugging the positioned animation so they can't trying to fly",
+        "Added posilility of disable animation if sitting in vehicle, add <code>disableInVehicle = true</code> in <code>animations.lua</code>",
+        "Visually improved keybind saving"
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "date": "15/11/2022",
+      "changes": [
+        "Blocked starting new animation while currently has anim",
+        "Added synchronized animations for two players"
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "18/10/2022",
+      "changes": [
+        "Multiple opening of animation panel blocked",
+        "Added ability to setting position player animation when is triggered",
+        "The ability to run animations while falling has been blocked",
+        "In the config, you can set the animation positioning interaction keys, the border color, whether the border should be displayed in the player game, and its size"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "date": "16/10/2022",
+      "changes": [
+        "Added to the config the ability to disable display and use virtual ped for the entire server <code>Config.FullyDisableVirtualPed</code>, also then the animation preview icons are removed from each animation.",
+        "Added the ability to also add the use of the command (<code>ExecuteCommand</code>) when using the animation, for example, you can add to the animation of smoking a cigarette, <code>ExecuteCommand = \"/me lights a cigarette\"</code>",
+        "Added notification telling you how to add an animation to your favorites when you press on that category and there are none there"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "14/10/2022",
+      "changes": [
+        "Added keybinds of animations"
+      ]
+    }
+  ]
+}
