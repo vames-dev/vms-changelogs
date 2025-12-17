@@ -1,0 +1,69 @@
+{
+  "currentVersion": "1.0.8",
+  "entries": [
+    {
+      "version": "1.0.8",
+      "date": "27/02/2025",
+      "changes": [
+        "Protection against an issue related to vehicle spawning on OneSync Infinity"
+      ]
+    },
+    {
+      "version": "1.0.7",
+      "date": "04/09/2023",
+      "changes": [
+        "Fixed the problem with buying vehicle with when using option <code>Config.UseRoutingBucketsInShowRoom</code>",
+        "Added <code>Config.UseFadeWithSpawn</code>: smoother transition when buying a vehicle"
+      ]
+    },
+    {
+      "version": "1.0.6",
+      "date": "31/08/2023",
+      "changes": [
+        "Added support for target system (<code>Config.Target</code>) and option <code>targetSystemRotation</code> to all shops in <code>Config.VehicleShops</code>",
+        "Added <code>Config.UseRoutingBucketsInShowRoom</code> & <code>Config.UseRoutingBucketsOnTestDrive</code>",
+        "Added ability to set a custom prefix for vehicle license plates purchased from the vehicle shop (<code>Config.PlateCustomPrefix</code>)",
+        "Added function <code>DrawText3D</code> to <code>config.client.lua</code> which you can modify to your own preference",
+        "Added <code>Config.VehicleInShowRoom</code> to <code>config.client.lua</code>, with this function you can modify vehicle in showroom like set custom license plate \"SHOWROOM\""
+      ]
+    },
+    {
+      "version": "1.0.5",
+      "date": "02/06/2023",
+      "changes": [
+        "Fixed Config.UseVehicleColorsRGB for QB-Core"
+      ]
+    },
+    {
+      "version": "1.0.4",
+      "date": "06/05/2023",
+      "changes": [
+        "Fixed a bug with setting up a car dealer only for a job"
+      ]
+    },
+    {
+      "version": "1.0.3",
+      "date": "04/05/2023",
+      "changes": [
+        "Added <code>Config.PlayerLoaded</code>",
+        "Added <code>Config.JobUpdated</code>",
+        "Added <code>requiredJob</code> & <code>requiredJobGrade</code> to <code>Config.VehicleShops</code> - this means that you can make vehicleshop available only when the player has a certain job and you can make that it requires a certain rank to be able to use the services of a car dealer"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "date": "14/04/2023",
+      "changes": [
+        "Added <code>Config.GiveKeysTestDrive</code> - to be able to give the keys for a test drive",
+        "Changed from <code>Config.GiveKeys</code> to <code>Config.GiveKeysBuy</code>"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "07/04/2023",
+      "changes": [
+        "Added <code>Config.UseVehicleColorsRGB</code>, if you use vehicle colors by index, set it <code>false</code>, if you use custom colors by rgb, set it <code>true</code>"
+      ]
+    }
+  ]
+}
