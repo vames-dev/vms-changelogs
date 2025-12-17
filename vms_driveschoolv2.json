@@ -1,12 +1,118 @@
 {
-  "currentVersion": "1.2.3",
+  "currentVersion": "1.1.3",
   "entries": [
     {
-      "version": "1.2.3",
-      "date": "",
+      "version": "1.1.3",
+      "date": "24/07/2025",
       "changes": [
-        "Added support for <code>17mov_Phone</code>",
-        "Fixed <code>ShowSecondaryMarketOnly</code> - the value was inverted (<code>true</code>/<code>false</code>) in the previous update"
+        "Added <code>menuAutoFind</code> function to <code>config.lua</code> - automatically detects a compatible menu",
+        "Added <code>Config.SpawnVehicle</code> function, allowing you to customize the vehicle spawn logic"
+      ]
+    },
+    {
+      "version": "1.1.2",
+      "date": "03/01/2025",
+      "changes": [
+        "Added <code>Config.PlayerDropped</code> to protect against locking the maneuvering area with a vehicle when a player leaves the server during an exam, the vehicle and the examiner's ped will be removed",
+        "Support for ox_inventory and qs-inventory items",
+        "Fixed icon display in exam selection menu",
+        "Fixed adding license item for ESX and assigning license metadata for item"
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "date": "23/10/2024",
+      "changes": [
+        "Fixed a bug related to qb-core licenses"
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "17/09/2024",
+      "changes": [
+        "Added compatibility with the upcoming cityhall resource (<code>Config.UseVMSCityHall</code>)",
+        "Support for Buty-License with new <code>Config.LicensesResource<code>",
+        "Added auto-detect of <code>Config.Core</code> and <code>Config.CoreExport</code>",
+        "<code>Config.ManeuveringAreaCoords</code> added, this allows you to enter multiple coordinates to check if no one is currently taking the exam at the maneuvering area",
+        "Added framework functions to <code>config.server.lua</code>",
+        "Added <code>Config.MenuIcon</code>",
+        "Added menuIcon to <code>Config.Licenses</code>",
+        "Secured the license addition event from cheaters",
+        "Added script translation in languages by default: EN, DE, FR, ES, PT, NL, PL, IT, CZ, SV",
+        "Improved the function of creating a vehicle for the practical exam",
+        "Moved translation from <code>config.lua</code> to <code>config.translation.lua</code> to be able to do multi-language",
+        "Moved UI translation from <code>translation.js</code> to <code>translation.json</code> to be able to do multi-language",
+        "Moved <code>questions.js</code> file from .html/ to .config/"
+      ]
+    },
+    {
+      "version": "1.0.9",
+      "date": "11/01/2024",
+      "changes": [
+        "Polish voiceover added for practical exam",
+        "Added to <code>Config.OnVehicleSpawn</code> compatibility with qs-vehiclekeys and wasabi_carlock",
+        "Added <code>Config.OnVehicleDelete</code> function to <code>config.client.lua</code> which allows keys to be taken away",
+        "Corrected in <code>config.server.lua</code> from <code>Config.UseLicenseAddItem</code> to <code>Config.AddLicenseItem</code>",
+        "Fixed double command \"return to driving school\" on failed practical test"
+      ]
+    },
+    {
+      "version": "1.0.8",
+      "date": "04/09/2023",
+      "changes": [
+        "The problem with the possibility of continuing the practical test with a different vehicle than the one received at the driving school has been fixed."
+      ]
+    },
+    {
+      "version": "1.0.7",
+      "date": "31/08/2023",
+      "changes": [
+        "Added function <code>Config.BeforeOpeningMenu</code> to <code>config.client.lua</code> which you check or do anything you want before opening menu",
+        "Added teleport to vehicle spawn location which results in long distance spawn compatibility for Onesync",
+        "Added <code>Config.AddLicenseItem</code>, you can add the license item after completing the practical exam"
+      ]
+    },
+    {
+      "version": "1.0.6",
+      "date": "18/06/2023",
+      "changes": [
+        "Added instruction speech in French and Portuguese",
+        "Added compatibility with target system such as ox_target"
+      ]
+    },
+    {
+      "version": "1.0.5",
+      "date": "31/05/2023",
+      "changes": [
+        "Added instructor speech in Spanish and added texts in Spanish to Config.Tasks",
+        "Added <code>Config.EnableMaxSpeedLoop</code> - if you set this to <code>true</code>, the player after exceeding the speed limit will not be able to drive above the speed limit all the time because it will refresh his speed and give errors in the practical exam.",
+        "Added <code>Config.MaxSpeedLoopTimeout</code> - this works when <code>Config.EnableMaxSpeedLoop = true</code> and this is the value of how often the players speed should refresh to give him another error if he continues to exceed the speed limit. I recommend giving it at least 1000/2000 ms so that the player has time to react to brake.",
+        "Compatibility with ox_lib context",
+        "Added for ESX <code>esx_license.sql</code> file"
+      ]
+    },
+    {
+      "version": "1.0.4",
+      "date": "11/04/2023",
+      "changes": [
+        "Added check if maneuvering area is empty for new exam (<code>Config.CheckIsManeuveringAreaIsOccupied</code>)"
+      ]
+    },
+    {
+      "version": "1.0.3",
+      "date": "26/03/2023",
+      "changes": [
+        "Fixed problem with doubled blip of return to driving school after exceeding error limit when returning to driving school",
+        "Fixed a bug with <code>QuestionsCount</code> & <code>QuestionToAnswer</code>, now you can have fewer answers required and a larger question pool",
+        "Added enabled option to <code>Config.Licenses</code>, it allows to disable given exams",
+        "Added Bulgarian voice audio and translation to <code>Config.Tasks</code>"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "date": "14/03/2023",
+      "changes": [
+        "Fixed <code>esx_license</code> xPlayer error"
       ]
     },
     {
@@ -14,8 +120,8 @@
       "date": "05/03/2023",
       "changes": [
         "Added audio commands spoken by examiner in German language",
-        "Added Config.Examiner.SpokenLanguage, now selectable EN and DE",
-        "Added to Config.Tasks the exact texts that the examiner says"
+        "Added <code>Config.Examiner.SpokenLanguage</code>, now selectable EN and DE",
+        "Added to <code>Config.Tasks</code> the exact texts that the examiner says"
       ]
     }
   ]
