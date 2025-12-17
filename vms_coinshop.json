@@ -1,0 +1,22 @@
+{
+  "currentVersion": "1.0.2",
+  "entries": [
+    {
+      "version": "1.0.2",
+      "date": "07/08/2023",
+      "changes": [
+        "Added <code>Config.PlayerLoaded</code> to load dailyrewards information",
+        "Improved loading of dailyrewards",
+        "Fixed permament vip status",
+        "Changed from callback to trigger to use code"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "29/03/2023",
+      "changes": [
+        "Added notifications informing about the lack of coins"
+      ]
+    }
+  ]
+}
