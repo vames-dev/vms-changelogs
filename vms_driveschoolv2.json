@@ -8,6 +8,15 @@
         "Added support for <code>17mov_Phone</code>",
         "Fixed <code>ShowSecondaryMarketOnly</code> - the value was inverted (<code>true</code>/<code>false</code>) in the previous update"
       ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "05/03/2023",
+      "changes": [
+        "Added audio commands spoken by examiner in German language",
+        "Added Config.Examiner.SpokenLanguage, now selectable EN and DE",
+        "Added to Config.Tasks the exact texts that the examiner says"
+      ]
     }
   ]
 }
