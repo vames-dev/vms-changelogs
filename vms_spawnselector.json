@@ -1,0 +1,79 @@
+{
+  "currentVersion": "1.0.9",
+  "entries": [
+    {
+      "date": "08/07/2025",
+      "version": "1.0.9",
+      "changes": [
+        "Added <code>SV.checkToCancel</code> function - allows canceling the spawn selector launch based on your own custom conditions",
+        "Added compatibility with VMS Housing spawns and support for respawning at the last known location if the player disconnected inside a property"
+      ]
+    },
+    {
+      "date": "27/02/2025",
+      "version": "1.0.8",
+      "changes": [
+        "Patch for ps-housing spawns"
+      ]
+    },
+    {
+      "date": "03/06/2024",
+      "version": "1.0.7",
+      "changes": [
+        "Adjusted spawn housing for qs-housing v3",
+        "Added <code>onPlayerSpawned</code> function in <code>config.client.lua</code> with first spawn parameter, you can now launch the player for example vms_guidebook when he joins for the first time",
+        "Added <code>SV.getJailStatus</code> function to <code>config.server.lua</code> it is compatible by default with esx_jail, esx-qalle-jail, mx_jail, qb-prisons, pickle_prisons, rcore_prisons and it allows no spawn selection by the player when he is in jail, also in <code>config.lua</code> you can disable this with the <code>Config.CheckJail</code> option and set the default spawn coordinates when in jail in <code>Config.IsJailedTeleportOnCoords</code> or set as nil, then it uses the spawn on the last location.",
+        "Added returning no houses when you have no compatible house system and you have the option running",
+        "Changed function format in <code>config.server.lua</code> from <code>exampleFunctionName()</code> to <code>SV.exampleFunctionName()</code> as in other vms resources"
+      ]
+    },
+    {
+      "date": "11/02/2024",
+      "version": "1.0.6",
+      "changes": [
+        "Added compatibility with ps-housing, bcs_housing",
+        "Compatibility has been improved with qs-housing on qb-core"
+      ]
+    },
+    {
+      "date": "17/01/2024",
+      "version": "1.0.5",
+      "changes": [
+        "Bug fix for QB-Core"
+      ]
+    },
+    {
+      "date": "14/01/2024",
+      "version": "1.0.4",
+      "changes": [
+        "Added <code>Config.UseOnlyFirstJoinSelect</code>, this allows the player to select his spawn location only once until the server restarts (this works on characters, so for each character he can select a position)",
+        "Added support for qs-housing with <code>Config.UseHousingSpawns</code>"
+      ]
+    },
+    {
+      "date": "05/10/2023",
+      "version": "1.0.3",
+      "changes": [
+        "Added <code>Config.UseHousingSpawns</code> option - support for spawn points in front of one's house - default done for QB-Houses and ESX Proparty 1.8.5+, ability to impelement custom housing system in <code>config.client.lua</code> & <code>config.server.lua.</code>",
+        "Added to launch export and events the isFirstSpawn parameter which, when the value is true, will not display the last location option.",
+        "Added <code>Config.OnlyJobsSpawns</code> - you can add special spawn points for people with specific jobs."
+      ]
+    },
+    {
+      "date": "09/05/2023",
+      "version": "1.0.2",
+      "changes": [
+        "Fixed problem with loading playerdata on QB-Core",
+        "Fixed problem with displaying warning from ESX about callback request"
+      ]
+    },
+    {
+      "date": "06/05/2023",
+      "version": "1.0.1",
+      "changes": [
+        "Changed the player's coordinates from above the camera to a position where the player can choose where to spawn while selecting spawn position",
+        "Added <code>Config.OnDeadOnlyLastPosition</code> - if the player logged out while dead, he will only be able to select the previous position"
+      ]
+    }
+  ]
+}
