@@ -4,6 +4,7 @@
     {
       "version": "1.3.0",
       "date": "05/01/2025",
+      "image": "vms_anims-1.3.0.webp",
       "changes": [
         "Redesigned UI a little bit",
         "Adjusted UI for 4K resolution",
@@ -51,14 +52,14 @@
       "version": "1.2.3",
       "date": "14/10/2023",
       "changes": [
-        "Added the \"Adjust\" button to the menu and the <code>Config.AnimAdjustCommandName</code> command to the ability to adjust each animation (not scenarios) - you can still use the playerRotate option in <code>animations.lua</code> but if you use adjust the player can adjust each animation once",
+        "Added the \"Adjust\" button to the menu and the <code>Config.AnimAdjustCommandName</code> command to the ability to adjust each animation (not scenarios) - you can still use the <code>playerRotate</code> option in <code>animations.lua</code> but if you use adjust the player can adjust each animation once",
         "Added a new option to <code>animations.lua</code>: <code>runFunction</code> - it's a function to which you can add whatever you want e.g. events, exports whatever you need to trigger when running an animation",
         "Added hiding of weapon menu during character rotation in animation adjustment menu",
         "Added new <code>exports.vms_anims:Cancel()</code> - for cancelling animations launched via anims menu",
         "Added new parameters to <code>RunAnimationById</code> export: <code>disableAdjusting</code>, options for synchronized animations",
         "Fixed falling character during positioning",
         "Corrected the problem of cancelling the animation of the virtual ped equally with the animation of the player, now it is separate, cancelling the virtualped will not also cancel the player animation",
-        "Corrected for <code>RunAnimationById</code> using time -1",
+        "Corrected for RunAnimationById using time -1",
         "Disabled ability to cancel animation when adjusting position, caused bug",
         "Improved controls after closing menu with the focus menu on the search bar",
         "Solved problem with shooting after pressing search bar with gun in hand"
@@ -69,12 +70,12 @@
       "date": "05/08/2023",
       "changes": [
         "Added <code>Config.DefaultQuestionMenuKeys</code> - if you want to change the accept and reject keys of the animation proposal synchronized with the question default menu vms_anims, now you can change it there",
-        "Added for synchronized animations the ability to use with prop and particles - also added an animation example at the very bottom of the animations.lua file",
+        "The animation search has been changed - you don't have to type in the animation name from the beginning, e.g. DANCE GLOWS... to have the DANCE GLOWSTICK animation pop up for you, now you can just type GLOWSTICK and you will have it",
+        "Fixed second prop in three dance glowsticks animations",
+        "Added for synchronized animations the ability to use with prop and particles - also added an animation example at the very bottom of the <code>animations.lua</code> file",
         "Added <code>Config.EnableSelfSyncedAnim</code>: when searching for a player for a synchronized animation, the ability to select yourself among other players also could run this animation without selecting another player - displays a helpButtons menu in the lower left corner informing you that you can switch players with the E key",
         "Added export <code>RunAnimationById</code> to the possibility of use with other resources so that you don't have to register and load animations in the future for other activities, you can do this with one simple export from vms_anims if it is also available in <code>animations.lua</code>",
-        "Added additional translation to E key in <code>translations.js</code> file",
-        "Fixed second prop in three dance glowsticks animations",
-        "The animation search has been changed - you don't have to type in the animation name from the beginning, e.g. DANCE GLOWS... to have the DANCE GLOWSTICK animation pop up for you, now you can just type GLOWSTICK and you will have it"
+        "Added additional translation to E key in <code>translations.js</code> file"
       ]
     },
     {
@@ -88,6 +89,7 @@
     {
       "version": "1.2.0",
       "date": "25/05/2023",
+      "image": "vms_anims-1.2.0.gif",
       "changes": [
         "Added preview of walking style on virtual ped",
         "Added <code>Config.VirtualPedPreviewWalkingTime</code>",
@@ -156,10 +158,10 @@
       "version": "1.1.3",
       "date": "28/01/2023",
       "changes": [
-        "Added ability to cancel synced animations via Config.CancelKey",
-        "Added Config.Hud (Ability to manage the display of the hud when the menu is running)",
-        "Added a new option Config.DisableKeyBindWhileDead to the config, you can disable the ability to open the menu if the player is dead",
-        "Fixed bug with minimap display after closing the animation menu"
+        "Added ability to cancel synced animations via <code>Config.CancelKey</code>",
+        "Added <code>Config.Hud</code> (Ability to manage the display of the hud when the menu is running)",
+        "Fixed bug with minimap display after closing the animation menu",
+        "Added a new option <code>Config.DisableKeyBindWhileDead</code> to the config, you can disable the ability to open the menu if the player is dead"
       ]
     },
     {
@@ -167,15 +169,16 @@
       "date": "08/01/2023",
       "changes": [
         "Added <code>translations.js</code>",
+        "Visually improved keybind saving",
         "Added <code>Config.RunAnimWhileRunned</code>, you will be able to turn on an animation without turning off the previous one",
         "Added <code>Config.DisableRunNextPositionedAnim</code>, it will block the possibility of bugging the positioned animation so they can't trying to fly",
-        "Added posilility of disable animation if sitting in vehicle, add <code>disableInVehicle = true</code> in <code>animations.lua</code>",
-        "Visually improved keybind saving"
+        "Added posilility of disable animation if sitting in vehicle, add <code>disableInVehicle = true</code> in <code>animations.lua</code>"
       ]
     },
     {
       "version": "1.1.1",
       "date": "15/11/2022",
+      "image": "vms_anims-1.1.1.webp",
       "changes": [
         "Blocked starting new animation while currently has anim",
         "Added synchronized animations for two players"
