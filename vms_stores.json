@@ -1,0 +1,132 @@
+{
+  "currentVersion": "1.1.2",
+  "entries": [
+    {
+      "date": "30/11/2025",
+      "version": "1.1.2",
+      "changes": [
+        "Fixed robbery start option",
+        "Renamed the option in <code>config.robbery.lua</code> - <code>Config.StartRobberyOnDealDamageByWeapon</code> => <code>Config.StartRobberyOnTakeDamageByWeapon</code>",
+        "Added <code>CL.AllowedToUse</code><br>This allows you to implement custom logic for granting permission to open menus or take a basket (e.g., checking whether the player is handcuffed)",
+        "Added a built-in polyzone system that no longer causes identification issues when teleporting to the store<br>This means you no longer need the PolyZone resource for this script.",
+        "Added the ability to purchase a store using a bank account - if you don't have enough cash on you",
+        "Added client-side exports<br><code>openManagementMenu</code><br><code>openShelf</code><br><code>openCheckout</code><br><code>getCurrentStore</code>",
+        "Fixed updating of the tax section after making a payment"
+      ]
+    },
+    {
+      "date": "14/03/2025",
+      "version": "1.1.1",
+      "changes": [
+        "Fixed a bug related to fuel taxes (for VMS City Hall users).",
+        "Blocked the ability to remove fuel from the shopping list using the Y menu and secured the attempt to clear the basket by returning it.",
+        "Added protection against an error caused by teleporting between stores for players using the target system - now, you will receive a warning with information instead of an error."
+      ]
+    },
+    {
+      "date": "20/02/2025",
+      "version": "1.1.0",
+      "changes": [
+        "Added <code>orderProductsLimit</code> option to <code>Config.LevelsBenefits</code> - it allows ordering multiple products at one time (maximum 3)",
+        "Added <code>Config.StartRobberyOnShootInPolyZone</code> - the ability to disable the existing method of starting a robbery (This option allowed a shot anywhere in the store zone to start a robbery)",
+        "Added <code>Config.StartRobberyOnAiming</code> and <code>Config.StartRobberyOnAimingTime</code> as a new option to start a store robbery - requiring you to aim at the cashier for a certain amount of time instead of shooting (You must aim at the ped for X amount of time - you can't move the cursor off the ped for the time to count)",
+        "Added <code>Config.StartRobberyOnDealDamageByWeapon</code> as another new option for starting a store robbery - requirement to inflict damage on the ped - for example, hit him with a baseball bat or shoot him",
+        "Added <code>Config.StartRobberyWeaponsAllowed</code> to limit the weapons that can start a robbery, for example so that a player cannot hit a ped with his hand or snowball to start a robbery",
+        "Added <code>SV.removeAllEmployees</code> function, which will remove jobs to players who were employed in the store when the store is sold (when it is resold for another player, it will not remove jobs to players)",
+        "Fixed <code>An error occurred while calling export sendAnnouncement</code> after refueling vehicle without paying",
+        "Protection against duplicate options under target",
+        "Webhook modifications - <code>DESCRIPTION.CREATE_ORDER</code>, <code>DESCRIPTION.DELIVERY_ORDER</code>",
+        "Modified ox_fuel to be able to use all stations even those not belonging to stores (previously you could only refuel a vehicle at a station with an interiors) - Gasoline canisters functionality improved - item: weapon_petrolcan (Requires ox_inventory!)"
+      ]
+    },
+    {
+      "date": "01/12/2024",
+      "version": "1.0.9",
+      "changes": [
+        "Added <code>Config.GlobalRobberyTimeout</code> to <code>config.robbery.lua</code> - this allows you to set a global timeout in effect for each store",
+        "Added <code>Config.PurchaseProductsLimit</code> - this allows you to set a per player limit on the ability to buy products until the next server/script restart",
+        "Added <code>Config.Debug</code>",
+        "Fixed date and active status bug for resumes from vms_cityhall",
+        "Fixed default fuel price for player owned stores when using <code>Config.AbilityChangeProductsPrices</code>"
+      ]
+    },
+    {
+      "date": "21/10/2024",
+      "version": "1.0.8",
+      "changes": [
+        "Added auto-detect for framework and framework events",
+        "Introduced compatibility with the tax system and job resumes from vms_cityhall",
+        "Fixed heading loading for delivery vehicle on qb-core"
+      ]
+    },
+    {
+      "date": "12/05/2024",
+      "version": "1.0.7",
+      "changes": [
+        "Added <code>Config.AbilityRobItems</code> and <code>Config.RobberyItems</code>, this allows additional steal of items from the safe",
+        "Added two new options to <code>Config.Stores</code>: <code>blipId</code> and <code>blipOwnedId</code> - now allows you to configure a different blip for each store by entering a unique id and configuring the blip in <code>Config.Blips</code>",
+        "Improved checking the number of police officers as several jobs listed in the table",
+        "Fixed a bug related to the lack of fuel removal after fuel steal using prepared LegacyFuel / ox_fuel (You must also update ox_fuel/LegacyFuel!)",
+        "A bug has been fixed that caused an robbery notification to be sent multiple times",
+        "Fixed duplicated target after store purchase on QBOX"
+      ]
+    },
+    {
+      "date": "16/03/2024",
+      "version": "1.0.6",
+      "changes": [
+        "Bug related to not being able to rob a safe when not using a target has been fixed",
+        "Fixed setting the right grade when buying a store - boss"
+      ]
+    },
+    {
+      "date": "08/03/2024",
+      "version": "1.0.5",
+      "changes": [
+        "Added help notification for parking a vehicle during product delivery.",
+        "Fixed the problem related to hiring a new player and refreshing the target.",
+        "The issue related to network ID and placing boxes into the bus has been fixed. A safeguard has been implemented to prevent any bugs associated with this."
+      ]
+    },
+    {
+      "date": "04/03/2024",
+      "version": "1.0.4",
+      "changes": [
+        "Added <code>Config.AbilityChangeProductsPrices</code> & <code>Config.CustomPricesRange</code> - this allows employees to set custom prices for products in their store",
+        "Added <code>Config.EscorterPed</code> & <code>Config.EscorderVehicle</code> to <code>config.storemanage.lua</code> - you can change the models of the ped and the money escort vehicle",
+        "Corrected duplicate blips on the map",
+        "Improved hiding of shopping cart menu after removing any item from it"
+      ]
+    },
+    {
+      "date": "11/02/2024",
+      "version": "1.0.3",
+      "changes": [
+        "Added translation in Dutch language.",
+        "A bug \"ESX\" on fuel delivery has been fixed and added the ability to use 3DText and TextUI on it."
+      ]
+    },
+    {
+      "date": "31/01/2024",
+      "version": "1.0.2",
+      "changes": [
+        "Added translation in Portuguese language",
+        "Improved sending information about delivered fuel to players who are at the PolyZone of station and plan to refuel the vehicle",
+        "Fixed fuel payment when in ox_fuel/LegacyFuel the option with the possibility of fuel theft is disabled"
+      ]
+    },
+    {
+      "date": "16/01/2024",
+      "version": "1.0.1",
+      "changes": [
+        "Added <code>Config.SaveTimeout</code>: Time every time the stores should refresh to save the status or delete it when the liquidation time has passed",
+        "Added a <code>pedModel</code> option in each store to <code>CashierPoints</code> so you can set a different cashier ped model",
+        "Added translation in Czech and Italian language",
+        "Fixed a bug with saving the status of stores",
+        "Fixed a bug related to the possibility of ordering multiple escorts from the Money Escort option",
+        "Fixed bug with cashiers ped respawning",
+        "Fixed bug with robbery when you don't use the required time in <code>Config.RobberyPossibleTime</code> - now you can use both options without a problem"
+      ]
+    }
+  ]
+}
