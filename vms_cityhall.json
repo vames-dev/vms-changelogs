@@ -36,6 +36,7 @@
     {
       "date": "25/02/2025",
       "version": "1.0.4",
+      "image": "vms_cityhall-1.0.4.gif",
       "changes": [
         "Added new billing method - Receipt<br>- Three new items introduced: payment_terminal, thermal_paper, receipt<br>- Recommended usage: e.g., for restaurants",
         "Added <code>allowCopy</code> option to <code>Config.CheckVIN</code> - Allows copying the VIN after checking it in a vehicle",
@@ -52,6 +53,7 @@
     {
       "date": "11/12/2024",
       "version": "1.0.3",
+      "image": "vms_cityhall-1.0.3.webp",
       "changes": [
         "Compatibility with vms_bossmenu in <code>SV.addSocietyMoney</code>, <code>SV.removeSocietyMoney</code>, <code>SV.getBusinessTaxAccount</code>, <code>SV.removeBusinessTaxAccount</code>, <code>SV.sendBusinessMessage</code>",
         "Added a new export <code>giveBill</code>: this allows you to add tickets/invoices via server-side to a player, e.g. for speed cameras.",
