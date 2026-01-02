@@ -1,0 +1,55 @@
+{
+  "currentVersion": "1.0.5",
+  "entries": [
+    {
+      "date": "28/02/2025",
+      "version": "1.0.5",
+      "changes": [
+        "Fixed getting badgeNumber from vms_bossmenu for QB-Core"
+      ]
+    },
+    {
+      "date": "13/02/2025",
+      "version": "1.0.4",
+      "changes": [
+        "Fixed a bug that sometimes prevented gangs from changing grades for their members",
+        "Changed the method for checking target availability from <code>job</code> to <code>canInteract</code> for qb-target"
+      ]
+    },
+    {
+      "date": "11/02/2025",
+      "version": "1.0.3",
+      "changes": [
+        "Added Stash section and ability to customize permissions for grades, in addition, in <code>Config.JobMenusSettings</code> possible to configure <code>allowStash</code>, <code>stashSettings</code><br><code>Config.Inventory</code>: by default compatible with ox_inventory, qb-inventory, origen_inventory, tgiann-inventory, if you have custom you need to make changes in <code>CL.OpenStash</code> / <code>SV.openStash</code>, <code>SV.registerAllStashes</code>",
+        "Added support for Renewed-Banking, tgg-banking in Config.Banking",
+        "Added Badge column to employee list in menu",
+        "Added sql execute for ESX in <code>SV.setPlayerJob</code> and <code>SV.gangPlayerJob</code> to avoid the requirement to wait for the employee list to update",
+        "Added automatic entry of badge column when using <code>Config.AutoExecuteQuery</code>",
+        "Modified functions that search for the current compatible resource in use",
+        "If your rank does not have access to the Options button in employees list, you will not see the entire column",
+        "Changed the method for checking target availability from <code>groups</code> to <code>canInteract</code> because target systems do not have the ability to check the gang",
+        "Changed method of getting data from database for qb-core from <code>SELECT *</code> to specify columns",
+        "Fixed bug preventing some users from opening menus"
+      ]
+    },
+    {
+      "date": "02/01/2025",
+      "version": "1.0.2",
+      "changes": [
+        "Added badge number system and its assignment to employees (* Requires adding a new column to its users/players table).",
+        "Added support for displaying a list of employees using job duty for ESX, which works like police/offpolice - <code>Config.UseOffDutyJobName</code> & <code>Config.OffDutyJobNamePrefix</code>",
+        "Created new server-side exports: <code>getPlayerBadge</code>, <code>getPlayerBadges</code>, <code>setPlayerBadge</code>",
+        "Fixed the ability to scroll the list of employee ranks in the clothing section",
+        "Fixed a bug that, for some users, required a restart of the resource to load the jobs list from the framework"
+      ]
+    },
+    {
+      "date": "24/11/2024",
+      "version": "1.0.1",
+      "changes": [
+        "Added <code>version_check.lua</code> file to check script version and inform about updates",
+        "Fixed <code>Society doesnt exist!</code>"
+      ]
+    }
+  ]
+}
