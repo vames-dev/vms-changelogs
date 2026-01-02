@@ -1,0 +1,343 @@
+{
+  "currentVersion": "1.2.4",
+  "entries": [
+    {
+      "date": "16/12/2025",
+      "version": "1.2.4",
+      "changes": [
+        "Added missing translations for marketplace menu titles",
+        "Added a filter button in the All Properties section",
+        "Currently available option: \"Exclude Starting Apartments\" for easier property list browsing",
+        "Added TeleportToStartingApartment export - client-side and server-side",
+        "Added support for qbx_core administration permissions<br>Please note: you must configure SV.GetPlayerGroup if you are using roles other than god, admin, mod, or support",
+        "Added support for qbx_garages",
+        "Added support for tgiann-clothing",
+        "Added support for lb-tablet (internal property search functionality inside lb-tablet)",
+        "Improved Routing Bucket handling after joining the server in the last property",
+        "Fixed an issue with garage access when using 3D Text Interaction",
+        "Fixed an issue that simulated pressing Enter in the F8 console after finishing furniture placement with the gizmo",
+        "Fixed compatibility with tgiann-inventory for <code>ESX RegisterUsableItem</code>",
+        "Fixed compatibility with ZSX_Garages",
+        "Fixed qb-weathersync and qbx_weathersync",
+        "It is recommended to apply the changes from the documentation in your qb-weathersync/qbx_weathersync to avoid temporary snow/rain appearing inside shells"
+      ]
+    },
+    {
+      "date": "07/12/2025",
+      "version": "1.2.3",
+      "changes": [
+        "Added support for 17mov_Phone",
+        "Fixed <code>ShowSecondaryMarketOnly</code> - the value was inverted (true/false) in the previous update"
+      ]
+    },
+    {
+      "date": "05/12/2025",
+      "version": "1.2.2",
+      "changes": [
+        "Added Compatibility Debug to the server console<br>Helps identify loading order issues server-side.",
+        "Added missing alarm translations for all languages",
+        "Added support for lation_ui menu",
+        "Added support for ZSX_Garages",
+        "Added support for Atenea Shells",
+        "Added <code>GiveProperty</code> server-side export and <code>giveproperty</code> command",
+        "Improved phone compatibility detection by adding a delayed initialization step (500ms).<br>Ensures the phone resource is correctly detected even if it loads before or after vms_housing in server.cfg.",
+        "Improved alarm authorization code formatting<br>Previously required exact input like \"000 000\".<br>You can now also enter \"000000\".",
+        "Fixed property display in marketplace when <code>ShowSecondaryMarketOnly = true</code>",
+        "Fixed typo in Banking Integration (<code>Config.BossMenu</code> => <code>Config.Banking</code>)",
+        "Fixed duplication of Wardrobe/Storage target interactions after property data updates",
+        "Fixed <code>GetSocietyMoney</code> function<br>SocietyName now correctly references <code>Config.RealEstate.Jobs</code> instead of the player job name.",
+        "Separated SMS compatibility between gksphone 1.0 and 2.0",
+        "Improved SMS compatibility with okokPhone"
+      ]
+    },
+    {
+      "date": "25/11/2025",
+      "version": "1.2.1",
+      "changes": [
+        "Improved server-side validation and added additional safety checks for furniture transactions during unstable connections.<br>We strongly recommend updating to ensure the best stability and consistency."
+      ]
+    },
+    {
+      "date": "24/11/2025",
+      "version": "1.2.0",
+      "image": "vms_housing-1.2.0.webp",
+      "changes": [
+        "Added Real Estate Agency System<br>You can now create an unlimited number of agencies.<br>These agencies can purchase properties either from players or directly from the server, allowing you to resell properties afterwards.",
+        "You can also configure a Showroom (like current Marketplace), where players can browse all properties offered by the agency and optionally purchase them - depending on your configuration.",
+        "For the best integration, it is recommended to use vms_bossmenu, as it automatically registers all purchase/sale transactions history.<br>However, external integration files are included as well.",
+        "Added Alarm Alert System<br>Players can now register their phone number to receive burglary alerts.<br>The system requires SMS verification - the player receives a code via SMS, and must enter it within a specified time to confirm the number.",
+        "Added <code>Config.DoorsSpeed</code> (Single, Double, Gate)<br>You can now adjust the opening/closing speed for all door types.",
+        "Added <code>Config.AllowInteractionUnderRaid</code><br>During a Police Raid, officers can now interact with furniture and static interaction points inside the property, enabling proper searching.",
+        "Added Images section to Property Creator<br>When creating a property, you can now take up to 5 photos, which will be displayed on the Marketplace.",
+        "Added compatibility with qb-garages.",
+        "Moved Auto-Detectors to <code>config.integrations.lua</code>"
+      ]
+    },
+    {
+      "date": "14/11/2025",
+      "version": "1.1.9",
+      "changes": [
+        "Added <code>EXIT_PREVIEW</code> to <code>Config.HousingCreatorControls</code>, allowing you to change the exit key for the Preview mode (Shell / IPL).",
+        "Added missing control menu for Power Box configuration",
+        "Fixed incorrect weight and slots values for qb-inventory storage.",
+        "Fixed an issue that caused problems when leaving the yard zone in MLO while using the gizmo furniture mode.",
+        "Fixed an issue some users experienced where they were unable to interact with properties after exiting the interior.<br>The cause was an attempt to load the Power Box object, which is only available starting from DLC Bottom Dollar Bounties (Game Build 3258).<br>If you want to use the Power Box, your server must run build 3258 or higher, or you can install the provided compatibility files found in the [compatibility] folder."
+      ]
+    },
+    {
+      "date": "08/11/2025",
+      "version": "1.1.8",
+      "changes": [
+        "Added integration for jaksam_inventory",
+        "Fixed heading for the okokGarage integration",
+        "Fixed an issue where the open Manage Menu was being overwritten with data from another property when a different player made changes to their own property",
+        "Fixed coordinate bug for buildings compatible with all supported dispatch systems",
+        "Fixed an error that occurred when removing the owner/renter of an MLO property that had no registered doors"
+      ]
+    },
+    {
+      "date": "04/11/2025",
+      "version": "1.1.7",
+      "changes": [
+        "Fixed a bug \"outside the zone\" in furniture for Motel MLO",
+        "Fixed a bug that prevented placing furniture in the property yard when <code>Config.RequirePurchaseFurniture = false</code>",
+        "Fixed creator headings being saved as integers instead of floats to prevent potential issues."
+      ]
+    },
+    {
+      "date": "31/10/2025",
+      "version": "1.1.6",
+      "image": "vms_housing-1.1.6.webp",
+      "changes": [
+        "Added interactive Power Box<br>Configurable in the Property Creator for Shell / IPL.<br>You can turn off the power in the house, destroy the box, turn it back on, or repair it - if you fail the process, several effects may occur: explosion or electric shock with knockback, damage, or instant death (each option can be configured in <code>Config.PowerBox</code>).<br>If the box is destroyed or turned off, the property loses electricity - you won't be able to turn on lights until you repair or reactivate the Power Box.<br>You can also configure the required items for each action - by default, the Pliers item is required for Destroy, and Insulating Tape for Repair.",
+        "Added support for new shells: Jamaring Maps Housing Shells V1/V2/V3/V4/V5",
+        "Fixed a bug where dirt generation and 3D Text on doors were not loading properly after using the <code>EnterProperty</code> export",
+        "Fixed an error occurring in MLOs when no doors were registered",
+        "Fixed Raid/Lockpick for MLO doors in motels when using 3D Text"
+      ]
+    },
+    {
+      "date": "22/10/2025",
+      "version": "1.1.5",
+      "changes": [
+        "Added server-side export <code>DropPlayerFromProperty</code><br>Documentation updated with compatibility for esx_ambulancejob, qb-ambulancejob, and qbx_ambulancejob - EMS alerts upon player death are now sent based on the property's coordinates if the player dies inside one, and upon hospital respawn, the player is automatically removed from the property.",
+        "Added lazy loading to the Furniture menu and Order Furniture section in the management panel.<br>Furniture items now load progressively while scrolling, which eliminates the brief lag that occurred when opening the menu.",
+        "Added <code>config.filterFurnitureAlphabetically</code> to <code>config.js</code>",
+        "Fixed a bug with furniture placement in shell interiors<br>Only applies when <code>Config.RequirePurchaseFurniture = false</code>",
+        "Fixed an issue where some furniture items might not load after reconnecting to the server if the player left while inside a property",
+        "Removed brief display of the Furniture menu after placing a furniture"
+      ]
+    },
+    {
+      "date": "14/10/2025",
+      "version": "1.1.4",
+      "changes": [
+        "Fixed an issue with recognizing key ownership with <code>Config.UseKeysOnItem = false</code>"
+      ]
+    },
+    {
+      "date": "13/10/2025",
+      "version": "1.1.3",
+      "image": "vms_housing-1.1.3.webp",
+      "changes": [
+        "Added a new interactive Mop furniture - players can now pick up a mop from the bucket and clean dirt inside the property.<br>The mop is intended for indoor use only, do not allow outdoor use, as it will not be interactive.",
+        "Added dirt generation system caused by player movement.<br>Dirt is now created only while walking, not when standing still.",
+        "Added blood stains that appear when the player takes damage.<br>The stain size depends on the amount of HP lost (15–20 HP = small stain, +20 HP = large stain).",
+        "Added new configuration section \"Dirt and Cleaning\", including options such as:<br><code>DirtSystem</code>, <code>DirtSlipping</code>, <code>DirtSlippingChance</code>, <code>MaxDirtPerProperty</code>, <code>DirtSpawnChance</code>, <code>DirtSpawnTimeout</code>, and <code>DirtObjects</code>.",
+        "Added slipping mechanic - if enabled, players have a configurable chance to slip on dirt and fall (ragdoll).",
+        "Added new client & server exports and a server event allowing you to create dirt manually (recommended for custom systems like food or drink to spawn crumbs).",
+        "A new reason parameter has been added to the <code>SV.AddMoney</code>, <code>SV.RemoveMoney</code>, and <code>SV.AddMoneyOffline</code> functions - all transaction reasons are available with registered functions in the <code>config.server.lua</code> file.",
+        "Fixed 3D Text scaling based on furniture size - texts previously aligned to the bottom edge are now properly centered.",
+        "Various minor improvements.",
+        "Special thanks to DC Customz for creating the dirt models exclusively for VMS Housing. 🤝"
+      ]
+    },
+    {
+      "date": "10/10/2025",
+      "version": "1.1.2",
+      "changes": [
+        "Added distance lock in furniture gizmo mode<br>Introduced three new options in <code>Config.FurnitureSettings</code>: <code>CancelOutsideZone</code>, <code>GizmoMaxDistanceIPL</code>, <code>GizmoMaxMarginShell</code>. This allows you to set restrictions - players can no longer use freecam to move around the map, a distance lock has been added, and they can't fly beyond the yard zone or leave the apartment interior.",
+        "Improved IPL handling<br>Added full compatibility for new IPLs - previous limitations have been removed. IPLs no longer require the Theme option or the internal functions <code>.Style.Clear</code> / <code>.Style.Set</code> from the bob74_ipl export."
+      ]
+    },
+    {
+      "date": "28/09/2025",
+      "version": "1.1.1",
+      "changes": [
+        "Fixed a bug preventing Wardrobe or Storage from being set via the Creator Menu.",
+        "Fixed an issue where incorrectly configured Interior Zone for an MLO still allowed the property to be purchased.<br>Previously it displayed an empty menu for 3d text interaction.",
+        "Fixed a bug with Toggle Lock for apartments in buildings when <code>Config.UseKeysOnItem = true</code>.<br>Now the option only shows if you actually have the key item in your inventory. If you don't, the option won't appear - regardless of whether you're the owner or renter.<br>Previously, the option was visible for owners/renter even without the key item."
+      ]
+    },
+    {
+      "date": "26/09/2025",
+      "version": "1.1.0",
+      "changes": [
+        "Fixed requirement for setting Shell Position",
+        "Fixed bug where re-saving a property would set the shell position to 0.0, 0.0, 0.0",
+        "Fixed key-related door bug when <code>Config.UseKeysOnItem = false</code>",
+        "Fixed bug with server-side export <code>EnterProperty</code>",
+        "Fixed selection options in the player list menu (e.g. when granting permissions) so they are now clickable.<br>Previously, with a larger number of players nearby, it was sometimes impossible to select the intended player."
+      ]
+    },
+    {
+      "date": "13/09/2025",
+      "version": "1.0.9",
+      "changes": [
+        "Added compatibility with ESX Garages",
+        "Added Door Furniture<br>To make door furniture work correctly, you must add <code>setr game_enableDynamicDoorCreation \"true\"</code> in <code>server.cfg</code>.",
+        "Added new configuration option for shell properties: Shell Position<br>For new properties this option is required during creation.<br>For already existing houses, it is recommended to reconfigure this option, as it resolves issues with external resources (e.g. dropped inventory items being visible in every apartment).",
+        "Added automatic Shell Position assignment for Starter Apartments",
+        "Added <code>Config.AllowExitOnLocked</code><br>Allows players to exit a property even when the door is locked, so they don't need to unlock/lock it to leave.",
+        "Added new permission system for the Creator menu in <code>Config.HousingCreator</code><br>Permissions can now be separated into jobs and groups.<br>It is also possible to assign specific rights (create, modify, delete, etc.) to individual roles.",
+        "Added option enabled in <code>Config.Blips</code>",
+        "Added <code>Config.MaxVisitingTime</code><br>You can set maximum allowed visiting time before purchase.",
+        "Fixed Controls Menu for Peephole and IPL Theme",
+        "Fixed webhook bug when taking pictures in the Marketplace section",
+        "Fixed coordinates for shell_v16mid"
+      ]
+    },
+    {
+      "date": "31/08/2025",
+      "version": "1.0.8",
+      "changes": [
+        "Added alphabetical sorting for the Building menu & owned properties are always displayed at the top",
+        "Added automatic key item for Starter Apartment when using <code>Config.AutomaticGiveKeyForProperty</code> and <code>Config.UseKeysOnItem</code>",
+        "Fixed description of the Smart Peephole upgrade",
+        "Fixed a bug that allowed opening the Creator menu when trying to use the 'Check inside' button if the interior was not included in your integration files",
+        "Fixed a bug where weather was not resumed after exiting Preview Shell mode in the Creator menu",
+        "Fixed an issue where furniture was not removed from the database during Automatic Sale",
+        "Fixed Toggle Lock for key items in Apartments"
+      ]
+    },
+    {
+      "date": "23/08/2025",
+      "version": "1.0.7",
+      "changes": [
+        "Fixed the <code>CL.GetInventoryItem</code> function to also work for QB-Core",
+        "Fixed a bug that caused duplication of Storage IDs in furniture after delivery, resulting in several pieces of furniture with the same storage"
+      ]
+    },
+    {
+      "date": "23/08/2025",
+      "version": "1.0.6",
+      "changes": [
+        "Added new options to <code>Config.Lockpick</code>:<br><code>PoliceJobs</code> - a list of police factions considered when checking the number of online officers required to lockpick a property.<br><code>RequiredPolice</code> - the minimum number of online officers required to allow lockpicking.<br><code>RequiredOwnerOnline</code> - option that requires the property owner or tenant to be online in order to start lockpicking.",
+        "Fixed a financial bug in Weekly Rent - the calculated bill amount is now generated correctly.",
+        "Fixed a critical bug that deleted Weekly Rent bills after they were paid when using <code>Config.OptimizeBillsTable</code> - this caused the initial payment at the start of a rental to be canceled after a server restart."
+      ]
+    },
+    {
+      "date": "16/08/2025",
+      "version": "1.0.5",
+      "image": "vms_housing-1.0.5.webp",
+      "changes": [
+        "Added Non-Target Interaction Mode<br>The resource can now work without a target system - simply walk up and press E.<br>This was one of the most requested features - now the script is also available for those who prefer a simple and direct interaction system.",
+        "Added Shell Creator with Static Interactable Configurator<br>The built-in creator lets you configure a new apartment interior (shell) within minutes and instantly add Static Interactable points (e.g., washing hands, shower).<br>Everything works in real time - you place interaction points, and the script generates a ready-to-use config file that can be copied straight into the integration.",
+        "Added configuration for new interaction controls in <code>Config.HousingCreatorControls</code> for Static Interactables in the shell creator",
+        "Added compatibility with K4MB1-AllShellsSubPack & K4MB1-AllShellsSubPack2",
+        "Added configurable functions: <code>CL.DrawText3D</code>, <code>CL.GetInventoryItem</code>",
+        "Added new configuration options: <code>Config.UseTarget</code>, <code>Config.UseDrawText</code>, <code>Config.UseDrawTextBox</code>, <code>Config.MenuResource</code> (with auto-detection of the active menu)",
+        "Added events when entering/exiting freecam mode - allowing bypass integration with anti-cheat",
+        "Added Pitch rotation in furniture photo mode inside the creator (Arrow Up & Arrow Down)",
+        "Implemented alphabetical filtering in Create Property => Shell",
+        "Fixed lockdown functionality in MLO",
+        "Fixed lockpick option not being removed in MLO when <code>Config.Lockpick.Enable = false</code>",
+        "Fixed incorrect loading of <code>menuCoords</code> in the MLO creator when editing properties",
+        "Fixed environment identification for Furniture in MLO",
+        "Fixed counting of loaded furniture in server-side debug",
+        "Changed shell preview images to full interior top-view shots for easier identification when managing a large number of shells on the server",
+        "Changed the method of loading Shell / IPL images in integration files - from path to url",
+        "Changed property data loading method from <code>TriggerClientEvent</code> to <code>TriggerLatentClientEvent</code> (performance optimization)"
+      ]
+    },
+    {
+      "date": "31/07/2025",
+      "version": "1.0.4",
+      "changes": [
+        "Added LB Phone compatibility (Available in documentation)",
+        "Added Chezza Inventory compatibility",
+        "Added 🗑️ button in \"All Properties\" that allows removing the Owner or Renter of a specific property",
+        "Added a new option for Shells and IPLs - Emergency Exit, allowing players to leave the property through an emergency exit (exit-only, cannot be used to enter)",
+        "Added tooltips to the Creator Menu to clarify specific options",
+        "Added support for weekly property rental (editable via <code>Config.RentalCycles</code>)",
+        "Added server-side export <code>EnterProperty</code>",
+        "Added <code>CL.HandleAction</code> function with two currently available actions: <code>enterInteriorPreview</code> and <code>exitInteriorPreview</code> - allows, for example, blocking the inventory during Check Inside preview.",
+        "Temporarily added <code>Config.DebugRegionsZone</code> to simplify adding new regions, along with the /getRegion command that prints the name of your current region",
+        "Changed the door handling method - door-related issues should no longer occur.",
+        "Reduced the delay for loading all properties on the client after joining the server (All data will now load into the game faster)",
+        "Fixed an error when you tried to accept a non-existent entity in 'Edit Furniture'",
+        "Fixed a bug after using 'Check Inside' on Motel IPL/Shell",
+        "Fixed a bug where bills weren't being deleted after rental ended",
+        "Fixed an issue where permissions and keys couldn't be managed if player identifiers were purely numeric",
+        "Fixed a bug that could cause local overwriting of property data after modification without saving",
+        "Fixed visual scaling of the \"All Properties\" list in the creator when using long identifiers",
+        "Corrected resource name from 'cd_garages' to 'cd_garage' in the integration file and <code>config.lua</code>",
+        "Corrected resource name from 'lb_tablet' to 'lb-tablet' in the integration file and <code>config.lua</code>",
+        "Graphics files have been optimized:<br>Furniture: 123 MB => 17,4 MB,<br>Shells 147 MB => 21,5 MB,<br>IPL 31,86 MB => 8,14 MB"
+      ]
+    },
+    {
+      "date": "21/07/2025",
+      "version": "1.0.3",
+      "changes": [
+        "Fixed 'Check inside' button interaction for building apartments",
+        "Added routing buckets support to 'Check inside' feature",
+        "Added weather and time synchronization when using 'Check inside'",
+        "Added a fallback for add-on map areas or Cayo Perico - if the address can't be resolved, a dash (-) is now used as the placeholder",
+        "Added missing translation for <code>move_out:modal</code> in other languages",
+        "Fixed loading of selected IPL Theme for 'Check inside' and rental",
+        "Fixed Z-coordinate issue for Kuz Quality Shells when the entrance is located on a non-zero floor",
+        "Fixed duplicated key encoding when renting with <code>Config.AutomaticGiveKeyForProperty</code> enabled",
+        "Fixed lockpicking interaction for houses",
+        "Fixed Change PIN functionality for safes",
+        "Fixed double doors being labeled as single in Creator",
+        "Improved Move Out logic - when moving out from inside the property, the player is now correctly removed from interior",
+        "Improved data reset for edited properties to avoid overwriting when creating a new one",
+        "Improved unfreeze door after property removal"
+      ]
+    },
+    {
+      "date": "19/07/2025",
+      "version": "1.0.2",
+      "changes": [
+        "Added support for Kuz Quality Shell Creator (Automatically loads all shells created using kq_shellbuilder - Update your Shell Creator to v1.6.2)",
+        "Added support for lb_tablet dispatch",
+        "Added \"Move Out\" button - Allows players to leave a rented property.",
+        "Added <code>Config.PermissionsLimit</code> - Allows you to set a limit for how many players can have permissions in a property.",
+        "Added peephole feature for apartments",
+        "Added missing slots and weight data in <code>OpenStorage</code> for static storages",
+        "Added <code>Config.AutomaticGiveKeyForProperty</code> - Allows the player to automatically receive a key when purchasing/renting a property from the server (only works for item-based keys).",
+        "Added Keys Limit and Permissions Limit options - Now configurable per-property during creation.",
+        "Added <code>ShowSecondaryMarketOnly</code> option to <code>Config.Marketplace</code> - Allows displaying all properties, not just those from the secondary market.",
+        "Added search input in Creator -> All Properties tab",
+        "Reduced sliding gate open/close speed",
+        "Fixed blip reload after renting/purchasing a property",
+        "Fixed permission updates after selling/cancelling rental",
+        "Fixed ability to cancel/close rental contract from another player using ESC",
+        "Improved compatibility with qs-inventory",
+        "Fixed wardrobe/storage creation for apartments",
+        "Minor additional fixes"
+      ]
+    },
+    {
+      "date": "15/07/2025",
+      "version": "1.0.1",
+      "image": "vms_housing-1.0.1.webp",
+      "changes": [
+        "Added missing translation for MLO door target option",
+        "Added new door type to the MLO creator - Slide Gate (example shown in the screenshot)",
+        "Added ability to adjust door interaction distance (use scroll while setting up the door)",
+        "Added the ability to modify <code>minZ</code> (lower height) of PolyZone for Yard and Interior types in the creator (Hold Left CTRL and use Scroll)",
+        "Reduced PolyZone height adjustment step from 1.0m to 0.3m for better precision",
+        "Fixed bug related to house purchase/rent",
+        "Fixed editing of doors in MLOs assigned to Motels",
+        "Fixed furniture unloading bug for MLOs depending on player position (inside/outside)",
+        "Fixed lockpicking",
+        "Fixed checking of required items for target options: Lockpick, Lockdown, Raid",
+        "Fixed undefined signature",
+        "Removed the unused \"Check Inside\" button from MLO properties"
+      ]
+    }
+  ]
+}
