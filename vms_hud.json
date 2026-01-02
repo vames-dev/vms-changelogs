@@ -51,6 +51,7 @@
     {
       "date": "09/11/2023",
       "version": "1.0.9",
+      "image": "vms_hud-1.0.9.webp",
       "changes": [
         "Added <code>Config.SeatBeltAlarm</code> & <code>Config.SeatBeltAlarmMinimumSpeed</code>: This enables the use of the seatbelt warning sound and the setting of a minimum speed for detection.",
         "Added <code>Config.UseStressEffects</code> & <code>Config.StressEffects</code>: This makes it possible to add and configure stress effects at a certain range of values.",
