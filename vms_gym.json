@@ -1,0 +1,112 @@
+{
+  "currentVersion": "2.0.1",
+  "entries": [
+    {
+      "date": "22/10/2024",
+      "version": "2.0.1",
+      "changes": [
+        "Fixed a bug related to the statistics menu and other menus not displaying."
+      ]
+    },
+    {
+      "date": "19/10/2024",
+      "version": "2.0.0",
+      "image": "vms_gym-2.0.0.webp",
+      "changes": [
+        "Complete redesign of the resource to ensure consistency across VMS resources",
+        "Added management menu, similar to the one in vms_tuning/vms_vehicleshopV2/vms_stores",
+        "Added membership and protein sales in management menu when gym is configured as business",
+        "Added receipt for membership or protein payment known from vms_tuning/vms_clothestore among others",
+        "Added custom menu for buying memberships and proteins in the gym instead of esx menu/qb menu/ox menu",
+        "Added ability to combine memberships (you can renew your current one)",
+        "Introduced compatibility with the tax system and job resumes from vms_cityhall",
+        "Moved many options from <code>config.lua</code> to <code>config.client.lua</code> and changed the prefix from <code>Config.</code> to <code>CL.</code>",
+        "Moved UI translations to the <code>translations.json</code> file (Multi-language: EN, DE, FR, ES, PT, PL, CZ)"
+      ]
+    },
+    {
+      "date": "28/11/2023",
+      "version": "1.0.9",
+      "changes": [
+        "Blocked switching from exercise to exercise using the target that caused the bug."
+      ]
+    },
+    {
+      "date": "13/11/2023",
+      "version": "1.0.8",
+      "changes": [
+        "Added server-side exports for skill management (<code>getSkill</code>, <code>addSkill</code>, <code>removeSkill</code>) - described and available in documentation",
+        "Fixed adding of flying skill",
+        "Fixed condition booster for treadmill exercises"
+      ]
+    },
+    {
+      "date": "16/10/2023",
+      "version": "1.0.7",
+      "changes": [
+        "Fixed hourly memberships for non-business gyms",
+        "Added <code>Config.UnitOfSpeed</code> - if you use the driving skil and its effects, you can customize the speed system for your server",
+        "Added <code>Config.EnableSkillDrivingEffects</code> & <code>Config.SkillDrivingEffectMinimumSpeed</code> - With low driving skill your vehicle will run into slides more often or through lack of skill will randomly turn, the higher the level the less or no effect it has, you can already change it using this option not required changes in <code>config.client.lua</code>, also you can change minimum speed to get effects"
+      ]
+    },
+    {
+      "date": "09/10/2023",
+      "version": "1.0.6",
+      "changes": [
+        "Added <code>shootingBlacklistWeapons</code> list with the ability to enter weapons that will be blocked for skilling - <code>config.client.lua</code>",
+        "Added ability to set up hourly memberships",
+        "Added extra <code>math.random</code> to the chance of getting the shooting skill to make it not so easy",
+        "Corrected title for qb-menu and ox_lib when accepting membership purchase."
+      ]
+    },
+    {
+      "date": "02/10/2023",
+      "version": "1.0.5",
+      "changes": [
+        "Added automatic removal of strenght skill when no training is given",
+        "Fixed elements titles for qb-menu in membership menu",
+        "Fixed server-side error for saving statistics when no players are online"
+      ]
+    },
+    {
+      "date": "05/09/2023",
+      "version": "1.0.4",
+      "changes": [
+        "Added for <code>Config.Gyms</code> the <code>blipEnabled</code> option",
+        "Fixed a problem with saving statistics",
+        "Fixed <code>Config.Target</code> for qb-target",
+        "Changed events <code>Config.PlayerLogoutServer</code>"
+      ]
+    },
+    {
+      "date": "24/08/2023",
+      "version": "1.0.3",
+      "changes": [
+        "Fixed a bug with increasing skil level while riding on a passenger",
+        "Added skill <code>\"Flying\"</code> - now players have separate driving of land vehicles and flying vehicles",
+        "Added two boosters items <code>'protein'</code> and <code>'runbooster'</code>.",
+        "Added booster event condition and strength: <code>\"vms_gym:runConditionBooster\"</code>, <code>\"vms_gym:runStrengthBooster\"</code> with parameter multiplier, time.",
+        "Added to the statistics menu buttons responsible for the ability to turn off and turn on for themselves notifications of skilling increase or decrease"
+      ]
+    },
+    {
+      "date": "09/08/2023",
+      "version": "1.0.2",
+      "changes": [
+        "Added <code>Config.EnableStaminaModifier</code> - you can modify a character's stamina level, which results in the ability to sprint longer without fatigue",
+        "Fixed disabling individual skill options in <code>Config.StatisticsMenu</code> so that this statistic could not be boosted",
+        "Improved random twist and slip for driving skill",
+        "Improved the addition of driver-only driving skills",
+        "Fixed notifications of increase and decrease of skill for values below 0.0 will not be displayed for decrease and above 100.0 will not be displayed for increase either",
+        "Server-side error problem corrected"
+      ]
+    },
+    {
+      "date": "05/08/2023",
+      "version": "1.0.1",
+      "changes": [
+        "Fixed <code>Config.PlayerLogoutServer</code> event that saves player stats when logging out of server on QB-Core"
+      ]
+    }
+  ]
+}
