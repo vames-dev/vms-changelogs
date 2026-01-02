@@ -1,0 +1,35 @@
+{
+  "currentVersion": "1.0.3",
+  "entries": [
+    {
+      "date": "03/03/2025",
+      "version": "1.0.3",
+      "changes": [
+        "Added Combat Log Reports - If a player leaves the server, their ghost will remain visible to all players for a duration you specify. The ghost will display selected information such as steam name, character name, identifier, reason, and an option to press E for easy player reporting. Pressing E will automatically open a new report with a special message containing the selected data and coordinates. If you already have an open report, the message will be automatically added to the existing one. (The ghost is compatible with esx_skin, qb-clothing, fivem-appearance, illenium-appearance, and rcore_clothing)",
+        "Added anti-spam messages in reports.",
+        "Fixed server-side errors that some players encountered.",
+        "Rewritten the message system and storage to eliminate issues that occurred on larger servers with a high number of reports and online players."
+      ]
+    },
+    {
+      "date": "01/06/2024",
+      "version": "1.0.2",
+      "changes": [
+        "Added translation of CLOSE button to <code>translation.js</code> (<code>translate.report_info.close</code>)",
+        "Improved server-side script performance",
+        "Fixed death checker module for qb-core and improved it with license plate information<br>(If you use a resource other than esx_ambulancejob/qb-ambulancejob or have other events for revive, you need to adjust them in <code>config.client.lua</code> to make the script aware that the player is no longer dead)"
+      ]
+    },
+    {
+      "date": "11/11/2023",
+      "version": "1.0.1",
+      "changes": [
+        "Added cause of death under the player's username with information on what he was killed from, by whom, and the model of vehicle he was run over with if he was (Only for ESX because in QB-Core player is not dead, it's only animation but if you are using custom death system, you can plug-in it in the <code>Config.GetDeathStatus</code>)",
+        "Added Admins Stats section so you can find out which admin is most active in helping players, and you can use this as a precise indicator because you have 4 values<br>- Claimed: When claiming this statistic is saved.<br>- Closed: When closing this statistic is saved.<br>- Sent Messages: After the message is sent, this statistic is saved.<br>- Resolved Reports: When claiming, sending a minimum of one message and closing the report, then the claim is considered fully resolved.",
+        "Added new action for admins<br>+ Take a Screenshot: It allows you to quickly take a screenshot of a player at any time when they have a report open<br>+ Open Inventory: If you have a custom inventory you can enter your custom export/event to open it in <code>Config.OpenCustomInventory</code> if you want to use our inventory menu, then you will see a list with items, weapons and player money (<code>SV.getInventory</code>)",
+        "Added translations in NL thanks to help from VMS Translators Team.",
+        "Fixed online/offline player status updates"
+      ]
+    }
+  ]
+}
