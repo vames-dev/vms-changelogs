@@ -1,0 +1,162 @@
+{
+  "currentVersion": "1.1.4",
+  "entries": [
+    {
+      "date": "20/02/2024",
+      "version": "1.1.4",
+      "changes": [
+        "Fixed bug with no hud after closing pause menu ESC"
+      ]
+    },
+    {
+      "date": "18/02/2024",
+      "version": "1.1.3",
+      "changes": [
+        "Added <code>Config.EnableAbilityToggleBigMap</code>: using a key (<code>Config.ToggleBigMapKey</code>) or a command (<code>Config.ToggleBigMapCommand</code>), you can toggle the minimap to \"Big\" size",
+        "Added <code>Config.BigMapOnlyInVehicle</code>: You can set that the big minimap mode can be activated only in the vehicle",
+        "Fixed a bug at minimap display 1 that caused icons not to move to the right from the minimap when joining the server",
+        "Fixed a bug with the minimap displaying when you get into a vehicle during a hidden hud",
+        "Fixed a bug related to <code>Config.FirstSpeedometer</code> not loading"
+      ]
+    },
+    {
+      "date": "29/01/2024",
+      "version": "1.1.2",
+      "changes": [
+        "Added to Customization Hud Menu the ability to select display minimap - ALWAYS/NEVER/ONLY IN VEHICLE",
+        "Added <code>Config.EnableManageMinimapDisplay</code> - if you want players to be able to manage the minimap display in the Customization Hud Menu you should set true otherwise false",
+        "Added <code>Config.SeatBeltMinimumImpactVal</code> option to <code>config.lua</code>",
+        "Changed <code>Config.MinimapOnlyInVehicle</code> option in <code>config.lua</code> to <code>Config.MinimapDisplayType</code> with option - \"1\" = always, \"2\" = never, \"3\" = only in vehicle",
+        "Corrected W and E directions because they were in the wrong positions"
+      ]
+    },
+    {
+      "date": "30/11/2023",
+      "version": "1.1.1",
+      "changes": [
+        "Added export <code>hasSeatbelt</code>: <code>exports[\"vms_hud\"]:hasSeatbelt()</code> - it returns <code>true</code> or <code>false</code>",
+        "Fixed a bug that occurred when joining a server using the stress effect",
+        "Reduced sensitivity to falling out by lack of seat belts caused by hard braking at high speed"
+      ]
+    },
+    {
+      "date": "13/11/2023",
+      "version": "1.1.0",
+      "changes": [
+        "Added world directions to the street label with the ability to use depending on whether you want it displayed from the direction of the vehicle or the player's camera, and it is possible to disable it using the <code>Config.DisableCompass</code> option",
+        "Fixed loading of minimap for <code>Config.MinimapOnlyInVehicle = false</code>",
+        "Fixed Gear in Circle Speedometer for 4k resolution"
+      ]
+    },
+    {
+      "date": "09/11/2023",
+      "version": "1.0.9",
+      "changes": [
+        "Added <code>Config.SeatBeltAlarm</code> & <code>Config.SeatBeltAlarmMinimumSpeed</code>: This enables the use of the seatbelt warning sound and the setting of a minimum speed for detection.",
+        "Added <code>Config.UseStressEffects</code> & <code>Config.StressEffects</code>: This makes it possible to add and configure stress effects at a certain range of values.",
+        "Added <code>Config.EnableGear</code>: This allows the addition of a gear display on the speedometer",
+        "Added <code>Config.DisableSpeedometer</code>: This allows the speedometer to be completely disabled along with its options for Cutomization Menu",
+        "Added engine damage indicator on the speedometer (<code>Config.GetVehicleDamage</code>)",
+        "Occasionally some users have experienced a problem with the minimap not loading, a patch has been introduced which should eliminate this problem completely",
+        "Improved map hiding for Cinematic Mode",
+        "Fixed falling out of the vehicle caused by unbuckling the seat belts at high speed",
+        "Automatic cancellation of cruise control on the vehicle after leaving the vehicle or shuffing to another seat"
+      ]
+    },
+    {
+      "date": "09/10/2023",
+      "version": "1.0.8",
+      "changes": [
+        "Fixed an scaling issue with the map display range for cayo perico",
+        "Fixed disappearance of default health bars from gta after closing ESC map"
+      ]
+    },
+    {
+      "date": "02/10/2023",
+      "version": "1.0.7",
+      "changes": [
+        "Replaced <code>minimap.gfx</code> file with updated one, blips are loading correctly",
+        "Improved the display of stress after it has been reduced with the <code>vms_hud:removeStress</code> event in <code>config.server.lua</code> for qb-core"
+      ]
+    },
+    {
+      "date": "04/09/2023",
+      "version": "1.0.6",
+      "changes": [
+        "Fixed sliding the status hud icons in vehicle to the right side of the map on the first connection",
+        "Fixed bug with <code>PlayerData.money</code> when joining a server in QB-Core",
+        "Probably got rid of a completely random bug with the map such as remaining large",
+        "Two types of cruise control have been added - you have to hold down to drive at the set maximum speed, or just press and it automatically drives forward. (<code>Config.CruiseControlPressAndRide</code>)",
+        "For cruise control, you can set the minimum and maximum speed at which to run it (<code>Config.CruiseControlSpeed</code>)",
+        "For cruise control, you can set the classes of vehicles in which it can be used (<code>Config.CruiseControlVehiclesClasses</code>)",
+        "Added a cruise control icon to the speedometer if you are using it",
+        "Added to the customization menu option Icons:<br>Scale: 1.5 1.25 1.0 and 0.75,<br>Icons Range Direction: you can change the position of the status bar to the right,<br>Hide Informations: a useful option for streamers who want to hide information about their character such as job, money or gang.",
+        "Added to the new <code>./config/config.js</code> file options such as<br><code>Config.LogoOpacity</code>: if you want to reduce the transparency of the logo along with the name, you can easily do it by changing the value there,<br><code>Config.InfoItemsAlign</code>: id, job, money can be moved to the right side from the logo,<br><code>Config.InfoItemsTextAlign</code>: you can change the alignment of the text from info hud,<br><code>Config.InfoItemsIconAlign</code>: with this you can change the position of the icons from info hud to the right side"
+      ]
+    },
+    {
+      "date": "07/08/2023",
+      "version": "1.0.5",
+      "changes": [
+        "Added to the <code>config.client.lua</code> file the <code>PlaySeatbeltSound</code> function which starts playing the sound of buckling and unbuckling the seatbelt, if you want to use yours from InteractSound or another resource, you can change it there",
+        "Added <code>Config.EnableDrunkStatus</code> - For ESX users, you can add for esx_status drunk status but for QB-Core users, the default is no drunk status in the player metadata",
+        "Added <code>Config.EnableToggleHud</code> - allows you to add a key and command to display and hide the hud",
+        "Added <code>Config.UseVMSGym</code> - For users of vms_gym and driving skill, when a car crash, the skill will drop with the value set in the config.lua on <code>Config.RemoveDrivingSkill</code>",
+        "Improved reading of vehicle speed to stress status",
+        "Added automatic loading of information to the info hud after restarting the script when you are on the server."
+      ]
+    },
+    {
+      "date": "11/07/2023",
+      "version": "1.0.4",
+      "changes": [
+        "Added compatibility voice range with mumble-voip (<code>Config.MumbleVoipRanges</code>)",
+        "Added <code>Config.EnableStressReducer</code> - in the <code>config.client.lua</code> file, there is a function that causes stress to be reduced when performing certain activities such as a leisurely walk",
+        "Added <code>Config.EnableStressShooting</code> - in the <code>config.client.lua</code> file, there is a function that increases stress when a player fires a weapon without a silencer",
+        "Added <code>Config.UseCustomMinimap</code> - use if you don't want the option to change the minimap type in the customization menu and use the default minimap from gta 5",
+        "Added <code>Config.CustomStreetNames</code> to ability to set custom street name",
+        "Added <code>Config.DebugStreetNames</code> to the ability to debug a street string to be able to set a custom street name more easily",
+        "Added <code>Config.FirstSpeedometer</code> to the ability to set the initial speedometer type for new players",
+        "Fixed <code>Config.FirstMinimap</code>"
+      ]
+    },
+    {
+      "date": "21/06/2023",
+      "version": "1.0.3",
+      "changes": [
+        "Fixed the update of the info hud of the money when the new one is equal to 0",
+        "Added compatibility with SaltyChat - (<code>Config.SaltyChatRanges</code>)",
+        "Changed for PMA Voice from Config.VoiceRanges to <code>Config.PMAVoiceRanges</code>",
+        "Added <code>Config.SeatBeltVehiclesClasses</code> - Classes of vehicles in which seat belts can be fastened",
+        "Added <code>Config.SeatBeltAntiRagdollVehicles</code> - Vehicle classes that are not taken into account in case of a hard hit (the player will not fall out of them)",
+        "A bug occurring with Company Balance has been fixed",
+        "Added ammo counter to info hud: <code>Config.EnableAmmoCounter</code> & <code>Config.EnableShowMaxAmmo</code>",
+        "Added to cutomization hud menu option No-Stack Status - so you can set icons anywhere on the screen and they won't scale to a particular direction",
+        "Added <code>Config.EnableStressGenerator</code> - Stress incraser if player ride without seat belts and above a certain speed in <code>Config.StressGeneratorMinSpeed</code>, how much stress will be added depends on the speed<br>If you want to reduce the player's stress and you don't have a stress reducer on the server, you can use the server trigger <code>TriggerClientEvent('vms_hud:removeStress', source, COUNT)</code> - COUNT you have to change to a number how much stress you want to come off the player, you can add this for example when the player sits on the bench or any other stress reducing activities"
+      ]
+    },
+    {
+      "date": "01/06/2023",
+      "version": "1.0.2",
+      "changes": [
+        "Improved loading of saved minimap from player game cache",
+        "Added <code>Config.EnablePlayerJob</code> & <code>Config.EnablePlayerJobGrade</code> - now you can add the players job to info hud",
+        "Added <code>Config.EnablePlayerGang</code> & <code>Config.EnablePlayerGangGrade</code> - now you can add the players gang to info hud "
+      ]
+    },
+    {
+      "date": "30/05/2023",
+      "version": "1.0.1",
+      "changes": [
+        "Improved export - <code>exports['vms_hud']:Display(boolean)</code>",
+        "Improved some status range bars",
+        "Added <code>Config.EnableDamageEffect</code> - when a player takes damage a red gradient appears around the screen",
+        "Added <code>Config.EnablePlayerId</code>",
+        "Added <code>Config.EnableStressStatus</code>, you can enable it if you have stress status on your server",
+        "Added <code>Config.EnableBlackMoneyBalance</code>, you can now set for players to see their dirty money",
+        "Added <code>Config.EnableCompanyBalance</code>, for ESX_SOCIETY, you can set to have the bosses of companies can see the balance of company money in the info hud<br>In order for esx_society to correctly send information to hud requires editing esx_society, a prepared version compatible with vms_hud has been added to the documentation. (https://docs.vames-store.com/assets/vms_hud/installation#if-you-want-to-use-config.enablecompanybalance-on-esx)",
+        "Added to the <code>translation.js</code> - <code>player_id_icon</code>, <code>cash_icon</code>, <code>bank_icon</code>, <code>black_money_icon</code>, <code>company_money_icon</code> for easely in case you want to change the icon"
+      ]
+    }
+  ]
+}
