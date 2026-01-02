@@ -1,0 +1,48 @@
+{
+  "currentVersion": "1.0.5",
+  "entries": [
+    {
+      "date": "28/02/2025",
+      "version": "1.0.5",
+      "changes": [
+        "Fixed getting badgeNumber from vms_bossmenu for QB-Core"
+      ]
+    },
+    {
+      "date": "25/02/2025",
+      "version": "1.0.4",
+      "changes": [
+        "Added to the <code>registerToPickup</code> export checking if the player has the required licenses before accepting the document request (for vms_cityhall)"
+      ]
+    },
+    {
+      "date": "13/02/2025",
+      "version": "1.0.3",
+      "changes": [
+        "Compatibility of <code>badgeNumber</code> with vms_bossmenu badges",
+        "Added a new parameter <code>cancelCurrentActive</code> to the <code>giveDocument()</code> export",
+        "Modified the behavior of the <code>giveDocument()</code> export – the photoId parameter is no longer required for automatic document generation. The document is now generated automatically when executing the export. You can, for example, configure automatic document issuance upon completing a driving license in vms_driveschoolV2, so the player will no longer need to visit the city hall to obtain a new document manually.",
+        "Added the needAnyLicenseToGetDocument option to <code>Config.Documents</code>.<br>If set to true, the player will not be able to obtain a document unless they have at least one of the licenses listed in licenses.<br>Example: If a player wants to obtain a Driving License but does not have a motorcycle, car, or truck license, they will not be able to receive it. However, if they have a motorcycle license, the document will be issued.<br>Important: The function <code>SV.getLicense</code> must return <code>''</code> or <code>' '</code> for a missing license. If it returns any other value, the system will not verify the license correctly.",
+        "Added to the documentation an example of using <code>isAnyDocumentValid()</code> in the context of modifying document metadata (e.g., in vms_driveschoolV2, if you don't want the player to receive a new document after completing the course). Additionally, we have added a tutorial on implementing metadata for origen_inventory in the Installation section.",
+        "Improved compatibility with origen_inventory in <code>SV.addItem</code> and added a dedicated export in <code>SV.registerUsableItem</code>."
+      ]
+    },
+    {
+      "date": "07/11/2024",
+      "version": "1.0.2",
+      "changes": [
+        "Added <code>Config.DistanceToStartPhotosProcess</code>: this allows you to set the minimum distance between the player and the point <code>Config.Photographers.camera.playerCoords</code>",
+        "Added <code>Config.MaxTimeWalkIn</code> & <code>Config.MaxTimeWalkOut</code>: maximum time in milliseconds a player can go to the point of taking pictures from the photographer and back again"
+      ]
+    },
+    {
+      "date": "30/10/2024",
+      "version": "1.0.1",
+      "changes": [
+        "Added compatibility with qs-inventory and ox_inventory on qb-core in <code>SV.registerUsableItem</code>",
+        "Fixed <code>SV.getLicense</code> function for QB-Core",
+        "Fixed an error causing the display that a document is active despite its theft report"
+      ]
+    }
+  ]
+}
