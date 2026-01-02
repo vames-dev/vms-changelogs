@@ -1,0 +1,162 @@
+{
+  "currentVersion": "1.1.8",
+  "entries": [
+    {
+      "date": "27/02/2025",
+      "version": "1.1.8",
+      "changes": [
+        "Added protection against a common error caused by failure to adjust notifications",
+        "Added <code>Config.AutoExecuteQuery</code> - automatic execution of SQL query to add required tables and columns",
+        "Added auto-detect for skin creator and spawn selector"
+      ]
+    },
+    {
+      "date": "05/10/2023",
+      "version": "1.1.7",
+      "changes": [
+        "Compatible with QBOX",
+        "Added <code>Config.CameraHeight</code> & <code>Config.CameraForward</code>",
+        "Added <code>Config.Hud</code> for the ability to hide the hud in the menu",
+        "Added <code>Config.UseRoutingBuckets</code> - this allows you to completely fix the problem with visibility or collisions between players in the menu, with the help of moving the player to a virtual world",
+        "Changed from <code>Config.CameraZHeight</code> to <code>Config.CameraHeightPoint</code>",
+        "Changed position from Diamond Casino to next to the field at Lost MC",
+        "Fixed removal of the only character",
+        "Added <code>Config.UseQBHouses</code> - to loading owned qb-houses with qb-garages houses (QB-Core)",
+        "Fixed console command addslots (QB-Core)"
+      ]
+    },
+    {
+      "date": "11/07/2023",
+      "version": "1.1.6",
+      "changes": [
+        "Fixed a problem with pressing the play button too fast"
+      ]
+    },
+    {
+      "date": "31/05/2023",
+      "version": "1.1.5",
+      "changes": [
+        "Fixed <code>Config.SelectFirstChar</code>"
+      ]
+    },
+    {
+      "date": "27/05/2023",
+      "version": "1.1.4",
+      "changes": [
+        "Added <code>Config.SkipSpawnSelector</code> to be able to use the spawn on the previous location without the spawn selector for QB-Core",
+        "Added <code>Config.SelectFirstChar</code> - it will select first possible player character by first connection on the server - recommended use"
+      ]
+    },
+    {
+      "date": "21/05/2023",
+      "version": "1.1.3",
+      "changes": [
+        "Added secured <code>Config.StarterItems</code> & <code>Config.StarterMoney</code> to <code>config_server.lua</code> file",
+        "Added some hints to <code>Config.UsersDatabase</code> on how to add options there (ESX)",
+        "Added the /addslots command for use only in the server console or through the tebex api, so you can sell slots on your server using the tebex store",
+        "Improved the function <code>openSpawnSelector</code> on <code>config_server.lua</code> for QB-Core",
+        "Fixed the command /setslots"
+      ]
+    },
+    {
+      "date": "04/05/2023",
+      "version": "1.1.2",
+      "changes": [
+        "Added <code>Config.UseCustomSpawnSelector</code>",
+        "Added function <code>openSpawnSelector()</code> to <code>config_server.lua</code>"
+      ]
+    },
+    {
+      "date": "02/05/2023",
+      "version": "1.1.1",
+      "changes": [
+        "Removed notification \"Wait for your character to load\", now you don't have to wait for the character to go in front of the camera, you can select the character earlier",
+        "<code>Config.SkyCoords</code> removed (this is taken from <code>Config.Spawn</code>)"
+      ]
+    },
+    {
+      "date": "24/04/2023",
+      "version": "1.1.0",
+      "changes": [
+        "Fixed an issue with disabling Config.ChangeCharacterPoint",
+        "Added qb-core DrawText to point of Config.ChangeCharacterPoint (QB-Core)",
+        "Added automatic loading of the correct gender of the one selected in identity into Config.UseCustomSkinCreator",
+        "Fixed problem with error display from es_extended when creating a new character (bad argument #1 to 'for iterator') (ESX)",
+        "Improved character creation in the default qb-clothing character creator (QB-Core)"
+      ]
+    },
+    {
+      "date": "06/04/2023",
+      "version": "1.0.9",
+      "changes": [
+        "Added <code>Config.SkinManager</code> which fixes black screen and character not loading issue - for fivem-appearance & illenium-appearance (QB-Core)",
+        "Fixed the reload UI when selecting a character"
+      ]
+    },
+    {
+      "date": "05/04/2023",
+      "version": "1.0.8",
+      "changes": [
+        "Changed UI loading when joining the server (Only after pressing a particular slot does the character come in) (ESX)",
+        "Corrected commands for QB-Core",
+        "Fixed UI loading error after character deletion (QB-Core)",
+        "Changed UI loading when joining the server (Only after pressing a particular slot does the character come in) (QB-Core)"
+      ]
+    },
+    {
+      "date": "04/04/2023",
+      "version": "1.0.7",
+      "changes": [
+        "Fixed problem with not being able to move after creating first character",
+        "Fixed problem with loading female ped model during character selection",
+        "Fixed the reload ui when deleting of characters",
+        "Changed in sql file from users to players"
+      ]
+    },
+    {
+      "date": "03/04/2023",
+      "version": "1.0.6",
+      "changes": [
+        "Compatible with QB-Core"
+      ]
+    },
+    {
+      "date": "21/03/2023",
+      "version": "1.0.5",
+      "changes": [
+        "Added <code>Config.CameraZHeight</code>",
+        "The problem with the active camera has been fixed"
+      ]
+    },
+    {
+      "date": "22/02/2023",
+      "version": "1.0.4",
+      "changes": [
+        "Fixed an issue with the character select button when a notification was displayed"
+      ]
+    },
+    {
+      "date": "02/01/2023",
+      "version": "1.0.3",
+      "changes": [
+        "Fixed spawn location on first login use <code>Config.SpawnLocation</code>"
+      ]
+    },
+    {
+      "date": "21/12/2022",
+      "version": "1.0.2",
+      "changes": [
+        "Fixed female character issues",
+        "Compatibility with custom character creators"
+      ]
+    },
+    {
+      "date": "14/12/2022",
+      "version": "1.0.1",
+      "changes": [
+        "Fixed a small bug with the camera during character creation",
+        "Compatible with fivem-appearance"
+      ]
+    }
+  ]
+}
