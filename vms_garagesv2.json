@@ -1,0 +1,283 @@
+{
+  "currentVersion": "1.3.9",
+  "entries": [
+    {
+      "version": "1.3.9",
+      "date": "19/12/2025",
+      "changes": [
+        "Added <code>Config.PersistenceSpawnDelay</code><br>Delay before persistent vehicles can start spawning after the <code>PlayerLoaded</code> event is triggered.<br>Helps avoid conflicts with player loading, routing buckets, and other resources.",
+        "Added <code>Config.PersistenceSpawnThrottle</code><br>Time to wait between consecutive persisted vehicle spawn requests.<br>This value is used as a throttle to prevent sending multiple spawn events at once when several persisted vehicles are within the spawn range.",
+        "Fixed a rare issue related to Housing Garages occurring during vehicle parking",
+        "Improved stability and resolved edge cases related to Persistent Vehicles"
+      ]
+    },
+    {
+      "version": "1.3.8",
+      "date": "13/12/2025",
+      "changes": [
+        "Added automatic removal of water-damaged vehicles from map after retrieving a vehicle from the impound.",
+        "Added <code>Config.ForcePropertiesSync</code><br>For some users this option will work good, for some it will not. It is recommended to set false as it is by default, you can also test with true, but each time you leave the vehicle, it can make an attempt to synchronize, it can also cause the doors to close, again cracking the windows/tires.",
+        "Fixed a bug where the netid was not being removed from the database after parking a vehicle in a garage.",
+        "Fixed a bug that allowed vehicle theft from Underground Parking regardless of the <code>AllowLockpick</code> option.",
+        "Fixed an issue with vehicle recovery in Job Impounds when <code>fine_amount</code> was set to 0 and the <code>Config.AllowJobImpoundsTakeVehWithoutPaying</code> option was disabled.",
+        "Disabled Persistent Vehicles in Underground Parkings.",
+        "Modified Vehicle Properties assignment.",
+        "Vehicles will no longer attempt to resynchronize.",
+        "Improved the compatibility guide for kq_wheeldamage with qb-core/qbx_core",
+        "Improved documentation for VehicleDeformation"
+      ]
+    },
+    {
+      "version": "1.3.7",
+      "date": "05/11/2025",
+      "changes": [
+        "Added the /dvp command - works like the default /dv framework command but also deletes persistent vehicles (<code>Config.DeletePersistentVehicleCommand</code>).",
+        "Fixed setting the position column to NULL with /tow command (Patch for Vehicle Persistent).",
+        "Fixed the <code>deleteVehicle</code> export to ensure it works for players in the Impound and prevents the vehicle from respawning at its last position after a restart."
+      ]
+    },
+    {
+      "version": "1.3.6",
+      "date": "03/11/2025",
+      "changes": [
+        "Added Vehicle Persistence (Beta Mode) (<code>Config.VehiclePersistence</code>)",
+        "Added server-side export <code>deleteVehicle</code><br>Allows you to delete persistent vehicles - you can integrate this export into your /dv command within your framework.",
+        "Added <code>Config.HousingGaragesType</code><br>If you're using VMS Housing and your vehicle type differs (e.g., car instead of vehicle), you can now adjust it so the system automatically generates garages using your custom type.",
+        "Fixed a bug that prevented ordering a company vehicle for grade 0."
+      ]
+    },
+    {
+      "version": "1.3.5",
+      "date": "27/08/2025",
+      "changes": [
+        "Added native <code>SetVehicleEngineOn</code> in <code>CL.SetOnVehicleSpawnLocally</code> so that parked boats have the engine turned off",
+        "Added VIN number generation in the <code>SV.GiveCar</code> function when using the /givecar command with vms_cityhall",
+        "Fixed a bug that prevented license plates consisting only of numbers"
+      ]
+    },
+    {
+      "version": "1.3.4",
+      "date": "26/07/2025",
+      "changes": [
+        "Compatibility with LB-Phone (Already available in the documentation!)",
+        "Compatibility with vms_notifyv2 Text UI",
+        "Changed the SQL method for fetching vehicles in garages to optimize the query",
+        "Fixed a bug related to vehicle properties after disconnecting from the server or leaving the vehicle outside of rendering range",
+        "Fixed a visual bug that showed the vehicle as parked for 23H for a few seconds after parking - it now correctly shows -1H immediately"
+      ]
+    },
+    {
+      "version": "1.3.3",
+      "date": "08/07/2025",
+      "changes": [
+        "Fixed an issue when bringing a vehicle via phone using the vms_garagesv2:vehicleTakenByPhone event"
+      ]
+    },
+    {
+      "version": "1.3.2",
+      "date": "08/07/2025",
+      "changes": [
+        "Added multi-level parking support for apartment buildings in VMS Housing",
+        "Fixed notification bug for parking spot rental price change",
+        "Resolved black screen issue in House Garages (Menu Mode)"
+      ]
+    },
+    {
+      "version": "1.3.1",
+      "date": "21/05/2025",
+      "changes": [
+        "Fixed a vehicle rotation issue on parking spots",
+        "Fixed a missing checkAreaOccupied validation for impounds"
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "30/04/2025",
+      "changes": [
+        "Added compatibility with <code>kq_wheeldamage</code> and <code>VehicleDeformation</code> using <code>CL.SetOnVehicleSpawn</code> & <code>CL.SetOnVehicleSpawnLocally</code>.",
+        "Added \"Parking Objects\" system - you can now place decorative or functional objects (e.g. parking meters) via <code>config.garages.lua</code> (<code>parkingObjects</code>).",
+        "Added \"recoverableFrom\" option to Config.Impounds - allows you to define a list of impounds from which a vehicle can be recovered in a specific impound point.",
+        "Added price editing in Management Menu for Business Parkings:<br>- Price Per Day<br>- Price for Infinity (flat fee)",
+        "Added automatic garage registration for nolag_properties and qs-housing.<br>⚠️ Note: If you've already registered housing garages and later change the Enter Garage point in the property management menu, it may cause inconsistencies.<br>For stability, filenames should follow this format:<br>- File name: <code'nolag_property:HousingID'</code><br>- Garage ID: <code>'HouseGarage:nolag_property-HousingID'</code><br>We recommend re-registering garages for full compatibility and future-proofing.",
+        "Introduced a new Housing Garage Menu system - works like regular garages but allows vehicle storage limits and is fully supported in the Parking Creator.",
+        "Added <code>Config.InstantVehicleLoading</code> to <code>config.lua</code> - enables loading all vehicles at once upon entering the PolyZone.<br>⚠️ This is an experimental feature. We recommend testing it on your own server, especially if you use many add-on vehicles.",
+        "Added <code>refreshVehicles</code> server-side export - allows dynamic refresh of parked vehicles (useful for scripted events or admin tools).",
+        "Fixed: Garage registration now properly closes the menu on success.",
+        "Changed: Tag for gang-owned garages now shows correctly as \"GANG GARAGE\"."
+      ]
+    },
+    {
+      "version": "1.2.3",
+      "date": "26/02/2025",
+      "changes": [
+        "Fixed a bug with <code>gradesAccess</code> that caused vehicles to not load in Job Garages with Predefined Vehicles"
+      ]
+    },
+    {
+      "version": "1.2.2",
+      "date": "04/02/2025",
+      "changes": [
+        "Added error debug to protect <code>SV.Database</code> misconfiguration",
+        "Fixed bug related to transfer of company/gang vehicles",
+        "Fixed bug preventing a company/gang vehicle from being taken from a public garage by an employee/member authorized to do so"
+      ]
+    },
+    {
+      "version": "1.2.1",
+      "date": "27/01/2025",
+      "changes": [
+        "Patch to protect against unwanted errors for ESX users when you don't have <code>xPlayer.job2</code>",
+        "Fixed the ability to recover gang vehicles in impound",
+        "Fixed a bug that prevented the transfer of a company/gang vehicle for grade level 0"
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "25/01/2025",
+      "changes": [
+        "Introduced built-in compatibility with VMS Boss Menu society",
+        "Introduced built-in compatibility with VMS City Hall VIN Generator",
+        "Added Gang Garages & Gang Parkings - they have the same options as those for jobs, allowing you complete flexibility in configuration. It is recommended for gangs to use it in the same way as the default VagosParking or BallasGarage is registered.",
+        "Added Private Garages - now using the <code>hasAccess()</code> function inside <code>Config.Garages</code>, you can add access conditions using, for example, information from PlayerData or identifier (possible to use, for example, for VIP roles on the server)",
+        "Added <code>Config.ParkingCreator.AutomaticLoad</code>: This now allows newly created parking lots to automatically load for all players, meaning you can create parking lots one after another without needing to restart the resource.",
+        "Added <code>Config.ParkingCreator.Controls</code>: This allows you to change the interaction keys.",
+        "Added DrawLine for PolyZone creation in Parking Creator - facilitates visibility of the first point of the area shape.",
+        "Added <code>CL.SetOnVehicleSpawnLocally</code>: This allows you to set the necessary data for parked vehicles in the parking lot.",
+        "Added <code>Config.PreventExplosionOfParkedVehicles</code>: Prevents parked vehicles from exploding (This function is used in <code>CL.SetOnVehicleSpawnLocally</code>).",
+        "Added <code>Config.VehiclePropertiesStateBag</code> and <code>Config.RegisterStateBag</code>: This allows you to rename the state bag if required - if you don't need to make the change, don't do it!",
+        "Added automatic detection of the nearest free ID for House Garage (HouseGarage:ID) and adjustment of the free routing bucket in both house garages and interior garages between 1001 and 15000 when creating garages using the Parking Creator menu.",
+        "Added missing <code>updateVehicleNewOwner</code> server-side export.",
+        "Added the ability to set <code>allowParkPrivateVehicles</code> for company/gang garages. This will allow private vehicles to be parked, and the boss will not be able to manage them in the management menu if the vehicle is not registered to the company.",
+        "Added protection against setting PolyZone point coordinates to 0.0, 0.0, 0.0 when the point was out of range - you will now receive a notification about this.",
+        "Added protection against setting points outside the PolyZone area for those that must remain inside the area in the Parking Creator menu.",
+        "Introduced several visual changes to the Parking Creator menu, including help options.",
+        "Optimized several methods for retrieving information from the database.",
+        "Changed the method for detecting the LEFT MOUSE key press in Parking Creator, as it could sometimes require a double-click to accept the selected point during freecam.",
+        "Changed the visibility of markers in company or gang parking lots - if you do not belong to the company or gang for which the parking is designated, you will not see the markers.",
+        "Improved the functionality of the <code>checkAreaOccupied</code> option.",
+        "Improved display of blips for parking garages configured as a company/gang"
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "18/11/2024",
+      "changes": [
+        "Added <code>Config.AllowRecoveryBurnedVehicles</code>: Allow recovery of burned vehicles on impound",
+        "Added <code>Config.AllowRecoveryVehiclesFromWater</code>: Allow recovery of vehicles from water on impound - option in beta mode only works with the ocean. (Does not work with bodies of water such as lakes, rivers)",
+        "Added <code>Config.RemoveSaleAgreementItem</code>, this allows you to remove a agreement item after it has been signed from both parties",
+        "Added the option to rotate vehicles for parking spaces. This means that if the parking surface is not perfectly level, the vehicle will adjust to the space according to physics. (This requires a full update of <code>config.garages.lua</code>, as a rotation option has been introduced for each parking space in <code>parkingSpaces</code>. While the script can still function without it, vehicles will not align with the map angles.)",
+        "Fixed a bug causing vehicles to float or be embedded in the ground in parking areas.",
+        "Fixed the /givecar command for qb-core/qbx_core.",
+        "Fixed a bug in the Parking Creator that prevented entering any value for Parking - Company and Models Restrictions.",
+        "Fixed a bug that caused the vehicle type to load as the default vehicle type in the Parking Creator after configuring parking spaces, even if another type (e.g., plane) was selected.",
+        "Fixed the possibility of vehicle destruction in the Parking Creator. This means that during the configuration of parking spaces, such as for planes, vehicles will no longer explode due to collisions between them."
+      ]
+    },
+    {
+      "version": "1.0.9",
+      "date": "03/11/2024",
+      "changes": [
+        "Fixed issues with saving the heading for <code>enterOnFoot</code> in Interior Parking using Parking Creator",
+        "Fixed an issue with the blip <code>\"job_garage\"</code>, which didn't exist - it is now set to <code>\"job_garage\"</code>. Remember that after saving, you can still modify everything in <code>./CREATED_PARKINGS/</code>",
+        "Fixed a bug that prevented re-clicking on a vehicle in the garage menu",
+        "Fixed the transfer to a garage with a name consisting solely of numbers"
+      ]
+    },
+    {
+      "version": "1.0.8",
+      "date": "22/10/2024",
+      "changes": [
+        "Added a tool to simplify the creation of new parking lots and garages.",
+        "Introduced <code>Config.ClearCacheOfVehicleModels</code>, which allows clearing the vehicle model cache after leaving a parking lot to avoid texture loss issues during extended gameplay (recommended for large servers or those with a lot of add-on vehicles)",
+        "Support for qbx_vehiclekeys (Modified <code>CL.GiveVehicleKeys</code> & <code>CL.RemoveVehicleKeys</code>)",
+        "Added export <code>unlockVehicle(plate, boolean)</code>, allowing you to integrate it into your lockpicking or key system scripts",
+        "Added the usability of the item sale agreement as an item in the inventory (<code>SV.registerUsableItem</code>).",
+        "Added <code>Config.AllowLockpickParkedVehicle</code>, allowing you to prevent other players from stealing a vehicle after unlocking it with a lockpick.",
+        "Added the parameter <code>allowParkPrivateVehicles</code> for <code>Config.Garages</code> (Job Garages with Owned Vehicles), enabling the parking of private vehicles in company garages.",
+        "Implemented a wait for vehicle models to load in garage/impound before allowing the selection of another.",
+        "Added missing translations in German and French.",
+        "Available compatibility with bcs_housing in the documentation",
+        "Fixed a bug that allowed taking a vehicle from a company parking lot that belonged to another player, while being only an employee of the company.",
+        "Fixed the <code>Config.AllowAllToParking</code> option when set to false for company vehicles.",
+        "Fixed an issue that caused vehicle properties to not load on QBX-Core. Along with this, <code>Config.WaitForProperties</code> and <code>Config.WaitForPropertiesTime</code> were added. It is recommended to use this if you encountered such issues. A value of 500 is recommended for <code>WaitForPropertiesTime</code>, which has been tested and found to be the optimal time—long enough to avoid issues without being too lengthy."
+      ]
+    },
+    {
+      "version": "1.0.7",
+      "date": "14/09/2024",
+      "changes": [
+        "Fixed bug with spawning in underground parking lot",
+        "Improved previous fixes"
+      ]
+    },
+    {
+      "version": "1.0.5",
+      "date": "12/09/2024",
+      "changes": [
+        "Compatibility with the YSeries phone by TeamsGG",
+        "Fixed a bug preventing the player from being teleported to the vehicle after retrieving it from the garage menu",
+        "Fixed a bug causing vehicle properties not to apply on vehicles from impound/garage",
+        "Fixed a bug causing vehicle collision when retrieving a vehicle from the garage in the menu",
+        "Fixed display of vehicle owner information in the management garage job menu on qb-core",
+        "Fixed bug with OWNER parameter of /givecar command for qb-core"
+      ]
+    },
+    {
+      "version": "1.0.4",
+      "date": "26/08/2024",
+      "changes": [
+        "Fixed a bug related to loading vehicles on parkings and on getting vehicle from impound"
+      ]
+    },
+    {
+      "version": "1.0.3",
+      "date": "08/08/2024",
+      "changes": [
+        "Added new options <code>Config.AddVehicleKeysOn</code>, <code>Config.RemoveVehicleKeysOn</code>: This allows precise customization of actions when players should receive or have their vehicle keys removed.",
+        "Added the <code>SV.GiveCar</code> function to <code>config.server.lua</code> (If you use the qb-core table format, you can adjust other parameters such as the license for adding a vehicle using the /givecar command).",
+        "Added server-side export <code>isInInterior</code> allowing information retrieval about the current garage interior where the player is located (the documentation includes a tutorial on how to introduce this function to your framework to avoid getting stuck in the interior after leaving the server).",
+        "Added server-side export <code>updateParkedVehiclePlate</code> allowing the update of the license plate change for a vehicle parked in the parking lot to reflect the change accurately.",
+        "Added the <code>customProperties</code> parameter to <code>availableVehicles</code>, enabling the addition of properties for vehicles from the garage (<code>config.garages.lua</code>).",
+        "Added Chinese translation",
+        "Now when adding vehicles to <code>availableVehicles</code>, you must provide the model name as the key value, i.e., instead of: <code>{model = 'police2'}</code>, you must enter it as <code>['police2'] = {model = 'police2'}</code>.",
+        "Fixed <code>string.upper</code> for vehicle search in paystation and job impound.",
+        "Modified functions <code>SV.getSocietyMoney</code>, <code>SV.addSocietyMoney</code>, <code>SV.removeSocietyMoney</code> - added default compatibility with cs_bossmenu, okokBanking.",
+        "Fixed an issue that allowed parking the vehicle while being a passenger.",
+        "Fixed an issue that allowed opening the garage menu while in a vehicle.",
+        "Fixed several minor bugs.",
+        "Removed <code>Config.AddKeysForEmployee</code> & <code>Config.RemoveKeysFromEmployee</code> options from config.lua and replaced them with two options allowing greater key management configuration: <code>Config.AddVehicleKeysOn</code>, <code>Config.RemoveVehicleKeysOn</code>."
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "date": "25/07/2024",
+      "changes": [
+        "<code>Config.UseVMSTuningLocator</code> option is already useful, requires latest vms_tuning update (2.0.4)",
+        "Added option <code>autoAddToImpoundAfterRestart</code> for <code>Config.VehicleTypes</code>",
+        "Added <code>Config.SaleBlacklistVehicles</code>: this allows you to block vehicles from being sold by model",
+        "Fixed a bug that prevented you take a vehicles from impound belonging only to jobs without a physical owner (As a boss, you can take any vehicle even those belonging to individual grades)",
+        "Fixed the ability to take a vehicle from the parking lot when the vehicle does not have a physical owner but is assigned to a company or a company with grade (As a boss you can take any vehicle even those belonging to individual grades)",
+        "Fixed /givecar command for ESX",
+        "Added protection for the use of /dv on a vehicle belonging to the player, from now on the player after this action will be able to recover the vehicle on any impound belonging to this type of vehicle",
+        "Added check if model exists for <code>CL.GetVehicleLabel</code> (<code>config.client.lua</code>)"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "19/07/2024",
+      "changes": [
+        "The database customization option in <code>SV.Database</code> has been expanded - you can now customize the names of columns such as owner, company, plate, vehicle, type to your current table",
+        "Added command /givecar PLAYERID/COMPANY VEH_TYPE VEH_MODEL LICENSE_PLATE - This allows administrators to add vehicles using the command.",
+        "Added new server-side export <code>giveVehicle</code> - see documentation for more information",
+        "Added <code>Config.AddKeysForEmployee</code> & <code>Config.RemoveKeysFromEmployee</code> option to add and remove keys in Job Garages with Owned Vehicles.",
+        "Added new language translation: Czech, Italian",
+        "Changed the method of license plate identification, now you can use license plates with less than 8 characters, but remember that if you want to use shorter plates, for example, 4 character plate, you can not set the plate like this \" TEST \", there must not be any space before and after the text, you can set \"TEST\" like this",
+        "Fixed visual bug in Job Garages with Owned Vehicles for employee list and job grades list",
+        "Fixed a bug with taking a vehicle from the parking lot after reselling a vehicle using /sellvehicle",
+        "Fixed bug with routing bucket when you don't have any vehicles in the garage",
+        "Fixed a bug for qb-core regarding loading a list of employees in the vehicle management menu in Job Garages with Owned Vehicles",
+        "Adjusted Housing Garages for the latest version of qs-housing"
+      ]
+    }
+  ]
+}
