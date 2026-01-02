@@ -1,0 +1,314 @@
+{
+  "currentVersion": "2.1.4",
+  "entries": [
+    {
+      "date": "06/12/2025",
+      "version": "2.1.4",
+      "changes": [
+        "Added modifications for Mod Type 49",
+        "This modification requires adding  entry to (<code>modKit49</code> - Vehicle Properties)"
+      ]
+    },
+    {
+      "date": "28/11/2025",
+      "version": "2.1.3",
+      "changes": [
+        "Added new add-on engine sounds for Engine Swaps:<br>Übermacht (N55 V6), Übermacht (S55 V6), Benefactor (M113 V8), Benefactor (M155 V8), Benefactor (M177 V8), Benefactor (M178 V8), Pegassi (L539 V12)",
+        "Fixed an issue that prevented creating a public workshop that does not require a job when using the target system",
+        "Improved synchronization of primary & secondary RGB colors when starting the installation of tuning parts",
+        "Fixed multiple parts points for target",
+        "Updated the Vehicle Properties for qb-core and qbx_core<br>If you have experienced any issues with false engine-damage indicators or compatibility problems with KQ Wheel Damage, updating the vehicle properties is recommended."
+      ]
+    },
+    {
+      "date": "17/07/2025",
+      "version": "2.1.2",
+      "changes": [
+        "Added server-side export <code>applyCustomMods(entity)</code>, allowing you to force the loading of custom mods such as Engine Swap (use it when creating the vehicle if your garage wasn't applying engine swap sounds)",
+        "Synchronized paint booth particle effects",
+        "Added protection against selecting the same mission location"
+      ]
+    },
+    {
+      "date": "19/04/2025",
+      "version": "2.1.1",
+      "image": "vms_tuning-2.1.1.webp",
+      "changes": [
+        "Added support for multiple parts points within the same workshop<br>Previously, if your workshop had multiple tuning stations (e.g. 5), all mechanics had to fetch parts from a single shared spot. Now you can assign individual parts locations to each tuning area, allowing more flexibility and realism.",
+        "Added Vehicle Paint Booth<br>By default, <code>BennyS-Paintshop</code> is configured as a Paint Booth. You can define your own booths and customize how the system behaves there. Full setup details are included in the configuration section.",
+        "Added <code>Config.ApplyDiscountForInsuredVehicles</code> and <code>Config.InsuredVehicleDiscount</code> (for VMS City Hall users)<br>If your vehicles are insured using the City Hall system, you can now grant players tuning discounts for insured vehicles - define the discount percentage in config.",
+        "Implemented NULL replacement<br>If a tuning parts label appears as NULL, it will now be automatically renamed (e.g. Spoiler 1, Spoiler 2, etc.). Make sure to define all <code>null_replacement.MODNAME</code> entries in your <code>config.translation.lua</code>.",
+        "Fixed a bug where markerBossMenu data was incorrectly required when using a targeting system, even though it wasn't needed",
+        "Fixed a bug where announcements added via the sendAnnouncement export were not being saved properly",
+        "Fixed several minor visual issues"
+      ]
+    },
+    {
+      "date": "26/02/2025",
+      "version": "2.1.0",
+      "changes": [
+        "Added protection against having a passenger when tuning a vehicle (You can't have a passenger in the vehicle when you are tuning, as there may be a problem)",
+        "Fixed error <code>Execution of native 00000000e8522d58 in script host failed: Tried to access invalid entity</code>",
+        "Fixed qs-vehiclekeys export"
+      ]
+    },
+    {
+      "date": "09/01/2025",
+      "version": "2.0.9",
+      "changes": [
+        "Added <code>Config.UseTargetSystemForTuningPoints</code>: This allows you to use the target system for tuning menu points",
+        "Fixed bug related to the native <code>SetVehicleSuspensionHeight</code> error when interacting with boats",
+        "Fixed Drift Tyres for qbx-core",
+        "Optimized <code>event:entityCreated</code> on server-side"
+      ]
+    },
+    {
+      "date": "26/11/2024",
+      "version": "2.0.8",
+      "changes": [
+        "Added the 'external_account' option to <code>Config.TuningPoints</code>, useful if you are using the built-in balance and want multiple separate tuning points to share a single company account.",
+        "Added <code>Config.Debug</code> to make it easier to identify misconfigurations, such as those related to <code>'grades_access'</code>.",
+        "Changed the behavior of checking for the use of custom tuning parts like Stance, Wheel Size/Width, etc. Previously, in <code>config.tuningmenu.lua</code>, it was 'Config.UseWheelsSize and {...} or nil'. This has been changed to the option 'dependence = Config.UseWheelsSize' inside the tuning option table due to bugs where an item with a specific ID could not be found, preventing access to features like turbo, etc.",
+        "Fixed a bug with a broken engine when opening the tuning menu for qb-core (Update Properties).",
+        "Fixed a bug with \"sagging suspension\" after closing the tuning menu for qb-core (Update Properties).",
+        "Fixed a bug with extras for qbox-core (Update Properties)."
+      ]
+    },
+    {
+      "date": "01/11/2024",
+      "version": "2.0.7",
+      "changes": [
+        "Fixed bug causing management menu not to display when not using vms_cityhall",
+        "Fixed a bug that caused missing mechanical parts for motorcycles",
+        "Fixed bug displaying $0 price for Engine Swap and Locator",
+        "Fixed a bug that caused a problem when using a different balance than the built-in one",
+        "Fixed some bugs and lack of synchoronization of Wheel Size, Wheel Width and Custom Suspension Height between players"
+      ]
+    },
+    {
+      "date": "24/10/2024",
+      "version": "2.0.6",
+      "changes": [
+        "Introduced compatibility with the tax system and job resumes from vms_cityhall",
+        "Added compatibility with ls_bolt_minigame (<code>Config.UseBoltMinigame</code> - <code>config.installationparts.lua</code>)",
+        "Added commas to prices for better visibility",
+        "Added <code>CL.AllowOpenTuningMenu</code> function - this allows you to check the dependencies for the ability to run the tuning menu",
+        "Added new modifications: Suspension Height, Wheel Size, Wheel Width, Drift Tyres",
+        "Added missing translations",
+        "Support for mx-surround in installation sound effects",
+        "The wheels stance loop has been optimized",
+        "Fixed a bug that caused some tuning parts to disappear after leaving the sector the vehicle was in and no one else was rendering it (<code>Config.VehiclePropertiesStateBag</code>)",
+        "Corrected error that displayed on F8 after using /relog",
+        "Fixed bug causing wheels stance loops to run even when not modified",
+        "Fixed a bug that, through a certain method, allowed you to buy window tint/turbo/wheels stance/engine swap/wash/half repair for no payment",
+        "Disabled RGB Xenon Color - Reason for removal is lack of synchronization between players in FiveM"
+      ]
+    },
+    {
+      "date": "15/08/2024",
+      "version": "2.0.5",
+      "changes": [
+        "Added <code>Config.UseInstallationSoundEffects</code>: this adds part assembly sound effects, for example when lifting a vehicle on car jacks, there will be a sound effect but an external script such as xsound is required for this, you can also customize the effects for which parts you want to use this in <code>Config.PartsInstallationSoundEffects</code> and possibly customize the export/event in <code>CL.PlayInstallationSoundEffect</code>",
+        "Created a new <code>config.custommods.lua</code> file into which <code>Config.EngineSwaps</code> from <code>config.tuningmenu.lua</code>, <code>Config.VehiclesSwaps</code>, <code>Config.VehiclesSwapsByClass</code> from <code>config.vehicles.lua</code> were moved. Also added the ability to completely disable the use of Engine Swap - <code>Config.UseEngineSwaps</code> and all options for the new Wheels Stance option.",
+        "Added some missing translations such as: French <code>.json</code> & some in <code>.lua</code>, Czech some in <code>.lua</code>, Spanish <code>.json</code> & some in <code>.lua</code>, Turkish <code>.json</code> & some in <code>.lua</code>",
+        "Added <code>Config.AllowRunWithJacks</code> & <code>Config.AllowJumpWithJacks</code> - this will allow you to manage the player's ability to run and jump while carrying jacks",
+        "Blocked all visual HSW parts coming from GTA+ (Updated <code>Config.BlacklistArmedMods</code> list).",
+        "Blocked all mechanical parts coming from GTA+ (Updated <code>Config.TuningMaxValues</code> vehicles list)",
+        "Fixed loading of previous color in RGB menu when it was 0,0,0",
+        "Fixed possibly all errors regarding loading custom tuning options such as Engine Swap, Locator",
+        "Removed <code>Config.DisableAbilityToRunWithParts</code> option, instead added <code>allowPlayerRun</code> & <code>allowPlayerJump</code> option to <code>Config.AdvancedInstallationsProps</code>, <code>Config.InstallationPartsPropsList</code> - this will allow you to manage player's ability to run and jump while carrying parts"
+      ]
+    },
+    {
+      "date": "23/07/2024",
+      "version": "2.0.4",
+      "changes": [
+        "Official support for qbx-core - guide to introducing our properties added to documentation",
+        "Added <code>Config.TuningMaxValues</code> to <code>config.tuningmenu.lua</code> - Here you can set the maximum number of upgrades for Engine, Brakes, Transmission, Suspension, Armor, Turbo per model.<br>I discovered that the native FiveM function, which supposedly gets the maximum upgrade value, returns incorrect data for some models. For example, the hakuchou2 has a maximum engine level of 4, yet the native function returned a value of 5, which couldn't actually be applied due to its absence. If you have information about more vehicle models that have more upgrades than are actually possible to install, I would appreciate it if you could let me know on #customer-chat, so I can include these models by default in future updates.",
+        "Added locator option to the installation, this will be used in the upcoming vms_garagesV2 update",
+        "Fixed a visual bug that occurred after using a discount code, that it did not stay deleted or reduced in the management menu",
+        "Changed saving custom modifications (engine swap, locator), now you can use short license plates as in vms_garagesV2:<br>You can use license plates with less than 8 characters, but remember that if you want to use shorter plates, for example, 4 character plate, you can not set the plate like this \" TEST \", there must not be any space before and after the text, you can set \"TEST\" like this"
+      ]
+    },
+    {
+      "date": "24/06/2024",
+      "version": "2.0.3",
+      "changes": [
+        "Added auto-framework detection",
+        "Added option <code>Config.UseSharedVehiclesFromQB</code>: enables loading vehicle prices from <code>QBCore.Shared.Vehicles</code>",
+        "Added function <code>CL.OnMissionVehicle</code>: allows, for example, unlocking an NPC vehicle you will be repairing during a mission",
+        "Added function <code>CL.UpdatedVehicle</code>: allows you to update the status of a vehicle to your garages on the client side",
+        "Added default use of <code>updateVehiclePlate</code> export for qs-advancedgarages users in <code>config.server.lua</code> when license plate changes",
+        "Added export <code>exports['vms_tuning']:CreateDiscountCode(codeName, mechanicPoint, percentage, countToUse)</code> - more information in the documentation: Usable Informations => Server-Side",
+        "Added <code>useIndividualWebhooks</code> and <code>individualWebhooks</code> value to the <code>Config.TuningPoints</code> - this means that you can now use individual webhooks for each workshop",
+        "Fixed an issue with 'employees' when hiring a player via the management menu",
+        "Fixed an issue with tuning reverting when a mechanic leaves the server",
+        "Fixed an error caused by quickly pressing the payment button for tuning",
+        "Fixed a problem with checking <code>CL.IsPlayerOnDuty()</code> when the option <code>client_can_select_tuning = true</code>",
+        "Fixed the radio turning on when changing the Engine Swap"
+      ]
+    },
+    {
+      "date": "05/05/2024",
+      "version": "2.0.2",
+      "changes": [
+        "Compatible esx_society has been created for the ability to use esx_society as a built-in company balance and new features have been added to <code>config.server.lua</code> for the ability to plug in the previously mentioned esx_society or another system <code>SV.getSocietyMoney</code>, <code>SV.addSocietyMoney</code>, <code>SV.removeSocietyMoney</code><br>- If you are using a company account as a company balance, you can plug it in <code>config.server.lua</code> in the above mentioned functions but it will not show up in the company menu, then you should set <code>Config.RemoveBalanceFromMenu = true</code> and deposit money in the bank",
+        "Added adding keys for vehicle to mission (<code>CL.GiveVehicleKeys</code> & <code>CL.RemoveVehicleKeys</code> in <code>config.client.lua</code>)",
+        "Added <code>Config.BlacklistArmedMods</code> option, allows you to enter your custom weapon names using <code>Config.DebugModsNames</code> to be removed when you use <code>Config.RemoveGunsTuningMods</code>",
+        "Added new translation languages",
+        "Added <code>CL.IsPlayerOnDuty</code> and <code>SV.isPlayerOnDuty</code>",
+        "Added <code>Config.UseMissions</code> option - you can set <code>false</code> if you don't want to use NPC missions",
+        "Added ability to use <code>Config.ColorsList</code> with <code>priceMultiplier</code> from vehicle price",
+        "Added ability to use TextUI in missions with NPCs",
+        "Fixed <code>CL.IsManager</code> & <code>CL.IsBoss</code> check for <code>manager_grades</code> and <code>boss_grades</code> values in table",
+        "Fixed restrictions for groups with access to boss menu in <code>CL.Target</code>",
+        "Fixed the text displayed to close the trunk door in the mission"
+      ]
+    },
+    {
+      "date": "23/04/2024",
+      "version": "2.0.1",
+      "changes": [
+        "Added UI translation for Portuguese, Polish, Czech.",
+        "Added <code>Config.MissionMoneyToSocietyPercent</code> & <code>Config.MissionMoneyToMechanicPercent</code> to <code>config.missions.lua</code>, this allows you to manage the percentage to go to the player and the company for completing the mission",
+        "Added protection in the form of a warning informing about the absence of the selected language for the UI",
+        "Added 3 exports to manage built-in company balance which, among other things, can be used for paycheck",
+        "Fixed manual engine installation for motorcycle class",
+        "Fixed problem related to adding money for the tuner",
+        "Fixed error - <code>attempt to index a nil value (field 'SV')</code>",
+        "Fixed a bug that caused a failure to add money for a completed mission"
+      ]
+    },
+    {
+      "date": "20/04/2024",
+      "version": "2.0.0",
+      "image": "vms_tuning-2.0.0.webp",
+      "changes": [
+        "Added Management Menu that you may be familiar with from vms_stores/vms_vehicleshopV2, among others.<br>- Main: Announcements, Total Tuned Vehicles, Total Earned<br>- Missions: The new task for mechanics - if there are no customers, you can earn money from additional missions with NPCs, they will be able to accept vehicle repair orders.<br>- Employees: The section where you can manage your employees<br>- Discounts: If you use discount codes created by the workshop, here the boss will be able to generate a code and employees will be able to check the list of available codes and copy it<br>- Management: Here the boss can deposit/withdraw the money that is in the workshop's safe and write an announcement to the employees",
+        "Added \"Selected\" status on action buttons (Clean & Repair) when selected.",
+        "Added to <code>Config.TuningPoints</code> - <code>whitelist</code> & <code>blacklist</code> a new option <code>vehicleClasses</code> with which you can allow only vehicles of a certain class to access the tuning menu",
+        "Added to <code>Config.TuningPoints</code> - <code>whitelist</code> & <code>blacklist</code> a new <code>indexedColors</code> option with which you can remove or leave specific indexed color types for example \"chameleon\"/\"black\" etc.",
+        "Added <code>Config.LiveriesUseCustomNames</code> in <code>config.lua</code> - when using this option, it will search if a name other than NULL exists, if found, it will display the custom name, otherwise, it will set 'Livery ID' as before.",
+        "Added <code>Config.RemoveGunsTuningMods</code>, this option can be set to true if you want the automatic option of adding weapon purchase to the vehicle to be removed from the selection.",
+        "Added <code>Config.UseBuildInCompanyBalance</code>, because vms_tuning now has a built-in company balance, no longer uses esx_society/qb-management, you can plug in the use of company money from, for example, your bank system if it has company accounts",
+        "Added <code>SV.Database</code> option to <code>config.server.lua</code>, it allows you to customize table names and columns to your current database",
+        "Added a new \"Engine Swap\" option in the Mechanical section - modifying this part will completely change the vehicle engine sound, you can add your own custom add-on engine sounds and use default GTA sounds. By default, we have implemented it based on engine displacement: 1.2 R4, 1.8 I4, 2.0 R4, 2.5 I4, 3.0 V6, 3.5 V6, 4.0 V8, 5.5 V8, 6.2 V8, 7.0 V12, 7.2 V12, 8.5 W16. You can also configure sound availability based on vehicle classes and models to restrict engine changes to specific vehicles.",
+        "Added <code>Config.LoadPricesFromDatabase</code> to <code>config.lua</code> and <code>SV.getPricesFromDatabase</code> to <code>config.server.lua</code> - you can now load vehicle prices from the database to automate the configuration process",
+        "Added a new method to configure vehicle prices so that some parts are not too expensive - such as spoiler, livery but also so that engine or turbo prices are not too small {mechanicals = 500000, cosmetics = 300000, extras = 130000}",
+        "Added <code>Config.DisableAbilityToRunWithParts</code> - this will allow you to block running with parts in your hands",
+        "Added compatibility with qb-target",
+        "Corrected change of indexed vehicle color for qb-core",
+        "Changed the format of images in the icons folder from <code>.png</code> to <code>.webp</code>, which weighs less and loads faster",
+        "Changed path of the javascript files from <code>vms_tuning/html/xxx.js</code> to the <code>vms_tuning/html/js/xxx.js</code>",
+        "Changed path of the css files from <code>vms_tuning/html/xxx.css</code> to the <code>vms_tuning/html/css/xxx.css</code>",
+        "Fixed the <code>Config.TeleportToVehicleAfterFullInstallation</code>, now, when disabled, it won't teleport the player to the vehicle after installation completion. (However, it's recommended to leave this option as true for seamless synchronization without issues)",
+        "Moved <code>Config.ProgressBar</code>, <code>Config.Skillbar</code>, <code>Config.Target</code>, <code>Config.GetClosestPlayerFunction</code>, <code>Config.CustomQuestionMenu</code> to <code>config.client.lua</code> and changed prefixes from <code>Config.</code> to <code>CL.</code> Also, renamed several functions.",
+        "Changed translation of UI from the <code>.js</code> to the <code>.json</code> file"
+      ]
+    },
+    {
+      "date": "18/01/2024",
+      "version": "1.0.9",
+      "changes": [
+        "Fixed an important bug that caused several errors related to using the same variable in ox_lib and vms_tuning, which caused the values used in vms_tuning to be overwritten by ox_lib when you used <code>Config.Menu = 'ox_lib'</code> or <code>Config.TargetResource = 'ox_target'</code>.",
+        "New license plate styles added for game build 3095 users (If you're not using this build and don't have these license plates, just remove the translations of the names of these plates from <code>config.translation.lua</code>)"
+      ]
+    },
+    {
+      "date": "17/01/2024",
+      "version": "1.0.8",
+      "changes": [
+        "[/] Bug fix for QB-Core"
+      ]
+    },
+    {
+      "date": "15/01/2024",
+      "version": "1.0.7",
+      "changes": [
+        "Compatibility with mysql-async",
+        "Compatibility with old ESX using essentialmode (error was due to lack of <code>ESX.RegisterCommand</code>, now use <code>oldESX = true</code> option in <code>Config.AdminDiscountCodesCommand</code>)",
+        "Split <code>Config.ColorsList</code> from a single price for the color of each part to each part separately: primary, secondary, pearlescent, dashboard, interior, wheel",
+        "Added to <code>SV.WebhookText</code> new webhook <code>TUNING_ACCEPTED_REQUEST</code>",
+        "Turkish language translation added thanks to one customer",
+        "Fixed bug related to repairing/washing vehicles without using the manual parts installation option",
+        "Changes in logs from vehicle hash to vehicle model name",
+        "The webhook regarding BILL payments has been edited adding the nickname and id of the mechanic",
+        "Fixed spray from a can when repainting a vehicle without using target system"
+      ]
+    },
+    {
+      "date": "05/12/2023",
+      "version": "1.0.6",
+      "changes": [
+        "Added loading to RGB palette current color if set as RGB",
+        "Added <code>Config.UseAdvancedWheelsInstallation</code>: advanced wheel installation to the vehicle - installing each wheel separately",
+        "Added <code>Config.HelpUI</code>: Help UI for advanced part installation which can prompt the player what they need to do now",
+        "Added spray particles for painting",
+        "Added primary and secondary color type - for RGB only (Required to use updated VehicleProperties from documentation)",
+        "Added new wheel types:<br>* Bennys Originals<br>* Bennys Bespoke<br>* Street (Minimum build: 2060)<br>* Track (Minimum build: 2372)",
+        "Added <code>Config.OnInstallationPart</code> to <code>config.installationparts.lua</code>, this allows you to add a custom function when the option is installed for example for the VehicleDeformation resource at the repair option",
+        "Added <code>Config.RequestMoneyToTunerPercent</code>: If you want the tuner to receive a % from request of tuning a vehicle",
+        "Fixed sending tuning request when there is no mechanic around",
+        "Fixed lack of registered workshop in <code>Config.InstallationPartsPoints</code> if you use advanced parts installation",
+        "Fixed tyre smoke color and RGB Xenon Colors for QB-Core (Required to use updated QB VehicleProperties from documentation)",
+        "Changed discount code input to normal character size, as discount codes have different letters."
+      ]
+    },
+    {
+      "date": "26/10/2023",
+      "version": "1.0.5",
+      "changes": [
+        "Fixed a bug related to permanently running headlights when changing their color in the menu",
+        "Removed BILL button for client who selects parts, option only available when mechanic selects tuning options"
+      ]
+    },
+    {
+      "date": "22/10/2023",
+      "version": "1.0.4",
+      "image": "vms_tuning-1.0.4.webp",
+      "changes": [
+        "Added free cam, you can use it holding RMB or scroll to zoom",
+        "Added billing <code>send_bill_to_player</code> - when paying, the tuner will have the option to send a bill to the player who is closest, after sending the player receives a generated receipt with all the information and you wait for payment or cancel it.<br>- <code>Config.BillMoneyToSocietyPercent</code>: Do you want the company to receive a % from paid billing of tuning a vehicle?<br>- <code>Config.BillMoneyToTunerPercent</code>: Do you want the tuner to receive a % from paid billing of tuning a vehicle?",
+        "Added coordinates for all workshops to <code>Config.InstallationPartsPoints</code>",
+        "Added <code>Config.VehiclesPricesByClass</code> to <code>config.vehicles.lua</code> and changed function <code>CL.getVehiclePrice</code> in <code>config.client.lua</code>",
+        "Added Dashboard and Interior colors (update vehicle properties functions in your core using our documentation)",
+        "Improved the preview of smoke from the tires on the vehicle",
+        "Improved loading of livery ID, now the first is as none"
+      ]
+    },
+    {
+      "date": "02/10/2023",
+      "version": "1.0.3",
+      "changes": [
+        "Problem with loading livery resolved"
+      ]
+    },
+    {
+      "date": "30/09/2023",
+      "version": "1.0.2",
+      "changes": [
+        "Fixed an issue with the correct loading of the distance between the player and the marker when using more points in <code>Config.TuningPoints</code>",
+        "Fixed loading of indexed color prices in <code>Config.ColorsList</code>",
+        "Fixed problem with loading price of indexed xenons"
+      ]
+    },
+    {
+      "date": "29/09/2023",
+      "version": "1.0.1",
+      "changes": [
+        "Added target system support for manual installation of parts (<code>Config.UseTargetForPartInstallation</code>)",
+        "Added target system support for boss menu <code>Config.UseTargetSystemForBossMenu</code>",
+        "Added Extras option to tuning menu",
+        "Added new and missing translations to the translation file",
+        "Added <code>client_can_select_tuning</code> option to <code>Config.TuningPoints</code> - this causes each player to be able to select parts for his vehicle, then when paying, he selects the nearest mechanic who will install all the selected parts for him",
+        "Added ability to remove specific parts of license plate color, horn and window tint by removing this value from <code>config.translation.lua</code>",
+        "Added <code>Config.TeleportToVehicleAfterInstallForMS</code>, <code>Config.TeleportToVehicleAfterFullInstallation</code> to synchronize the installed of each part.",
+        "Added <code>Config.ForMotorcyclesOnlyMotoWheels</code> with a fix for changing the rear wheel on motorcycles and added the ability to set only motorcycle type wheels for motorcycles, otherwise other types will only change the front wheel. ",
+        "Moved Tuning Menu slightly lower to make vms notification visible",
+        "Improved getting money from society for options <code>pay_from_society_money</code> & <code>society_name</code> - (<code>SV.getSocietyMoney</code>)",
+        "Fixed a problem that sometimes occurred with the absence of sub-options such as Body for the first entry of a vehicle",
+        "Fixed the calculation of the percentage for <code>Config.AddSocietyMoneyForTuningPercent</code>"
+      ]
+    }
+  ]
+}
