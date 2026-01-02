@@ -1,0 +1,67 @@
+{
+  "currentVersion": "1.0.8",
+  "entries": [
+    {
+      "version": "1.0.8",
+      "date": "27/02/2025",
+      "changes": [
+        "Added protection against a common error caused by failure to adjust notifications"
+      ]
+    },
+    {
+      "version": "1.0.7",
+      "date": "05/10/2023",
+      "changes": [
+        "Compatible with QBOX",
+        "Added <code>Config.Hud</code> for the ability to hide the hud in the menu",
+        "Added <code>Config.DateFormat</code> - the ability to change the format of the entered date.",
+        "Added <code>Config.UseLatinAlphabetChecker</code>, for users who use an alphabet other than Latin, like Arabic, Japanese, Cyrillic.",
+        "Added <code>Config.UseNationalityOption</code>, if you want to use nationality option with register"
+      ]
+    },
+    {
+      "version": "1.0.6",
+      "date": "27/05/2023",
+      "changes": [
+        "Fixed the cursor on the registration menu for servers with a loading screen that supports a mouse cursor on ESX"
+      ]
+    },
+    {
+      "version": "1.0.5",
+      "date": "21/05/2023",
+      "changes": [
+        "Improved scaling of ▶ button for users of 2K, 4K monitors"
+      ]
+    },
+    {
+      "version": "1.0.4",
+      "date": "02/05/2023",
+      "changes": [
+        "Improved player height range",
+        "Improved loading of height range into height label on the UI<br>Now after wrong input, it doesn't reset previously entered data, only after correct completion of character registration clears inputs (so that the player, when making a mistake, does not have to fill in the fields again)"
+      ]
+    },
+    {
+      "version": "1.0.3",
+      "date": "24/04/2023",
+      "changes": [
+        "Added wait for player to load on server so UI doesn't load early",
+        "Removed from config file - <code>Config.Multichars</code> and <code>Config.UseCustomSkinCreator</code> for QB-Core"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "date": "03/04/2023",
+      "changes": [
+        "Compatible with QB-Core"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "12/01/2023",
+      "changes": [
+        "Fixed menu for not using <code>Config.Multichars</code>"
+      ]
+    }
+  ]
+}
