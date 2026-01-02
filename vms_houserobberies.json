@@ -1,0 +1,63 @@
+{
+  "currentVersion": "1.0.6",
+  "entries": [
+    {
+      "date": "13/10/2025",
+      "version": "1.0.6",
+      "changes": [
+        "Fixed the randomization of item quantities for <code>isCabinet</code> loot."
+      ]
+    },
+    {
+      "date": "29/09/2025",
+      "version": "1.0.5",
+      "changes": [
+        "Fixed a bug that could cause the second player entering a property during a robbery not to load correctly."
+      ]
+    },
+    {
+      "date": "13/01/2025",
+      "version": "1.0.4",
+      "changes": [
+        "Added <code>Config.StopRobbery</code> with option to enable/disable and price configuration - then there will be a button with which you can stop robbery",
+        "Added noise bar drop if you keep quiet at house",
+        "Added additional debugging",
+        "Added protection against misconfiguration of items (If you have <code>Config.Debug</code>, you will receive information regarding errors made)",
+        "Fixed the display of the remaining time until the possibility of robbing a house again"
+      ]
+    },
+    {
+      "date": "17/07/2024",
+      "version": "1.0.3",
+      "changes": [
+        "Added official support for older ESX using <code>ESX.GetExtendedPlayers</code> function",
+        "Added new language translation: German, French, Spanish",
+        "Fixed server-side bug <code>attempt to get length of a nil value (field 'tenants')</code>",
+        "Fixed a bug that caused using a target on a pawnshop ped to launch the fence menu",
+        "Fixed the display of a hud after starting a robbery in the planning menu"
+      ]
+    },
+    {
+      "date": "28/05/2024",
+      "version": "1.0.2",
+      "changes": [
+        "Fixed a last bug regarding 'Notification' when copying data in the configuration menu"
+      ]
+    },
+    {
+      "date": "27/05/2024",
+      "version": "1.0.1",
+      "changes": [
+        "Added new language translation: Czech",
+        "Added <code>requiredPolices</code> value to each house separately in <code>config.houseslist.lua</code> - you can set the minimum number of police officers online for a player to start a house robbery",
+        "Added <code>Config.PoliceJobs</code>, here you can define the names of the jobs to be considered for <code>requiredPolices</code>",
+        "Fixed a bug regarding 'Hud' when opening the configuration menu",
+        "Fixed a bug regarding removing robbery organisator ped after relog",
+        "Fixed removal of noise bar after house receives timeout",
+        "Fixed the use of <code>SV.checkBeforeStartRobbery</code> function",
+        "Patch for not loading <code>FreezeEntityPosition</code> for the interior",
+        "Patch for not loading heading for the objects"
+      ]
+    }
+  ]
+}
