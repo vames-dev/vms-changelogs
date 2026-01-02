@@ -1,0 +1,182 @@
+{
+  "currentVersion": "1.1.9",
+  "entries": [
+    {
+      "date": "24/07/2025",
+      "version": "1.1.9",
+      "changes": [
+        "Added compatibility with vms_notifyV2 Question menu (<code>Config.CustomQuestionMenu</code>)",
+        "Added <code>menuAutoFind</code> function to <code>config.lua</code> - automatically detects a compatible menu",
+        "Added <code>skinmanagerAutoFind</code> function to <code>config.lua</code> - automatically detects a compatible skinmanager",
+        "Improved wardrobe functionality for qb-clothing (there was an issue with overwriting face/hair, etc.)"
+      ]
+    },
+    {
+      "date": "19/03/2025",
+      "version": "1.1.8",
+      "changes": [
+        "Fixed NUI callback openBill error"
+      ]
+    },
+    {
+      "date": "14/03/2025",
+      "version": "1.1.7",
+      "changes": [
+        "Fixed a bug with the calculation of prices listed in the <code>Config.PricesForIds</code>, <code>Config.PricesForComponentSpecificStores</code>, <code>Config.PricesForIdsSpecificStores</code>"
+      ]
+    },
+    {
+      "date": "14/03/2024",
+      "version": "1.1.6",
+      "changes": [
+        "Added inputs so you can enter custom values to select clothing parts (after entering a value, you must accept it with the ENTER key to prevent any blacklist bugs)",
+        "Added warning-print in server console when esx_datastore for esx_skin is misconfigured",
+        "Added to <code>Config.PricesForIds</code>, <code>Config.PricesForComponentSpecificStores</code>, <code>Config.PricesForIdsSpecificStores</code> gender value",
+        "Added ability to block textures for clothing id"
+      ]
+    },
+    {
+      "date": "22/11/2023",
+      "version": "1.1.5",
+      "changes": [
+        "Added <code>Config.PricesForComponentSpecificStores</code>: Works the same as PricesForComponent but you can do it for a specific store (<code>config.prices.lua</code>)",
+        "Added <code>Config.PricesForIdsSpecificStores</code>: Works the same as PricesForIds but you can do it for a specific store (<code>config.prices.lua</code>)",
+        "The Id of the clothe in <code>Config.PricesForIds</code> & <code>Config.PricesForIdsSpecificStores</code> has been changed from a number value to a string and must be so for the price to be detected correctly",
+        "Removed dependency on face values etc. for esx_skin, which means it no longer requires the latest esx_skin & skinchanger"
+      ]
+    },
+    {
+      "date": "14/11/2023",
+      "version": "1.1.4",
+      "image": "vms_clothestore-1.1.4.webp",
+      "changes": [
+        "Added ability to also use arrows to change values (<code>config.js</code>)",
+        "Support for target system - <code>Config.UseTarget</code>, <code>Config.TargetResource</code>, <code>Config.Target</code> and added parameter <code>targetRotation</code>, <code>targetSize</code> to <code>Config.Stores</code>",
+        "Added <code>Config.DefaultPrice</code> to <code>config.prices.lua</code>",
+        "Added <code>Config.PricesForComponent</code>: it allows you to set a custom price for a garment category, e.g. for helmet_1 or for torso_1.",
+        "Added <code>Config.PricesForIds</code>: it allows you to set a custom price for a specific garment ID e.g. for helmet_1 -> 25 which allows you to make more expensive garments e.g. suits or add-on garments",
+        "Added payment in the bill menu",
+        "Improved UI for 4K resolution",
+        "Fixed loading your current values into the store menu for any compatible skinmanager",
+        "Removed <code>'price'</code> parameter from <code>Config.Stores</code>"
+      ]
+    },
+    {
+      "date": "31/08/2023",
+      "version": "1.1.3",
+      "changes": [
+        "Fixed the ability to remove outfit in option Manage Clothes for esx_skin"
+      ]
+    },
+    {
+      "date": "18/08/2023",
+      "version": "1.1.2",
+      "changes": [
+        "Fixed the names of elements in the ox_lib context in the Manage clothes option in QB-Core."
+      ]
+    },
+    {
+      "date": "17/08/2023",
+      "version": "1.1.1",
+      "image": "vms_clothestore-1.1.1.gif",
+      "changes": [
+        "Changed the operation of the camera, now you can do it by holding the right mouse button and moving around the screen and the distance with the mouse scroll",
+        "Added <code>Config.CameraSettings</code> with camera settings such as maximum/minimum height and maximum/minimum fov",
+        "Changed the animation in <code>Config.ClothingPedAnimation</code> to one that the character doesn't move as much",
+        "Added <code>Config.DataStoreName</code> - if your table in datastore_data has a name other than <code>\"property\"</code> using the wardrobe on esx_skin you can adjust this",
+        "Added a new option to the Share Outfit store menu - it allows clothes to be shared for free or for money (<code>Config.PriceForAcceptOutfit</code>) - useful for gangs or other organizations on the server that may wear the same clothes",
+        "Added <code>Config.GetClosestPlayersFunction</code> for ability to find closest players to Share Outfit",
+        "Added the ability to cancel the store menu with the ESC key",
+        "Fixed for qb-clothing the possibility of using a ped other than mp_m_freemode_01 and mp_f_freemode_01",
+        "Removed from ui slide bars for camera management"
+      ]
+    },
+    {
+      "date": "06/06/2023",
+      "version": "1.1.0",
+      "changes": [
+        "Fixed esx_menu_default for ESX fivem-appearance/illenium-appearance",
+        "Fixed loading <code>Config.BlockedClothes</code> for ESX fivem-appearance/illenium-appearance",
+        "Moved <code>Config.BlockedClothes</code> to each store separately for blockedClothes - following requests to be able to set different blocked values in each store, from now on there is such a possibility",
+        "Added <code>Config.UseQSInventory</code> & <code>Config.QSInventoryName</code> to compatibility with qs-inventory clothing system",
+        "Added check for length of saved clothes name to wardrobe entered in esx_context & esx_menu_dialog",
+        "Fixed display of name in manage esx_menu_default menu for ESX illenium-appearance",
+        "Improved display of category name with hats",
+        "Added one missing Binco clothing store near the beach"
+      ]
+    },
+    {
+      "date": "09/05/2023",
+      "version": "1.0.9",
+      "changes": [
+        "Added to <code>Config.BlockedClothes</code> gender, you can set blocked values for male and female other",
+        "Added an additional check to see if the player should have access to the ability to open the menu (The lock was made so that your TextUI would not display all the time when, for example, using the clothing store or using the wardrobe menu)",
+        "Compatibility with ox_lib (context & input)"
+      ]
+    },
+    {
+      "date": "04/05/2023",
+      "version": "1.0.8",
+      "changes": [
+        "Added notification when a set of clothes is removed from the wardrobe",
+        "Added <code>Config.EnableHandsUpButtonUI</code> - if this is true, there will be a button to raise hands on the UI on the right of the cancel button (<code>Config.HandsUpKey</code> continues to be active)",
+        "Added <code>Config.HandsUpKey</code> & <code>Config.HandsUpAnimation</code>"
+      ]
+    },
+    {
+      "date": "01/05/2023",
+      "version": "1.0.7",
+      "changes": [
+        "Added <code>Config.Interact</code> and functionality <code>ESX.ShowHelpNotification</code> for esx while not using any textui"
+      ]
+    },
+    {
+      "date": "27/04/2023",
+      "version": "1.0.6",
+      "changes": [
+        "Added <code>Config.BlockedClothes</code> - now you can block clothing by id in the clothing store, for example, police uniforms, so that nobody wears them",
+        "Added id option to marker settings"
+      ]
+    },
+    {
+      "date": "13/04/2023",
+      "version": "1.0.5",
+      "changes": [
+        "Added choice of payment - cash, bank",
+        "Fixed reload of skins after wearing clothes from wardrobe for illenium-appearance"
+      ]
+    },
+    {
+      "date": "28/03/2023",
+      "version": "1.0.4",
+      "changes": [
+        "Supporting for illenium-appearance"
+      ]
+    },
+    {
+      "date": "20/02/2023",
+      "version": "1.0.3",
+      "changes": [
+        "Fixed skin saving after wearing one of the outfits from the wardrobe for qb-clothing",
+        "Added client exports <code>OpenManage</code> & <code>OpenWardrobe</code> for use in custom scripts",
+        "Added <code>Config.Hud</code>, to disable your hide in clothstore menu"
+      ]
+    },
+    {
+      "date": "15/02/2023",
+      "version": "1.0.2",
+      "changes": [
+        "Fixed changing the texture value to 0 (e.g tshirt_2) when changing an main item (e.g tshirt_1)"
+      ]
+    },
+    {
+      "date": "15/01/2023",
+      "version": "1.0.1",
+      "changes": [
+        "Added possibility of deleting clothes from wardrobe on ESX (esx_skin / fivem-appearance) and QB (qb-clothing)",
+        "Fixed wardrobe of ESX with fivem-appearance",
+        "Added vests"
+      ]
+    }
+  ]
+}
