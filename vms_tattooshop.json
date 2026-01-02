@@ -1,0 +1,151 @@
+{
+  "currentVersion": "2.0.3",
+  "entries": [
+    {
+      "version": "2.0.3",
+      "date": "04/04/2025",
+      "changes": [
+        "Added support for rcore_clothing<br>(Basically, you can now use any skin manager - simply implement your refresh skin event or export inside <code>CL.ReloadSkin</code>)",
+        "Reworked the clothing removal system used during tattoo sessions<br>You now only need to define the esx_skin format in <code>Config.ClothesOff</code>, as we've introduced the universal <code>CL.LoadSkin</code> function - it no longer requires integration with any external skin manager"
+      ]
+    },
+    {
+      "version": "2.0.2",
+      "date": "04/03/2025",
+      "changes": [
+        "Added official support for tattoo shop interior from MXC."
+      ]
+    },
+    {
+      "version": "2.0.1",
+      "date": "19/11/2024",
+      "changes": [
+        "Fixed 'identifier error' on qb-core"
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "date": "19/10/2024",
+      "image": "vms_tattooshop-2.0.0.webp",
+      "changes": [
+        "Complete redesign of the resource to ensure consistency across VMS resources",
+        "Added management menu, similar to the one in vms_tuning/vms_vehicleshopV2/vms_stores",
+        "Added a receipt for tattoo payments in the business tattoo shop, similar to the one in vms_tuning/vms_clothestore (If you want to use the old payment system for the business tattoo shop, set <code>Config.UseOldBusinessPaymentSystem</code>)",
+        "Introduced compatibility with the tax system and job resumes from vms_cityhall",
+        "Moved many options from <code>config.lua</code> to <code>config.client.lua</code> and changed the prefix from <code>Config.</code> to <code>CL.</code>",
+        "Moved UI translations to the <code>translations.json</code> file (Multi-language: EN, DE, FR, ES, PT, PL, CZ)"
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "date": "05/12/2023",
+      "changes": [
+        "PlayerData loading for qb-core corrected"
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "22/10/2023",
+      "changes": [
+        "Support for target system - <code>Config.UseTarget</code>, <code>Config.TargetResource</code>, <code>Config.Target</code>",
+        "Added a special prepared tattoo chair object for the ability to spawn in tattooshop that does not have a reclining chair - <code>Config.SeatObject</code>, <code>Config.SeatSpawnsList</code>",
+        "Added tattooshops on Sandy Shores and Paleto Bay to <code>Config.Tattooshops</code>",
+        "Adjusted scaling for 21:9 monitor format"
+      ]
+    },
+    {
+      "version": "1.0.9",
+      "date": "19/07/2023",
+      "changes": [
+        "Fixed bug with removing tattoo without money",
+        "Fixed an issue for QB-Core with loading charinfo after restarting the script",
+        "Added new languages CZ, FR, ES to config.translation.lua file thanks to help from VMS Translators Team"
+      ]
+    },
+    {
+      "version": "1.0.8",
+      "date": "16/07/2023",
+      "changes": [
+        "Added <code>config.translation.lua</code> file with new language DE thanks to help from VMS Translators Team (moved <code>Config.Translate</code> & <code>Config.Lang</code> here from <code>config.lua</code> file)",
+        "Added to each tattoo shop variable \"categories\", in them you can set available categories with tattoos for individual tattoo studios",
+        "Added to <code>translation.js</code> - <code>translate.header_tattoo</code> & <code>translate.header_shop</code>",
+        "Moved <code>Config.TattooList</code> to <code>config.tattoos.lua</code> file",
+        "Added <code>Config.TattoosCameras</code> with defined cameras positions, you can still use values not defined in <code>Config.TattoosCameras</code> a as coordinates in table",
+        "Changed in each tattoo from <code>nameHash</code> to <code>nameHashMale</code> and added <code>nameHashFemale</code>",
+        "Removed <code>forFemaleAlso</code> and replaced it with <code>nameHashFemale</code>",
+        "Added a lot of new tattoos from new DLCs (Thanks @Cantarelle)",
+        "Added <code>Config.AutoExecuteQuery</code> - will automatically add the 'tattoos' column to your ESX: users / QB-Core: players table if it doesn't already exist",
+        "Added <code>Config.UseQSInventory</code> & <code>Config.QSInventoryName</code> to compatibility with qs-inventory clothing system",
+        "Changed the preview of tattoos - from now on the eye icon is not removed, due to the fact that the player when he has many tattoos and selects tattoos later may have a problem to check which tattoo he now selects, now you can refresh the check of a specific tattoo by clicking on the darker eye again",
+        "Fixed loading of tattoos after script restart for a player who is currently already on the server",
+        "Added <code>Config.EnableTattooingAudioEffect</code> - adds tattoo machine audio effect",
+        "Fixed any complications with camera and position synchronization for players (employee and client)"
+      ]
+    },
+    {
+      "version": "1.0.7",
+      "date": "19/05/2023",
+      "changes": [
+        "Improved grade checking for employees",
+        "Fixed a bug with the ability to sit on an occupied seat"
+      ]
+    },
+    {
+      "version": "1.0.6",
+      "date": "03/05/2023",
+      "changes": [
+        "Added <code>bossMenuPos</code> and <code>bossMenuGrades</code> option to <code>Config.Tattooshops</code>",
+        "Added function <code>Config.BossMenu</code> - by default for esx_society and qb-management",
+        "Added <code>Config.Markers</code>",
+        "Added <code>Config.UseTattooMachineRequired</code> & <code>Config.TattooMachineItem</code> - you can require employees to have a tattoo machine to do new tattoo",
+        "Added <code>Config.UseTattooLaserRemoverRequired</code> & <code>Config.TattooLaserRemoverItem</code> - you can require employees to have a tattoo laser remover to remove tattoo",
+        "Added <code>Config.UseTattooInkRequired</code> & <code>Config.TattooInkItem</code> & <code>Config.RemoveTattooInk</code> - you can require employees to have a tattoo ink and whether the ink is to be taken away after the tattoo is done",
+        "Changed from busy to taken in each file and changed trigger \"...:setBusyChair\" to \"...:takeChair\"",
+        "Added <code>forFemaleAlso</code> option to <code>Config.TattooList</code> - this detects the gender of the player and tells the UI not to load tattoos that are <code>forFemaleAlso = false</code> when the client is female, in gta female tattoos work on a man but on a woman not every male tattoo works"
+      ]
+    },
+    {
+      "version": "1.0.5",
+      "date": "28/03/2023",
+      "changes": [
+        "Supporting for illenium-appearance",
+        "Changed <code>Config.SkinMenu</code> to <code>Config.SkinManager</code>",
+        "Changed name of <code>Config.Core</code> from \"QBCore\" to \"QB-Core\"",
+        "Changed name of <code>Config.SkinManager</code> from \"qb-clothes\" to \"qb-clothing\""
+      ]
+    },
+    {
+      "version": "1.0.4",
+      "date": "19/03/2023",
+      "changes": [
+        "Fixed xPlayer issue for QB-Core when removing tattoos"
+      ]
+    },
+    {
+      "version": "1.0.3",
+      "date": "19/02/2023",
+      "changes": [
+        "Fixed an issue with ESX skinchanger tattoos not loading",
+        "Added Config.CoreExport to define core by custom export name",
+        "Added Config.PlayerLogout to remove all tattoos from character"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "date": "31/01/2023",
+      "image": "vms_tattooshop-1.0.2.webp",
+      "changes": [
+        "Added new custom tattoos (on image)",
+        "Added hair overlay around the head (Category: 12)",
+        "A new tattoo parlor has been coordinated"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "19/11/2022",
+      "changes": [
+        "Added compatibility with fivem-appearance for QBCore version"
+      ]
+    }
+  ]
+}
