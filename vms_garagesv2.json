@@ -186,6 +186,7 @@
     {
       "version": "1.0.8",
       "date": "22/10/2024",
+      "image": "vms_garagesv2-1.0.8.webp",
       "changes": [
         "Added a tool to simplify the creation of new parking lots and garages.",
         "Introduced <code>Config.ClearCacheOfVehicleModels</code>, which allows clearing the vehicle model cache after leaving a parking lot to avoid texture loss issues during extended gameplay (recommended for large servers or those with a lot of add-on vehicles)",
