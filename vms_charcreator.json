@@ -1,0 +1,185 @@
+{
+  "currentVersion": "1.1.9",
+  "entries": [
+    {
+      "date": "05/06/2024",
+      "version": "1.1.9",
+      "changes": [
+        "Added auto detection of framework and skinmanager",
+        "Added <code>Config.DefaultRoutingBucket</code>, you can define a default routing bucket in which the player should appear when he completes character creation",
+        "Added <code>Config.DadMin</code>, <code>Config.DadMax</code>, <code>Config.MomMin</code>, <code>Config.MomMax</code>: if you are using custom faces that increases the number of faces, here you can customize it",
+        "Added Eye Squint option to customization options",
+        "Added a new Dutch and Italian translation for lua files",
+        "Moved all configuration files to the config folder",
+        "Changed translation from <code>translation.js</code> to <code>translation.json</code> - remember to replace each file described below"
+      ]
+    },
+    {
+      "date": "06/03/2024",
+      "version": "1.1.8",
+      "changes": [
+        "Added inputs so you can enter custom values to select clothing parts (after entering a value, you must accept it with the ENTER key to prevent any blacklist bugs)",
+        "Fixed ERROR callback notififcation on plastic surgery",
+        "Fixed Moles option for qb-clothing",
+        "Removed Blemishes, Complexion, Sun options with qb-clothing, because qb-clothing does not support these options"
+      ]
+    },
+    {
+      "date": "30/10/2023",
+      "version": "1.1.7",
+      "changes": [
+        "Added ability to also use arrows to change values (<code>config.js</code>)",
+        "Added <code>Config.AddMoneyToHospital</code> function to config.server.lua file - you can add money for e.g. a hospital when someone gets plastic surgery",
+        "Added <code>Config.AfterCreatedFirstCharacter</code> function to <code>config.client.lua</code> file - this function is triggered only when character creation is completed after registration and you can enter here, for example, an export from vms_spawnselector",
+        "Added <code>EnablesCategories</code> and <code>AvailableItems</code> option for <code>Config.PlasticSurgery</code>, you can disable clothes etc. for plastic surgery",
+        "Corrected blush color value for fivem-appearance and illenium-appearance",
+        "The problem with the face values for the story models from GTA 5 - Franklin, Michael, Trevor - has been fixed. They are no longer taken into account when creating a post with this model and it will not spoil the character."
+      ]
+    },
+    {
+      "date": "24/08/2023",
+      "version": "1.1.6",
+      "changes": [
+        "Fixed loading of available texture values for clothes from qb-clothing.",
+        "Fixed chest hair for illenium-appearance.",
+        "Removed chest hair option from qb-clothing because in qb-clothing this does not exist.",
+        "Added <code>Config.CreatingIsNotInInterior</code> - if you use character creator in the interior and have problems with the camera, you can set it to false to have the camera render the interior",
+        "Added translations in ES, PT thanks to help from VMS Translators Team."
+      ]
+    },
+    {
+      "date": "22/08/2023",
+      "version": "1.1.5",
+      "changes": [
+        "Changed the operation of the camera, now you can do it by holding the right mouse button and moving around the screen and the distance with the mouse scroll",
+        "Added <code>Config.CameraSettings</code> with camera settings such as maximum/minimum height and maximum/minimum fov",
+        "Changed the animation in <code>Config.CharacterCreationPedAnimation</code> to one that the character doesn't move as much",
+        "Changed from <code>Config.blurBehindPlayer</code> => <code>Config.BlurBehindPlayer</code>",
+        "Added Plastic Surgery with many options in <code>Config.PlasticSurgery</code>",
+        "Added <code>Config.Notification</code> for Plastic Surgery",
+        "Added <code>config.translation.lua</code> with translations for Plastic Surgery in EN, DE, CZ, FR, PL thanks to help from VMS Translators Team",
+        "Added support for other peds than mp male and mp female for qb-clothing, fivem-appearance and illenium-appearance - <code>Config.PedsList</code>",
+        "Added <code>Config.UseRoutingBuckets</code> - If you had any problems with player visibility during character creation, now you can use this option to connect players to individual virtual worlds",
+        "Removed from ui slide bars for camera management"
+      ]
+    },
+    {
+      "date": "16/06/2023",
+      "version": "1.1.4",
+      "changes": [
+        "Fixed problem for illenium-appearance with saving skin color when player do not change RESEMBLANCE and SKIN TONE"
+      ]
+    },
+    {
+      "date": "14/06/2023",
+      "version": "1.1.3",
+      "changes": [
+        "Added MakeUp color 2 & Hair color 2",
+        "Fixed <code>Config.BlockedClothes</code> for illenium-appearance and fivem-appearance",
+        "Fixed reloading of blocked clothing values when changing gender in character creator"
+      ]
+    },
+    {
+      "date": "12/06/2023",
+      "version": "1.1.2",
+      "changes": [
+        "Fixed bug with black text displayed on ui under one of the clothing items",
+        "Improved illenium-appearance compatibility (NEW FILE - <code>components_illenium-appearance.lua</code>)",
+        "Added <code>Config.UseQSInventory</code> & <code>Config.QSInventoryName</code> to compatibility with qs-inventory clothing system"
+      ]
+    },
+    {
+      "date": "05/06/2023",
+      "version": "1.1.1",
+      "changes": [
+        "Added <code>Config.TeleportPlayerByCommand</code> - when the player is given the character creation menu by the admin whether to be teleported to <code>Config.creatingCharacterCoords</code>",
+        "When the player receives the menu by the administrator and <code>Config.TeleportPlayerByCommand = true</code> then after saving/canceling the character creation the player is teleported to his previous coordinates",
+        "Added <code>Config.EnableCancelButtonUI</code> - this can only be displayed when in the character creation menu via /char ID - so that the player does not cancel the creation of the first character after it is registered",
+        "Added <code>Config.HandsUpKey</code>, <code>Config.HandsUpAnimation</code> - key to raise hands up and customizable animations (key always works in charcreator, also can be <code>Config.EnableHandsUpButtonUI = false</code>)",
+        "Added <code>Config.EnableHandsUpButtonUI</code> - If you don't want the hands up icon to be visible when using charcreator you can disable it with this",
+        "Added <code>Config.BlockedClothes</code> - You can exclude a specific id of a skin value"
+      ]
+    },
+    {
+      "date": "25/04/2023",
+      "version": "1.1.0",
+      "changes": [
+        "Added changing the texture value to 0 (e.g tshirt_2) when changing an main item (e.g tshirt_1)"
+      ]
+    },
+    {
+      "date": "17/04/2023",
+      "version": "1.0.9",
+      "changes": [
+        "Added more colors for: hair, beard, eyebrows, chest, eye",
+        "Fixed minimum values for qb-clothing",
+        "Removed subvalues for <code>Config.SkinManager = \"qb-clothing\"</code> which are not available in qb-clothing"
+      ]
+    },
+    {
+      "date": "28/03/2023",
+      "version": "1.0.8",
+      "changes": [
+        "Supporting for illenium-appearance"
+      ]
+    },
+    {
+      "date": "15/03/2023",
+      "version": "1.0.7",
+      "changes": [
+        "Added <code>Config.EnableFirstCreationClothes</code> and <code>Config.FirstCreationClothes</code> - You can set a default for the character the first outfit the player will be reborn with in the character creator - the default was laid out for both genders in just underwear so the player can see all the details of the character",
+        "Added loading the current character skin if you manually open someone's character creation menu with /char ID, no longer resets the player's skin to default just leaves the one they are started with",
+        "Renamed from <code>qb-clothes</code> to <code>qb-clothing</code> for use in <code>Config.SkinManager</code>",
+        "Added a slider with camera height management so that you can see every detail from above and below",
+        "Added new option to <code>translation.js</code> (<code>translate.height</code>)",
+        "Added <code>Config.AdminCommand</code> {Enabled, Group, Name, Help, ArgHelp} to customize admin command for opening a char creator for players /char ID"
+      ]
+    },
+    {
+      "date": "19/02/2023",
+      "version": "1.0.6",
+      "changes": [
+        "Fixed eye, makeup, blush, lipstick colors for qb-clothing"
+      ]
+    },
+    {
+      "date": "29/01/2023",
+      "version": "1.0.5",
+      "changes": [
+        "Fixed loading gender from trigger args"
+      ]
+    },
+    {
+      "date": "28/01/2023",
+      "version": "1.0.4",
+      "changes": [
+        "Added <code>Config.Hud</code> (Ability to manage the display of the hud when the menu is running)",
+        "Added a new arg to the char-creator menu trigger, you can add a gender value to identity (0 = male, 1 = female) and if there is such an arg else it will load the male model by default",
+        "Added missing values in blush_3 and makeup_3 color change functions"
+      ]
+    },
+    {
+      "date": "14/01/2023",
+      "version": "1.0.3",
+      "changes": [
+        "Fixed load skin in shop after do the character (esx_skin & skinchanger)"
+      ]
+    },
+    {
+      "date": "09/01/2023",
+      "version": "1.0.2",
+      "changes": [
+        "Added all character customization options, possible toggle on and off in <code>Config.AvailableItems</code> config",
+        "Fixed max values from the second item value (tshirt_2, torso_2 etc.)",
+        "Added to qb-clothes some items minimum value to -1"
+      ]
+    },
+    {
+      "date": "02/01/2023",
+      "version": "1.0.1",
+      "changes": [
+        "Fixed /char command for QB-Core"
+      ]
+    }
+  ]
+}
