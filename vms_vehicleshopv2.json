@@ -1,0 +1,94 @@
+{
+  "currentVersion": "1.0.8",
+  "entries": [
+    {
+      "date": "04/12/2025",
+      "version": "1.0.8",
+      "changes": [
+        "Added a built-in polyzone system that no longer causes identification issues when teleporting to the store.<br>This means you no longer need the PolyZone resource for this script.",
+        "Added protection against a bug that prevented entering Test Drive when the vehicle model wasn't loaded but the button was pressed.",
+        "Removed the hard requirement for an 8-character license plate.<br>You can now set automatically generated license plates shorter than 8 characters."
+      ]
+    },
+    {
+      "date": "05/11/2025",
+      "version": "1.0.7",
+      "changes": [
+        "Added support for VMS Garages V2 Vehicle Persistent (<code>SV.onVehicleSpawned</code>)",
+        "Added support for Offline Players on qb-core and qbx_core (<code>SV.getPlayerByIdentifier</code>, <code>SV.setPlayerJob</code>, <code>SV.addMoney</code>)<br>Allowing you to fire, promote, or give bonuses to players even when they're offline"
+      ]
+    },
+    {
+      "date": "07/10/2025",
+      "version": "1.0.6",
+      "changes": [
+        "Added the missing <code>formatDate</code> function in JavaScript for compatibility with resumes vms_cityhall"
+      ]
+    },
+    {
+      "date": "31/10/2024",
+      "version": "1.0.5",
+      "changes": [
+        "Fixed bug causing management menu not to display when not using vms_cityhall",
+        "Fixed query for qb-core in <code>config.server.lua</code>",
+        "Fixed the display of prices with $NaN",
+        "Fixed a bug that caused a problem when using a different balance than the built-in one"
+      ]
+    },
+    {
+      "date": "20/10/2024",
+      "version": "1.0.4",
+      "changes": [
+        "Added auto-detect for framework and framework events",
+        "Improved the function <code>SV.createVIN</code> to check whether the VIN is already registered, and added compatibility for VIN generation if you are using vms_cityhall",
+        "Compatibility with vehicle ownership history when using vms_cityhall",
+        "Introduced compatibility with the tax system and job resumes from vms_cityhall",
+        "Compatibility has been introduced with qs-advancedgarages Persistent Vehicles by default in <code>SV.onVehicleSpawned</code>",
+        "Added commas to prices for better readability of vehicle prices",
+        "Added filtering by vehicle category in the showroom menu",
+        "Added the ability to place vehicles on display in the management menu or, if you have configured a dealership as non-business, you can set default vehicles to always be on display in config.lua <code>Config.Stores</code> - <code>vehiclesOnDisplay</code>",
+        "Added the option for customers to buy vehicles themselves without employee intervention when the dealership is configured as a business. It will then check if the vehicle is available in stock, add money to the company account, and log the sale history. To enable vehicles to be fetched from the showroom stock, you need to set <code>showOnlyAvailable = true</code>",
+        "Introduced the option <code>allowBuyIfEmployeesOffline</code> in <code>Config.Stores</code>, which allows vehicle purchases via the showroom when it's configured as a business, but only when no employees are online",
+        "Added <code>Config.VehiclesCustomInfos</code> to <code>config.showroom.lua</code> - this allows you to add unlimited custom vehicle information, such as the current fields for \"Seats\" and \"Max Speed.\" For example, this version introduces \"trunk,\" and you can add many more using this method",
+        "Added export <code>openShowroom</code> and client event <code>vms_vehicleshopv2:openShowroom</code> to enable launching the showroom menu using an external resource, e.g., npctalk",
+        "Translation in German, French and Italian",
+        "Slightly modified compatibility with esx_society and other external balance managers - added <code>societyName</code> to <code>Config.Stores</code> and modified the functions <code>SV.getSocietyMoney</code>, <code>SV.addSocietyMoney</code>, and <code>SV.removeSocietyMoney</code> in <code>config.server.lua</code>"
+      ]
+    },
+    {
+      "date": "25/07/2024",
+      "version": "1.0.3",
+      "changes": [
+        "Added function <code>SV.createVIN</code> to generate VIN number in <code>config.server.lua</code> (This will be useful in future resources)",
+        "Created built-in vehicle spawn function to avoid using external ESX framework functions and QB-Core, which can cause an error when upgrading. Also related to this, compatibility with older ESX.",
+        "Added new function <code>SV.formatVehicleProperties</code> for formatting, saving and loading correct vehicle properties, also added to read <code>dashboardColor</code>, <code>interiorColor</code>, <code>wheelColor</code> and <code>modLivery</code>",
+        "Adjusted <code>SV.addPlayerVehicles</code> function by default for vms_garagesV2, qs-advancedgarages",
+        "Added support for m-Insurance",
+        "Changed parameters for <code>SV.addPlayerVehicles</code> function",
+        "Modified the content of the <code>SV.checkLicense</code> function"
+      ]
+    },
+    {
+      "date": "25/04/2024",
+      "version": "1.0.2",
+      "changes": [
+        "Compatible esx_society has been created for the ability to use esx_society as a built-in company balance and new features have been added to <code>config.server.lua</code> for the ability to plug in the previously mentioned esx_society or another system <code>SV.getSocietyMoney</code>, <code>SV.addSocietyMoney</code>, <code>SV.removeSocietyMoney</code><br>- If you are using a company account as a company balance, you can plug it in <code>config.server.lua</code> in the above mentioned functions but it will not show up in the company menu, then you should set <code>Config.RemoveBalanceFromMenu = true</code> and deposit money in the bank",
+        "Added a new option <code>spawnVehicleOnPurchase</code> to <code>Config.Stores</code> - this allows you to disable vehicle spawning after purchase, then it will go straight to the garage",
+        "Added <code>Config.VehiclesCustomMaxSpeed</code> to <code>config.showroom.lua</code>, you can set custom vehicle speeds on UI",
+        "Added <code>SV.Database</code> to <code>config.server.lua</code>, you can customize the table names <code>vehicles</code> and <code>vehicle_categories</code>",
+        "Fixed bug with loading vehicles as undefined",
+        "Fixed bug with loading add-on vehicles, more specifically waiting for the model to load before being able to change the vehicle"
+      ]
+    },
+    {
+      "date": "07/03/2024",
+      "version": "1.0.1",
+      "changes": [
+        "Added value <code>paymentMethods</code> to the <code>Config.Stores</code> with ability to set payment methods",
+        "Improved a vehicle purchase function to prevent bugs and fixed on qb-core with required license",
+        "Fixed when buying a vehicle the effect as if the vehicle fell down",
+        "Fixed target duplication for some users in ox_target"
+      ]
+    }
+  ]
+}
