@@ -1,0 +1,24 @@
+{
+  "currentVersion": "1.0.2",
+  "entries": [
+    {
+      "date": "04/02/2025",
+      "version": "1.0.2",
+      "changes": [
+        "Added backward client events from vms_notify, mythic_notify, okokNotify, brutal_notify, wasabi_notify, cm-notification",
+        "Fixed a bug that did not load saved notification settings when you changed the scale",
+        "Fixed a bug that caused the TextUI position to change when you changed the scale"
+      ]
+    },
+    {
+      "date": "18/01/2025",
+      "version": "1.0.1",
+      "changes": [
+        "Added <code>version_check.lua</code>",
+        "Fixed ERROR when launching TextUI Customization Menu",
+        "Fixed visual bug of currently selected Position in Customization Menu",
+        "Removed prints"
+      ]
+    }
+  ]
+}
