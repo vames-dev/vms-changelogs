@@ -1,0 +1,100 @@
+{
+  "currentVersion": "1.0.8",
+  "entries": [
+    {
+      "date": "19/08/2025",
+      "version": "1.0.8",
+      "changes": [
+        "Added missing Version Check file",
+        "Added a search bar to /billings - you can search fines/invoices by Receiver name or Issuer name",
+        "Fixed a bug that could occur when generating a new tax account for companies - it did not set default values for <code>late_fee_applied</code> and <code>delayed_amount</code>, which could prevent opening the clerk menu"
+      ]
+    },
+    {
+      "date": "08/07/2025",
+      "version": "1.0.7",
+      "changes": [
+        "Modified export <code>addPlayerCustomTaxToPay</code> - now allows tax to be added to a player who is offline for compatibility with VMS Housing"
+      ]
+    },
+    {
+      "date": "16/04/2025",
+      "version": "1.0.6",
+      "changes": [
+        "Added support for gksphone",
+        "Fixed a bug that allowed clerks grade 1 to open the city hall menu without the required item in their inventory",
+        "Added protection against <code>joaat as nil</code> error"
+      ]
+    },
+    {
+      "date": "28/02/2025",
+      "version": "1.0.5",
+      "changes": [
+        "Fixed error when using empty_ticket"
+      ]
+    },
+    {
+      "date": "25/02/2025",
+      "version": "1.0.4",
+      "changes": [
+        "Added new billing method - Receipt<br>- Three new items introduced: payment_terminal, thermal_paper, receipt<br>- Recommended usage: e.g., for restaurants",
+        "Added <code>allowCopy</code> option to <code>Config.CheckVIN</code> - Allows copying the VIN after checking it in a vehicle",
+        "Added 'Issue a ticket' button in the VIN Information menu - when pressed, if you have the required item for issuing a fine, the ticket will be generated with pre-filled details such as VIN, model, and plate",
+        "Created new exports <code>getVehicleInsurance</code> and <code>addVehicleInsurance</code>",
+        "Implemented license requirement verification with VMS Documents V2 (1.0.4)",
+        "Expanded comments in <code>config.lua</code> to better explain configuration options",
+        "Fixed a bug related to job restrictions for qb-target",
+        "Fixed <code>receiver.phoneNumber</code> in the <code>SV.sendPhoneMessage</code> function",
+        "Secured a bug that prevented the City Hall menu from opening when documents were incorrectly configured",
+        "Changed the method for loading the 'Application for Change of Registration Numbers' document: Previously used: <code>Config.AllowToChangePlate</code> and {...} - Now uses: visible = <code>Config.AllowToChangePlate</code>"
+      ]
+    },
+    {
+      "date": "11/12/2024",
+      "version": "1.0.3",
+      "changes": [
+        "Compatibility with vms_bossmenu in <code>SV.addSocietyMoney</code>, <code>SV.removeSocietyMoney</code>, <code>SV.getBusinessTaxAccount</code>, <code>SV.removeBusinessTaxAccount</code>, <code>SV.sendBusinessMessage</code>",
+        "Added a new export <code>giveBill</code>: this allows you to add tickets/invoices via server-side to a player, e.g. for speed cameras.",
+        "Added <code>useOnTarget</code> option to <code>Config.InfoVIN</code> and <code>Config.CheckVIN</code> - this allows you to interact with a vehicle using a target",
+        "Added <code>Config.SendPhoneMessageAboutResume</code> option means that after accepting/rejecting an application you can send an email to the player's phone informing them of the status of their resume, support for qb-phone, qs-smartphone-pro, yseries, lb-phone, okokPhone",
+        "Added <code>SV.getPlayerJobLabel</code> function to <code>config.server.lua</code>",
+        "Added <code>Config.UsePaychecks</code>: if you don't want to use paychecks, you can opt out by disabling this option in the configuration",
+        "Added Penalty Point, Penalty Point List to Find Citizens by SSN section of clerk menu",
+        "Added a new item <code>signed_vehicle_sale_agreement</code> and new options to <code>Config.VehicleSaleAgreement</code> - <code>GiveSignedItemToSeller</code>, <code>GiveSignedItemToBuyer</code>, <code>SignedItemName</code>, this now allows you to add an official completed sales document for the seller and the buyer",
+        "Added <code>Config.UseVehicleType</code>, if you do not have a <code>'type'</code> column in your owned_vehicles/player_vehicles, you need to set this to false, the lack of a column caused a problem for qb-core/qbx-core users when trying to sell a vehicle",
+        "Added <code>Config.HealthInsurancerSociety</code> & <code>Config.HealthInsuranceMoneyToSocietyPercent</code> it allows you to create health insurance company, which will receive the indicated percentage of the amount paid",
+        "Added <code>Config.VehiclesInsurancerSociety</code> & <code>Config.VehiclesInsurancesMoneyToSocietyPercent</code> it allows you to create vehicle insurance company, which will receive the indicated percentage of the amount paid",
+        "Added <code>'image'</code> parameter to <code>Config.JobsList</code>, this allows you to add an image to jobs as a link or by adding the file to <code>./html/images/</code>",
+        "Improved the width of the space between letters has been reduced on the banner in the tax menu and added a missing color for \"Lack of income\"",
+        "Improved item compatibility with origen_inventory",
+        "Improved rendering of VIN positions in cars and motorcycles",
+        "Fixed export <code>isLicenseSuspended</code>",
+        "Fixed a bug causing a sale agreement item to be removed from the seller's inventory when the buyer did not have enough money",
+        "Fixed bug causing no select menu on agreement for German language - <code>paragraph_1_text</code>",
+        "Fixed bug related to incorrect calculation of values from <code>percentageForSociety</code> and <code>percentageForIssuer</code>",
+        "Fixed a bug related to an error caused by a webhook when ordering a document",
+        "Fixed player money update for QB-Core in <code>SV.addMoneyOffline</code> function",
+        "Fixed an error <code>An error occurred while calling export 'updatePaychecks' in resource vms_cityhall</code>, which could occur on qb-core/qbox-core",
+        "Fixed warning <code>Uncaught TypeError: Cannot read properties of undefined (reading 'close')</code>"
+      ]
+    },
+    {
+      "date": "08/11/2024",
+      "version": "1.0.2",
+      "changes": [
+        "Added origen_inventory compatibility for <code>SV.registerUsableItem</code>",
+        "Fixed a bug that occurred when using /checkvin or /hidevin a second time"
+      ]
+    },
+    {
+      "date": "04/11/2024",
+      "version": "1.0.1",
+      "changes": [
+        "Added compatibility with qs-inventory and ox_inventory on qb-core in <code>SV.registerUsableItem</code>",
+        "Introduced default fetching of vehicle prices via SV.fetchVehiclesPrices function for vms_vehicleshopv2 and default QB-Core and QBX-Core",
+        "Fixed error <code>nil value field debug</code>",
+        "Fixed error <code>balanceAlreadyRemoved is not defined</code>"
+      ]
+    }
+  ]
+}
