@@ -1,0 +1,35 @@
+{
+  "currentVersion": "1.1.0",
+  "entries": [
+    {
+      "date": "04/01/2025",
+      "version": "1.1.0",
+      "changes": [
+        "Compatibility with the VMS City Hall suspended license (<code>Config.UseVMSCityHall</code>)",
+        "Compatibility with qs-vehiclekeys and wasabi_carlock",
+        "Support for Buty-License with new <code>Config.LicensesResource</code>",
+        "Support for ox_inventory and qs-inventory items",
+        "Added auto-detect of <code>Config.Core</code>, <code>Config.CoreExport</code>, <code>Config.PlayerLoaded</code> and <code>Config.Notification</code>",
+        "Added <code>Config.PlayerDropped</code> to protect against locking the spawn point with a vehicle when a player leaves the server during an exam, the vehicle and the examiner ped will be removed",
+        "Added framework functions to <code>config.server.lua</code>",
+        "Added <code>Config.MenuIcon</code>",
+        "Added <code>menuIcon</code> to <code>Config.Licenses</code>",
+        "Added script translation in languages by default: EN, DE, FR, ES, PT, NL, PL, IT, CZ, SV",
+        "Added <code>Config.OnVehicleDelete</code> function to <code>config.client.lua</code> which allows keys to be taken away",
+        "Added <code>Config.AddLicenseItem</code>, you can add the license item after completing the practical exam",
+        "Secured the license addition event from cheaters",
+        "Fixed closing of task list menu after vehicle explosion",
+        "Moved translation from <code>config.lua</code> to <code>config.translation.lua</code> to be able to do multi-language",
+        "Moved UI translation from <code>translation.js</code> to <code>translation.json</code> to be able to do multi-language",
+        "Moved <code>questions.js</code> file from <code>.html/</code> to <code>.config/</code>"
+      ]
+    },
+    {
+      "date": "09/10/2023",
+      "version": "1.0.1",
+      "changes": [
+        "Added <code>Config.BeforeOpeningMenu</code> function to <code>config.client.lua</code> file"
+      ]
+    }
+  ]
+}
