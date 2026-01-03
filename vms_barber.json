@@ -33,6 +33,7 @@
     {
       "version": "2.0.0",
       "date": "19/10/2024",
+      "image": "vms_barber-2.0.0.webp",
       "changes": [
         "Complete redesign of the resource to ensure consistency across VMS resources",
         "Added management menu, similar to the one in vms_tuning/vms_vehicleshopV2/vms_stores",
