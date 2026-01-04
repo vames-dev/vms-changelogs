@@ -2,6 +2,19 @@
   "currentVersion": "1.2.4",
   "entries": [
     {
+      "date": "04/01/2026",
+      "version": "1.2.5",
+      "changes": [
+        "Added <code>Config.FurnitureLimitPerProperty</code><br>This allows you to limit the maximum number of specific furniture items per property based on their model.",
+        "Added shell tag filtering<br>Only tags that are actually used on your server will now be displayed.<br>If you don't have any shells assigned to a tag defined in <code>config.shellsTags</code>, that tag will not be available at all.",
+        "Added automatic opening of the Furniture Menu after placing a furniture item.",
+        "Added Make Photos checkbox option to the furniture creation menu.<br>This allows you to skip the photo-taking process for each furniture item individually.<br>If you already have furniture from your own furniture pack, you can now add it much faster.",
+        "Added support for the latest K4MB1 Shells after object model name changes.<br>If you haven't updated yet - don't worry, the update is not mandatory, although it is recommended.<br>We currently support both the old and new model names in the integration files.<br>⚠️ If you update your K4MB1 files, you will NOT lose any previously created properties.<br>The update was designed so no additional changes to existing properties are required.",
+        "Fixed Webhook texts: <code>DESCRIPTION.CreatedProperty</code>, <code>DESCRIPTION.EditedProperty</code>.",
+        "Removed furniture items that cause loading issues in GTA: v_res_mconsolemod, v_res_mbdresser."
+      ]
+    },
+    {
       "date": "16/12/2025",
       "version": "1.2.4",
       "changes": [
