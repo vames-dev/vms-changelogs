@@ -2,10 +2,13 @@
   "currentVersion": "1.0.5",
   "entries": [
     {
-      "date": "28/02/2025",
+      "date": "14/01/2025",
       "version": "1.0.5",
       "changes": [
-        "Fixed getting badgeNumber from vms_bossmenu for QB-Core"
+        "Added support for the <code>QBCore:Server:UpdateObject</code> event<br>This ensures compatibility with the <code>AddJob</code> and <code>RemoveJob</code> exports.",
+        "Added support for Multi Job systems.<br>Currently supported: <code>wasabi_multijob</code>, <code>ps-multijob</code>",
+        "Added <code>Config.ClotheMerge</code><br>This allows changing the behavior of the Job Wardrobe system.<br><code>true</code>: keeps the previous behavior, allowing outfits to be merged together. This makes it possible to create multiple outfits that modify only specific parts (e.g. one outfit changing only a head accessory and another changing the uniform).<br><code>false</code>: new behavior that resets the player's previous appearance when changing clothes, meaning outfits cannot be merged in the Job Wardrobe.",
+        "Fixed the Wear private clothes option for <code>rcore_clothing</code>.<br>The lookup order for compatible skin managers in the <code>skinmanagerAutoFind</code> function has been adjusted so that <code>rcore_clothing</code> is checked first, ensuring the resource is properly detected and loaded."
       ]
     },
     {
