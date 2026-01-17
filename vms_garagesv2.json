@@ -1,6 +1,17 @@
 {
-  "currentVersion": "1.3.9",
+  "currentVersion": "1.4.0",
   "entries": [
+    {
+      "version": "1.4.0",
+      "date": "17/01/2026",
+      "changes": [
+        "Changed the vehicle spawn method on the server side.<br>This change likely resolves all issues related to Vehicle Persistence and also improves vehicle properties loading speed.",
+        "Added <code>SV.OnVehicleSpawn</code> function in <code>config.server.lua</code>.<br>Due to the new spawn method, the FiveM <code>entityCreated</code> event no longer detects spawned vehicles.<br>If you had any logic relying on that event, it should now be implemented inside this function.",
+        "Added <code>Config.ShowLoadingText</code> and <code>Config.LoadingTextScale</code><br>When you enter the parking zone, during the creation of vehicles, you will see the test "Loading...".<br>Recommended for debugging but not only - in the case of players with a weaker internet connection, then it will know that a vehicle will be loaded at this location.",
+        "Added a safeguard preventing vehicles from being taken from the garage or impound before the vehicle model has finished loading, to prevent duplicate "ghost" vehicles appearing in the vehicle selection point.",
+        "Added more debug prints"
+      ]
+    },
     {
       "version": "1.3.9",
       "date": "19/12/2025",
