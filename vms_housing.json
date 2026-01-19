@@ -1,6 +1,21 @@
 {
-  "currentVersion": "1.2.5",
+  "currentVersion": "1.2.6",
   "entries": [
+    {
+      "date": "19/01/2026",
+      "version": "1.2.6",
+      "changes": [
+        "Added <code>Config.InteriorBoundaryCheck</code><br>Ensures the player remains within interior boundaries and automatically corrects invalid positions.",
+        "Added <code>Config.RequireKeysInsideInterior</code><br>Allows configuring whether interior doors require keys to be locked/unlocked from the inside, or if they can be operated without keys for more realistic behavior.",
+        "Added TextUI interactions<br>Default compatibility with <code>vms_notifyv2</code>, <code>lation_ui</code>, and <code>ox_lib</code>.",
+        "Added a confirmation menu when deleting a Building or Motel.<br>The confirmation clearly informs that all apartments belonging to the selected Building/Motel will also be deleted and proceeds accordingly after confirmation.",
+        "Added listener event <code>vms_housing:cl:teleport` for anti-cheat integrations.",
+        "Added compatibility with <code>ak47_garage</code> and <code>ak47_qb_garage</code>.",
+        "Added compatibility with <code>dc_housingshellsv2</code>.",
+        "Fixed QB-Target job detection<br>If you are using <code>qb-target</code> interactions, make sure to update CL.Target.",
+        "Fixed an issue where the <code>police_barrier</code> item was not returned after using the Remove Seal action."
+      ]
+    },
     {
       "date": "04/01/2026",
       "version": "1.2.5",
