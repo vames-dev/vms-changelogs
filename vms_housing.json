@@ -1,6 +1,20 @@
 {
-  "currentVersion": "1.2.6",
+  "currentVersion": "1.2.7",
   "entries": [
+    {
+      "date": "07/02/2026",
+      "version": "1.2.7",
+      "changes": [
+        "<strong>Doorbell System</strong><br>Added a new <strong>Doorbell Sound</strong> upgrade with 10 custom sounds available by default. Players can preview sounds before purchasing. Added a new outside <strong>muffled doorbell effect</strong> (sound played through doors).",
+        "<strong>Garden & Grass System</strong><br>Added a fully configurable garden system. Grass now grows over time based on configuration. Added a lawn mower as an interactive furniture item with a special sound effect. Grass can also be mowed using the <code>mower</code> vehicle.",
+        "<strong>Sale / Rent Signs</strong><br>Added custom FOR SALE / FOR RENT signs. Sign position is configurable in the Creator menu. Visual appearance can be customized via <code>sale_sign.html</code>.",
+        "<strong>Police Raid Improvements</strong><br>Added custom-made Battering Ram animations. Introduced a new interactive raid system where the player must actively hit the door by clicking the highlighted ram object.",
+        "<strong>Lockpick Animations</strong><br>Added a custom lockpick animation.",
+        "<strong>Real Estate System</strong><br>Added renting system support for Real Estate Agencies.",
+        "<strong>Integrations</strong><br>Added support for Max Creations \"25 Shells Pack\" and FiveManage.",
+        "<strong>Fixed Issues</strong><br>Fixed Real Estate Agent permissions. Fixed minor issues with Marketplace Rent. Fixed ox_target array issue (removed all <code>options = {}</code> in shell files). Fixed wardrobe issues when using <code>Config.StaticInteractionAccess = 2</code> and <code>Config.UseTarget = false</code>. Other minor bug fixes and stability improvements."
+      ]
+    },
     {
       "date": "19/01/2026",
       "version": "1.2.6",
