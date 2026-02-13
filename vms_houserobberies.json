@@ -1,6 +1,13 @@
 {
-  "currentVersion": "1.0.6",
+  "currentVersion": "1.0.7",
   "entries": [
+    {
+      "date": "13/02/2026",
+      "version": "1.0.7",
+      "changes": [
+        "Updated interiors to support the latest K4MB1 StarterShells version."
+      ]
+    },
     {
       "date": "13/10/2025",
       "version": "1.0.6",
