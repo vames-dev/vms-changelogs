@@ -5,11 +5,11 @@
       "date": "15/02/2026",
       "version": "1.2.8",
       "changes": [
-        "Added missing K4MB1 Shells.",
+        "Added missing K4MB1 Shells for full pack compatibility.",
         "Added search option in the Create Property -> Shells section.<br>You can now quickly filter shells by name and tags.",
         "Added new config option: <code>Config.AutoLoadKuzQualityShells</code>.",
         "Added mop object to the <code>[compatibility]</code> folder.<br>If you're using a gamebuild lower than 3095, please add these objects.",
-        "Improved shell detection system.<br>Due to recurring reports of missing shells, the shell loading logic has been redesigned.<br>All shells are now loaded with a slight delay to ensure the resource properly detects started shell files.<br><br>As part of this change, <code>Config.Shells</code> has been removed from <code>config.lua</code>.<br></br>All shell-related configuration is now handled inside <code>config.integrations.lua</code>.",
+        "Improved shell detection system.<br>The shell loading logic has been redesigned for improved stability and compatibility.<br>All shells are now loaded with a slight delay to ensure proper detection of started shell resources.<br>As part of this change, <code>Config.Shells</code> has been removed from <code>config.lua</code>.<br>All shell-related configuration is now handled inside <code>config.integrations.lua<code>.",
         "Fixed <code>Config.StaticInteractionAccess</code> not being properly respected for non-target interactions."
       ]
     },
