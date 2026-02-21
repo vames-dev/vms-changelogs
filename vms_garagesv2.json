@@ -1,6 +1,17 @@
 {
-  "currentVersion": "1.4.0",
+  "currentVersion": "1.4.1",
   "entries": [
+    {
+      "version": "1.4.1",
+      "date": "21/02/2026",
+      "changes": [
+        "Added automatic vehicle state validation & cleanup on resource start to prevent rare persistence edge-cases after unexpected restarts.",
+        "Added new client-side hook <code>CL.OnVehiclePersistent(action, vehicle)</code> for advanced customization and extended compatibility handling.",
+        "Extended <code>allowParkPrivateVehicles</code> support to company garages.",
+        "Fixed potential UI race condition when rapidly closing garage/impound menus.",
+        "Enhanced vehicle spawn validation to prevent rare edge-case freeze states."
+      ]
+    },
     {
       "version": "1.4.0",
       "date": "17/01/2026",
