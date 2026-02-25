@@ -1,6 +1,15 @@
 {
-  "currentVersion": "1.1.2",
+  "currentVersion": "1.1.3",
   "entries": [
+    {
+      "date": "26/02/2025",
+      "version": "1.1.3",
+      "changes": [
+        "Improved cart behavior when leaving polyzone areas",
+        "Enhanced store purchase validation to prevent unintended transactions",
+        "Adjusted compatibility with <code>qbx_core</code> job grade handling during store sale"
+      ]
+    },
     {
       "date": "30/11/2025",
       "version": "1.1.2",
