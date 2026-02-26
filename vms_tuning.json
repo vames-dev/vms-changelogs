@@ -1,6 +1,17 @@
 {
-  "currentVersion": "2.1.4",
+  "currentVersion": "2.1.5",
   "entries": [
+    {
+      "date": "26/02/2026",
+      "version": "2.1.5",
+      "changes": [
+        "Added support for custom per-model offsets in <code>Config.AdvancedInstallationsProps</code> and <code>Config.InstallationPartsPropsList</code>.<br>This allows precise adjustment of installation part positions for individual vehicle models.",
+        "Improved radio behavior after closing the tuning menu.<br>The radio will now automatically turn off if it was unintentionally triggered after vehicle properties reload.",
+        "Fixed incorrect installation status display (e.g. Turbo) in <code>qbx_core</code>, where installed parts were not properly marked as <b>Selected</b>.",
+        "Improved vehicle repair handling and execution of <code>Config.OnInstallationPart</code> when using manual installation mode without workshop entries in <code>Config.InstallationPartsPoints</code>.",
+        "Refined <code>modLivery</code> handling in vehicle properties to improve compatibility across different frameworks.<br>If you previously experienced livery-related inconsistencies, please update your framework <code>SetVehicleProperties</code> and <code>GetVehicleProperties</code> functions"
+      ]
+    },
     {
       "date": "06/12/2025",
       "version": "2.1.4",
