@@ -1,6 +1,22 @@
 {
-  "currentVersion": "1.2.8",
+  "currentVersion": "1.2.9",
   "entries": [
+    {
+      "date": "01/03/2026",
+      "version": "1.2.9",
+      "changes": [
+        "Added Motel Reception<br>You can now configure a dedicated reception point for motels.<br>When enabled, renting or purchasing rooms is only possible via the reception menu.<br>Introduced new option: <code>Config.HideOccupiedMotelRooms</code> to hide already rented rooms.",
+        "Added <code>IncludeMotelRooms</code> and <code>IncludeBuildingApartments</code> options to <code>Config.Marketplace</code>",
+        "Added MLO Doorbells<br>Doorbells can now be configured individually per door in MLO properties via Housing Creator.",
+        "Added new server-side exports: <code>WipeProperty</code> and <code>ResetPlayerProperties</code><br>Allows safe property reset, including full Character Kill scenarios.",
+        "Added new configuration options to <code>Config.StarterApartments</code>: <code>AllowSell</code>, <code>AllowTransfer</code>, and <code>AllowRent</code><br>Allows you to control whether starter apartments can be sold, transferred, or rented.",
+        "Added Wasabi UI Kit integration (Menu & TextUI)",
+        "Added missing mower configuration data to <code>config.js</code>",
+        "Fixed an issue where IPL / MLO images were not loading in Housing Creator",
+        "Fixed collision issues that could occur after property configuration changes.",
+        "Improved interaction label for buildings<br>Default interaction text has been unified to \"Building\" instead of \"View House\" / \"Show House\", providing clearer and more consistent user experience."
+      ]
+    },
     {
       "date": "15/02/2026",
       "version": "1.2.8",
