@@ -1,6 +1,15 @@
 {
-  "currentVersion": "1.0.5",
+  "currentVersion": "1.0.6",
   "entries": [
+    {
+      "date": "04/03/2025",
+      "version": "1.0.6",
+      "changes": [
+        "Improved the Boss Menu transaction system to use a more efficient data loading method.<br>Transactions are now loaded using pagination instead of sending the entire transaction history to clients, significantly reducing network load and improving stability on servers with large transaction histories.",
+        "Added a configurable `Config.TransactionCacheLimit`, allowing server owners to control how many transactions per company are stored in the server cache.",
+        "Added new client-side exports: <code>getGradePermissions</code>, <code>havePermission</code>.<br>These exports allow other resources to easily check Boss Menu permission settings."
+      ]
+    },
     {
       "date": "14/01/2025",
       "version": "1.0.5",
