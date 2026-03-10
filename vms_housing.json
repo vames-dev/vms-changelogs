@@ -1,6 +1,13 @@
 {
-  "currentVersion": "1.2.9",
+  "currentVersion": "1.3.0",
   "entries": [
+    {
+      "date": "11/03/2026",
+      "version": "1.3.0",
+      "changes": [
+        "Furniture Screenshot System Upgrade<br>Due to recent changes in the Discord API, the furniture screenshot workflow has been improved.<br><br>Screenshots are now processed and saved directly by the resource, removing the dependency on Discord webhooks. The entire process now happens automatically in-game.<br><br>Existing features such as screenshot generation and automatic background removal remain unchanged. New improvements include automatic webp optimization, a maximum image resolution of 512x512, and saving screenshots directly to the furniture images directory.<br><br>This results in significantly smaller image sizes, a faster workflow, and removes the need for external services."
+      ]
+    },
     {
       "date": "01/03/2026",
       "version": "1.2.9",
