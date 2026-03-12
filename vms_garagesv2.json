@@ -1,6 +1,13 @@
 {
-  "currentVersion": "1.4.1",
+  "currentVersion": "1.4.2",
   "entries": [
+    {
+      "version": "1.4.2",
+      "date": "12/03/2026",
+      "changes": [
+        "Fixed an issue with parking company vehicles when <code>Config.AllowParkingCompanyVehiclesEverywhere = false</code>.<br>In some cases, vehicles assigned to a company with a specific employee grade could trigger the message \"This vehicle is not suitable for this garage.\"."
+      ]
+    },
     {
       "version": "1.4.1",
       "date": "21/02/2026",
