@@ -1,6 +1,20 @@
 {
-  "currentVersion": "1.3.0",
+  "currentVersion": "1.3.1",
   "entries": [
+    {
+      "date": "29/03/2026",
+      "version": "1.3.1",
+      "changes": [
+        "Added a new job: <b>Interior Designer</b><br>A new role that allows players to design and customize interiors for properties.<br>Interior Designers can create full furniture layouts as design projects, which can then be purchased and applied by other players.<br>This system significantly improves the furnishing process while introducing a new roleplay opportunity, enabling players to offer professional interior design services.<br>Perfect for servers looking to expand their economy and add more depth to property customization and player-driven services.",
+        "Added <code>Config.FurnitureRequireLineOfSight</code><br>Prevents interacting with furniture through walls or obstacles (non-target mode only).<br>Note: may slightly increase resmon usage when many interactable furniture objects are nearby.",
+        "Added <code>Config.InactivePropertyCleanup</code><br>Automatically handles inactive properties based on last activity time.<br>- Starter apartments: permanently deleted from the database<br>- Houses / Apartments / Motel rooms: fully reset to default (ownership, furniture, bills, sale/rent status etc.)",
+        "Added <code>Config.StarterApartmentsBills</code><br>Enables or disables utility bills (electricity, water, internet) for starter apartments.<br>Recommended for large servers with high player turnover.<br>Disabling this option helps prevent unnecessary database growth caused by unused starter properties.",
+        "Added <code>Config.MaxUnpaidServiceBills</code><br>Defines the maximum number of unpaid utility bills.<br>If the limit is reached, new bills will not be generated to prevent database overload.",
+        "Added DELETE key support to move furniture to storage (via Edit Furniture).<br>Helps prevent accidental deletions and improves furniture management workflow.",
+        "Added support for <code>crm-appearance</code>",
+        "Fixed <code>Config.TeleportToLastPropertyOnJoin</code><br>The option is now fully functional."
+      ]
+    },
     {
       "date": "11/03/2026",
       "version": "1.3.0",
