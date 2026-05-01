@@ -1,6 +1,27 @@
 {
-  "currentVersion": "1.3.1",
+  "currentVersion": "1.4.0",
   "entries": [
+    {
+      "date": "01/05/2026",
+      "version": "1.4.0",
+      "changes": [
+        "Added IDEA Store system<br>A fully interactive furniture store where players can browse and purchase furniture or complete interior presets.<br>Players can physically visit the IDEA location and experience a new way of furnishing properties.<br>This system introduces a more immersive and structured furniture shopping flow, replacing the classic menu-based approach.",
+        "Added IDEA Delivery Job<br>Players can now work as delivery drivers and transport ordered furniture to other players properties.<br>This creates a new roleplay opportunity and expands the in-game economy with player-driven logistics.",
+        "Added custom benson delivery vehicle<br>A dedicated delivery vehicle designed for the IDEA system.",
+        "Added IDEA Interior (Free Resource)<br>A fully designed interior included with the script, ready to use out of the box.",
+        "Added Furniture Cart & Checkout system<br>Players can now add multiple furniture items to a cart and purchase them in a single transaction.<br>No more ordering items one by one - everything is handled in a clean and modern checkout flow.",
+        "Added configurable Delivery System (reworked)<br>The entire delivery configuration has been redesigned:<br>  - Support for Script Delivery and Player Delivery<br>  - Multiple delivery methods: Instant, Standard, Express<br>  - Fully configurable options depending on your server needs",
+        "Added <code>Config.WeeklyRentPriceCalculation</code><br>  - Year Scale - Rent is calculated using a full 52-week distribution for maximum accuracy<br>  - Monthly Split - Rent is simplified into 4-week periods (easier to manage, slightly less precise)",
+        "Added <code>Config.AllowOrderingFurnitureInProperty</code><br>Players can order furniture directly from the property menu or must visit the IDEA Store",
+        "Added Relative mode to Gizmo<br>You can now switch between world-based and object-based movement using the V key.<br>Improves precision and control when placing furniture.",
+        "Expanded furniture library<br>Added many new furniture items across multiple categories.",
+        "Massive data optimization on player join<br>Significantly reduced the amount of data sent when a player joins the server.<br>Example (real server data):<br>- Before: ~7014 KB<br>- After: ~684 KB<br>This results in faster loading times and reduced network usage.",
+        "Reworked Delivery configuration structure<br>Cleaner, more flexible and easier to maintain configuration for all delivery-related features.",
+        "Improved TextUI logic<br>Prevents conflicts when multiple interactions are close to each other.",
+        "Fixed furniture edit position issue<br>Furniture no longer snaps to the ground when editing its position.",
+        "Fixed power box interaction bug<br>Players can no longer turn on lights when the power is disabled (non-target interaction)."
+      ]
+    },
     {
       "date": "29/03/2026",
       "version": "1.3.1",
