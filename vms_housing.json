@@ -1,6 +1,19 @@
 {
-  "currentVersion": "1.4.0",
+  "currentVersion": "1.4.1",
   "entries": [
+    {
+      "date": "05/05/2026",
+      "version": "1.4.1",
+      "changes": [
+        "Added a new server-side export: <code>UpdatePropertyState</code>",
+        "Improved bill generation logic for starter apartments when <code>Config.StarterApartmentsBills</code> is disabled",
+        "Added <code>CL.OnVehicleSpawn</code> and <code>CL.OnVehicleDespawn</code> functions for better vehicle handling (e.g. keys, fuel, etc.)",
+        "Fixed an issue with apartments data inside buildings",
+        "Fixed spawn in last property issue",
+        "Fixed an issue with objects in Grass Points configuration",
+        "Added missing <code>blip.idea</code> translation"
+      ]
+    },
     {
       "date": "01/05/2026",
       "version": "1.4.0",
