@@ -1,6 +1,17 @@
 {
-  "currentVersion": "1.4.1",
+  "currentVersion": "1.4.2",
   "entries": [
+    {
+      "date": "06/05/2026",
+      "version": "1.4.2",
+      "changes": [
+        "Automatically enforces <code>game_enableDynamicDoorCreation</code> as true to ensure proper door creation.<br>This prevents issues where doors would not spawn due to missing configuration in <code>server.cfg</code>, especially within the IDEA system.",
+        "Added debug information when an IDEA object fails to spawn.<br>This helps identify outdated or incorrectly configured objects on the client side.",
+        "Added protection against looping the player in the IDEA Offer menu if they select a piece of furniture that cannot be created, e.g., due to gamebuild incompatibility.<br>A debug message with the model name will also be displayed to help the administrator remove the furniture from the offer.",
+        "Included the requirement <code>Config.Delivery.Type = 2</code> for accessing the Orders menu in IDEA.",
+        "Fixed a rare issue affecting property loading in specific edge-case scenarios."
+      ]
+    }
     {
       "date": "05/05/2026",
       "version": "1.4.1",
