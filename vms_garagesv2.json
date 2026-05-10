@@ -1,6 +1,27 @@
 {
-  "currentVersion": "1.4.2",
+  "currentVersion": "1.4.3",
   "entries": [
+    {
+      "version": "1.4.3",
+      "date": "10/05/2026",
+      "changes": [
+        "Added additional validation checks to ensure vehicles are properly requested and created locally (up to 3 attempts)",
+        "Added server-side exports <code>getAllGarages</code> and <code>getAllImpounds</code>",
+        "Added support for accessing vehicles from higher grades/ranks (<code>Config.AllowCompanyAccessAboveRank</code> & <code>Config.AllowGangAccessAboveRank</code>)",
+        "Reworked and improved the vehicle access/permission system for company and gang vehicles",
+        "Improved internal validation and permission checks for garage and impound vehicle access",
+        "Improved overall stability and reliability of local vehicle spawning/loading",
+        "Refactored and optimized multiple garage/impound permission and access systems",
+        "Added additional safeguards and fallback checks for vehicle creation/loading",
+        "Vehicle door lock states are now refreshed automatically when the player's job changes inside a garage polyzone",
+        "Improved <code>getGarageInfo</code> export",
+        "Reduced the minimum required polyzone height from 10.0 to 5.0 to better support underground and low-height parking garages without collisions",
+        "Added additional validation to ensure the player is properly inside a garage polyzone after joining the server",
+        "Fixed an issue where company/gang bosses could retrieve shared vehicles but were unable to park them back",
+        "Fixed multiple edge cases related to company/gang vehicle access validation",
+        "Fixed several permission-related inconsistencies for garages and impounds"
+      ]
+    },
     {
       "version": "1.4.2",
       "date": "12/03/2026",
