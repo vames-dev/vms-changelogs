@@ -1,6 +1,13 @@
 {
-  "currentVersion": "1.4.3",
+  "currentVersion": "1.4.4",
   "entries": [
+    {
+      "version": "1.4.4",
+      "date": "10/05/2026",
+      "changes": [
+        "Fixed vehicle spawning issues in underground parkings and housing garages."
+      ]
+    },
     {
       "version": "1.4.3",
       "date": "10/05/2026",
