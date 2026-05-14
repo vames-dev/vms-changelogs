@@ -1,6 +1,17 @@
 {
-  "currentVersion": "1.4.2",
+  "currentVersion": "1.4.3",
   "entries": [
+    {
+      "date": "15/05/2026",
+      "version": "1.4.3",
+      "changes": [
+        "Fixed an issue with furniture ordering for MySQL databases",
+        "Fixed an issue with IPL apartments related to <code>Config.InteriorBoundaryCheck</code>",
+        "Fixed an issue when opening the Interior Designer offers menu",
+        "Fixed an issue with entering motel shell/ipl rooms",
+        "Fixed an issue with the <code>EnterProperty</code> export"
+      ]
+    },
     {
       "date": "06/05/2026",
       "version": "1.4.2",
@@ -11,7 +22,7 @@
         "Included the requirement <code>Config.Delivery.Type = 2</code> for accessing the Orders menu in IDEA.",
         "Fixed a rare issue affecting property loading in specific edge-case scenarios."
       ]
-    }
+    },
     {
       "date": "05/05/2026",
       "version": "1.4.1",
