@@ -1,6 +1,16 @@
 {
-  "currentVersion": "1.4.3",
+  "currentVersion": "1.4.4",
   "entries": [
+    {
+      "date": "06/06/2026",
+      "version": "1.4.4",
+      "changes": [
+        "Improved Gizmo placement stability and reliability",
+        "Fixed an issue where furniture placement could become stuck in specific scenarios",
+        "Fixed a race condition affecting the Spawn in Last Property feature",
+        "Fixed several furniture placement edge cases"
+      ]
+    },
     {
       "date": "15/05/2026",
       "version": "1.4.3",
