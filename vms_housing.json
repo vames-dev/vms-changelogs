@@ -1,6 +1,22 @@
 {
-  "currentVersion": "1.4.4",
+  "currentVersion": "1.4.5",
   "entries": [
+    {
+      "date": "30/07/2026",
+      "version": "1.4.5",
+      "changes": [
+        "Added compatibility with the VMS Needs temperature system.",
+        "Added VMS Needs <code>thirst</code> status support when drinking a glass of tap water.",
+        "Added compatibility with the latest K4MB1 shells.",
+        "Added missing sink and shower interactions for existing IPLs.",
+        "Added 10 new IPLs.",
+        "Added vehicle access support for supported Shells and IPLs.<br>Vehicles can now enter supported interiors.<br>(Vehicles are not managed by VMS Housing, and their position is not persisted after a server restart.)",
+        "The purchase confirmation menu is no longer displayed for furniture priced at <code>$0</code> when <code>Config.RequirePurchaseFurniture = false</code>.",
+        "Added scrolling to the order details section in the IDEA delivery menu.",
+        "Fixed an issue where cancelling furniture placement outside could fail.",
+        "Fixed the <code>currentProperty</code> state bag not being removed after using the <code>DropPlayerFromProperty</code> export."
+      ]
+    },
     {
       "date": "06/06/2026",
       "version": "1.4.4",
