@@ -1,4 +1,15 @@
 {
-  "currentVersion": "1.0.0",
-  "entries": []
+  "currentVersion": "1.0.1",
+  "entries": [
+    {
+      "date": "30/07/2026",
+      "version": "1.0.1",
+      "changes": [
+        "Added Client State Bags for every status, allowing direct access to player status values and real-time change handlers",
+        "Added <code>Config.ESXStatusOnTick</code> and <code>Config.ESXStatusOnTickTime</code>",
+        "Added optional backward compatibility with <code>esx_status:onTick</code>, allowing most ESX HUDs to work without any code changes",
+        "Added integration guides for <code>esx_hud</code>, <code>qb-hud</code>, and <code>qbx_hud</code> to the documentation"
+      ]
+    }
+  ]
 }
