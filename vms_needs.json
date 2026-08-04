@@ -1,6 +1,17 @@
 {
-  "currentVersion": "1.0.1",
+  "currentVersion": "1.0.2",
   "entries": [
+    {
+      "date": "04/08/2026",
+      "version": "1.0.2",
+      "changes": [
+        "Added new client and server export <code>CleanupOptionalStatuses</code>",
+        "Added the client event <code>vms_status:cl:reloadVisualEffect</code>, allowing visual effects to be refreshed from the server",
+        "Added the <code>default</code> option to <code>Config.Statuses</code>, allowing default values to be configured for new players",
+        "Added the <code>CL.InitiateFunctions</code>, making ambulance job integrations require minimal modifications",
+        "Added documentation for <code>jg-hud</code>, <code>tuff-hud</code>, <code>wasabi_ambulance</code>, <code>wasabi_ambulance_v2</code>, and <code>ars_ambulance</code>"
+      ]
+    },
     {
       "date": "30/07/2026",
       "version": "1.0.1",
