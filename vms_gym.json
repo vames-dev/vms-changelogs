@@ -1,6 +1,15 @@
 {
-  "currentVersion": "2.0.1",
+  "currentVersion": "2.0.2",
   "entries": [
+    {
+      "date": "15/08/2026",
+      "version": "2.0.2",
+      "changes": [
+        "Added a new <code>UseEquipment</code> export, allowing external resources to integrate with gym equipment.",
+        "Improved webhook handling.",
+        "Improved and optimized the codebase.",
+      ]
+    },
     {
       "date": "22/10/2024",
       "version": "2.0.1",
