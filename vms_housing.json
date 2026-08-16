@@ -1,6 +1,17 @@
 {
-  "currentVersion": "1.4.5",
+  "currentVersion": "1.4.6",
   "entries": [
+    {
+      "date": "16/08/2026",
+      "version": "1.4.6",
+      "changes": [
+        "Added an audio alarm system that activates when a property is successfully broken into.",
+        "Added compatibility with VMS Gym fitness equipment: <code>prop_curl_bar_01</code>, <code>prop_weight_rack_02</code>, <code>apa_p_apdlc_treadmill_s</code>",
+        "Added <code>Config.MotelsBills</code>, allowing utility bill generation for motel rooms to be enabled or disabled.",
+        "Added a warning when selling a property or ending a rental while still inside an MLO to help prevent players from accidentally losing access while inside.",
+        "Fixed a server-side error that could occur when selling an MLO property while still inside the interior."
+      ]
+    },
     {
       "date": "30/07/2026",
       "version": "1.4.5",
