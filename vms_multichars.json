@@ -1,6 +1,25 @@
 {
-  "currentVersion": "1.1.8",
+  "currentVersion": "2.0.0",
   "entries": [
+    {
+      "date": "22/08/2026",
+      "version": "2.0.0",
+      "changes": [
+        "Unified ESX, QB-Core and QBX support into a single resource.",
+        "Added automatic framework detection and shared framework handling.",
+        "Added support for assigning custom metadata to starter items.",
+        "Expanded the character switching point with target interaction support alongside the existing marker/TextUI interaction.",
+        "Added configurable animations for characters displayed in the selection menu.",
+        "Added additional customization options for the character selection scene, including cameras, transitions, FOV, camera shake and timecycle effects.",
+        "Added compatibility with rcore_clothing.",
+        "Added compatibility with VMS Tattoo Shop v2.0.4+, allowing saved tattoos to be displayed on characters in the character selection menu.",
+        "Completely rewrote the resource backend and internal logic.",
+        "Completely refreshed the character selection interface.",
+        "Improved character creation, loading and selection flow.",
+        "Reworked configuration structure and customization options.",
+        "Improved <code>Config.CanDelete</code> behavior - when character deletion is disabled, the delete button is now completely hidden from the character selection interface."
+      ]
+    },
     {
       "date": "27/02/2025",
       "version": "1.1.8",
