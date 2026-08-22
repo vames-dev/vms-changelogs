@@ -1,6 +1,17 @@
 {
-  "currentVersion": "1.0.8",
+  "currentVersion": "2.0.0",
   "entries": [
+    {
+      "version": "2.0.0",
+      "date": "22/08/2026",
+      "changes": [
+        "Completely rewrote the resource backend and internal logic.",
+        "Completely refreshed the character registration interface.",
+        "Reworked configuration structure and customization options.",
+        "Improved character registration flow.",
+        "Improved validation and error handling during character registration."
+      ]
+    },
     {
       "version": "1.0.8",
       "date": "27/02/2025",
