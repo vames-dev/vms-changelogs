@@ -1,6 +1,13 @@
 {
-  "currentVersion": "2.0.3",
+  "currentVersion": "2.0.4",
   "entries": [
+    {
+      "version": "2.0.4",
+      "date": "22/08/2025",
+      "changes": [
+        "Added the client-side <code>loadTattoos</code> export for loading saved character tattoos on external peds."
+      ]
+    },
     {
       "version": "2.0.3",
       "date": "04/04/2025",
