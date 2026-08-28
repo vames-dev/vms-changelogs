@@ -1,6 +1,15 @@
 {
-  "currentVersion": "1.0.2",
+  "currentVersion": "1.0.3",
   "entries": [
+    {
+      "date": "28/08/2026",
+      "version": "1.0.3",
+      "changes": [
+        "Added <code>CL.OnItemUseStart</code> and <code>CL.OnItemUseEnd</code> functions for custom client-side integrations when a player starts or stops using an item.",
+        "Added <code>SV.CanUseItem</code> function, allowing you to add custom conditions that determine whether a player can use an item.",
+        "Added <code>SV.OnItemUseStart</code> and <code>SV.OnItemUseEnd</code> functions for custom server-side integrations."
+      ]
+    },
     {
       "date": "04/08/2026",
       "version": "1.0.2",
