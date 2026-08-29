@@ -1,6 +1,15 @@
 {
-  "currentVersion": "1.4.6",
+  "currentVersion": "1.4.7",
   "entries": [
+    {
+      "date": "29/08/2026",
+      "version": "1.4.7",
+      "changes": [
+        "Added compatibility with <code>sd-phone</code>.",
+        "Added protection against filtering non-existent data from the database.",
+        "Fixed the <code>creator:selectShell</code> NUI callback."
+      ]
+    },
     {
       "date": "16/08/2026",
       "version": "1.4.6",
