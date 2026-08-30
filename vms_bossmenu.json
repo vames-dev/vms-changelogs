@@ -1,6 +1,14 @@
 {
-  "currentVersion": "1.0.6",
+  "currentVersion": "1.0.7",
   "entries": [
+    {
+      "date": "30/08/2026",
+      "version": "1.0.7",
+      "changes": [
+        "Added a new and expanded <code>registerTransaction</code> export, allowing more detailed transaction data to be registered compared to the previous <code>addTransaction</code> export.",
+        "Expanded transaction information - added a new details modal where you can view all information related to a selected transaction."
+      ]
+    },
     {
       "date": "04/03/2025",
       "version": "1.0.6",
