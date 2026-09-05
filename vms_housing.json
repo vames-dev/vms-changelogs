@@ -1,6 +1,15 @@
 {
-  "currentVersion": "1.4.7",
+  "currentVersion": "1.4.8",
   "entries": [
+    {
+      "date": "05/09/2026",
+      "version": "1.4.8",
+      "changes": [
+        "Added validation in IDEA to prevent adding furniture that does not exist in the database to the cart or proceeding with checkout. An error message will now display the missing model name.",
+        "Added support for Renewed-Weathersync.",
+        "Fixed property data not being properly reset when switching between properties in the creator, which could cause data such as the yard zone from the previously edited property to remain active."
+      ]
+    },
     {
       "date": "29/08/2026",
       "version": "1.4.7",
