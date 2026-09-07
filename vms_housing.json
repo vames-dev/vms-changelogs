@@ -1,6 +1,17 @@
 {
-  "currentVersion": "1.4.8",
+  "currentVersion": "1.4.9",
   "entries": [
+    {
+      "date": "08/09/2026",
+      "version": "1.4.9",
+      "changes": [
+        "Added the <code>PlayerInvisibility</code> option to <code>Config.Idea</code>, allowing players to remain fully visible while browsing furniture.",
+        "Added the <code>vms_housing:onPlayerVisibilityChange</code> client event, which can be used to temporarily bypass or adjust anti-cheat invisibility checks and prevent false detections.",
+        "Fixed some checkboxes not being properly reset in the configurator menu.",
+        "Fixed an issue with cached data not being properly reset, introduced in version 1.4.8.",
+        "Fixed furniture not loading properly after exiting the interior camera mode while outside the property."
+      ]
+    },
     {
       "date": "05/09/2026",
       "version": "1.4.8",
