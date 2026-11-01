@@ -1,6 +1,16 @@
 {
-  "currentVersion": "1.5.1",
+  "currentVersion": "1.5.2",
   "entries": [
+    {
+      "date": "1/11/2026",
+      "version": "1.5.2",
+      "changes": [
+        "Added interior customization for compatible KQ Shell Builder shells, accessible from the property menu and in-property target.",
+        "KQ Shell Builder shells now include their preview images in the housing shell list.",
+        "Shell changes made in KQ Shell Builder now refresh automatically in VMS Housing.",
+        "Interior customization follows the property's furniture permissions and access restrictions."
+      ]
+    },
     {
       "date": "7/10/2026",
       "version": "1.5.1",
