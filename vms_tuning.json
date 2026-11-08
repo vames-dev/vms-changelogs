@@ -1,6 +1,24 @@
 {
-  "currentVersion": "2.1.5",
+  "currentVersion": "3.0.0",
   "entries": [
+    {
+      "date": "8/11/2026",
+      "version": "3.0.0",
+      "changes": [
+        "Added persistent Work Orders. Customers can pay for tuning, and mechanics can complete the installation later.",
+        "Added functional two-post vehicle lifts with adjustable height. Supported installation steps now require the vehicle to be raised.",
+        "Added a dynamometer with estimated power and torque curves, top speed, and acceleration results. Test speeds and km/h or mph can be configured.",
+        "Added exhaust backfire with selectable firing modes, custom sounds, colored flames, and synchronized effects for nearby players.",
+        "Mechanics can choose the order of parts to install, stop working, and resume an unfinished Work Order later. Completed installations remain on the vehicle.",
+        "Added configurable refunds for unfinished Work Orders.",
+        "Added 3D interaction indicators that guide mechanics to parts and installation positions.",
+        "Added a dedicated installation flow for electric vehicles.",
+        "Redesigned the tuning menu for a cleaner, more consistent look.",
+        "Tuning categories with no available options are now hidden.",
+        "Wheel size and width options now explain why they are unavailable with stock wheels.",
+        "Redesigned the discount code menu and improved how codes are entered and updated."
+      ]
+    },
     {
       "date": "26/02/2026",
       "version": "2.1.5",
