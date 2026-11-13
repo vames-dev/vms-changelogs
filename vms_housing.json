@@ -2,6 +2,22 @@
   "currentVersion": "1.5.2",
   "entries": [
     {
+      "date": "13/11/2026",
+      "version": "1.5.3",
+      "changes": [
+        "Added functional letterboxes. Players can write, deliver, read, and destroy letters. Letters can be handled as inventory items or written directly at a letterbox. Public access, inbox capacity, and letter length are configurable.",
+        "Tenants can now buy their rental property from the management menu and keep their belongings.",
+        "Added bulk furniture actions. Move all placed furniture to storage, sell indoor or outdoor furniture separately, or sell all furniture at once.",
+        "Redesigned the safe interface to match the rest of VMS Housing.",
+        "Updated the item icons included with VMS Housing.",
+        "Fixed purchase and rent price fields resetting or losing their values in the Property Creator.",
+        "Fixed a contract window that could remain on screen after closing the property menu with Escape.",
+        "Fixed rent payments failing to register correctly in the agency's transaction history.",
+        "Fixed an error when previewing an IPL without configured themes.",
+        "Adjusted when interior lighting and weather settings are restored when players spawn in their last property."
+      ]
+    },
+    {
       "date": "1/11/2026",
       "version": "1.5.2",
       "changes": [
