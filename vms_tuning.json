@@ -1,6 +1,15 @@
 {
-  "currentVersion": "3.0.0",
+  "currentVersion": "3.0.1",
   "entries": [
+    {
+      "date": "14/11/2026",
+      "version": "3.0.1",
+      "changes": [
+        "Added configurable markers and 3D text at vehicle lift controls when target is disabled.",
+        "Fixed standard part installation failing when <code>Config.UseSkillbar</code> was disabled.",
+        "Fixed an error when opening the tire smoke color picker."
+      ]
+    },
     {
       "date": "8/11/2026",
       "version": "3.0.0",
