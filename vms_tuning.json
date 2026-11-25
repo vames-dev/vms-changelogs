@@ -1,6 +1,13 @@
 {
-  "currentVersion": "3.0.1",
+  "currentVersion": "3.0.2",
   "entries": [
+    {
+      "date": "25/11/2026",
+      "version": "3.0.2",
+      "changes": [
+        "Fixed an error when processing customer tuning requests."
+      ]
+    },
     {
       "date": "14/11/2026",
       "version": "3.0.1",
